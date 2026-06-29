@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aitabiは、ひとり旅の記憶をAIと一緒に美しい旅の記事へ育てるサービスです。"
+    />
+    <title>Aitabi | AIと育てるひとり旅の記憶</title>
+    <style>
+      #root-fallback {
+        min-height: 100vh;
+        background: #f8f4ef;
+        color: #3a2f2a;
+        font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+      }
+      .fallback-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 80px;
+        padding: 0 48px;
+        border-bottom: 1px solid #e7ddd3;
+        background: #fffcf8;
+      }
+      .fallback-logo {
+        font-family: "Noto Serif JP", "Yu Mincho", serif;
+        font-size: 32px;
+      }
+      .fallback-nav {
+        display: flex;
+        gap: 24px;
+        font-size: 14px;
+      }
+      .fallback-button {
+        border-radius: 999px;
+        background: #2f6f73;
+        color: white;
+        padding: 12px 22px;
+        text-decoration: none;
+      }
+      .fallback-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
+        gap: 48px;
+        align-items: center;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 80px 48px;
+      }
+      .fallback-hero h1 {
+        margin: 0;
+        font-family: "Noto Serif JP", "Yu Mincho", serif;
+        font-size: clamp(42px, 4.2vw, 62px);
+        line-height: 1.45;
+      }
+      .fallback-hero p {
+        margin: 24px 0 0;
+        max-width: 560px;
+        color: #51423b;
+        font-size: 18px;
+        line-height: 2;
+      }
+      .fallback-photo {
+        min-height: 520px;
+        border-radius: 10px;
+        background:
+          linear-gradient(120deg, rgba(248, 244, 239, 0.1), rgba(47, 111, 115, 0.18)),
+          url("/assets/photos/travel-01.jpg") center / cover;
+        box-shadow: 0 24px 70px rgba(47, 111, 115, 0.14);
+      }
+      .fallback-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 36px;
+      }
+      .fallback-eyebrow {
+        color: #c98f8b;
+        font-size: 13px;
+        letter-spacing: 0.18em;
+        margin: 0 0 18px;
+      }
+      .fallback-secondary {
+        border: 1px solid #c98f8b;
+        border-radius: 999px;
+        color: #9e625e;
+        padding: 12px 22px;
+        text-decoration: none;
+      }
+      .fallback-extra {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 48px 80px;
+      }
+      .fallback-dashboard {
+        display: grid;
+        grid-template-columns: 260px minmax(0, 1fr);
+        gap: 28px;
+      }
+      .fallback-panel,
+      .fallback-card {
+        border: 1px solid #e7ddd3;
+        border-radius: 10px;
+        background: #fffcf8;
+        box-shadow: 0 18px 45px rgba(58, 47, 42, 0.08);
+      }
+      .fallback-panel {
+        padding: 24px;
+      }
+      .fallback-menu {
+        display: grid;
+        gap: 8px;
+        margin-top: 24px;
+      }
+      .fallback-menu a,
+      .fallback-chip {
+        border-radius: 999px;
+        background: #eaf1f2;
+        color: #2f6f73;
+        padding: 10px 14px;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      .fallback-stats,
+      .fallback-grid {
+        display: grid;
+        gap: 18px;
+      }
+      .fallback-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 28px;
+      }
+      .fallback-stat {
+        border-radius: 10px;
+        background: #f8f4ef;
+        padding: 20px;
+      }
+      .fallback-stat strong {
+        display: block;
+        margin-top: 8px;
+        color: #2f6f73;
+        font-family: "Noto Serif JP", "Yu Mincho", serif;
+        font-size: 36px;
+      }
+      .fallback-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 28px 0 18px;
+      }
+      .fallback-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .fallback-card {
+        overflow: hidden;
+      }
+      .fallback-card img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+      }
+      .fallback-card div {
+        padding: 18px;
+      }
+      .fallback-card h3 {
+        margin: 8px 0;
+        font-family: "Noto Serif JP", "Yu Mincho", serif;
+        font-size: 20px;
+        line-height: 1.5;
+      }
+      @media (max-width: 800px) {
+        .fallback-header {
+          padding: 0 20px;
+        }
+        .fallback-nav {
+          display: none;
+        }
+        .fallback-hero {
+          grid-template-columns: 1fr;
+          padding: 48px 20px;
+        }
+        .fallback-photo {
+          min-height: 320px;
+        }
+        .fallback-extra {
+          padding: 0 20px 48px;
+        }
+        .fallback-dashboard {
+          grid-template-columns: 1fr;
+        }
+        .fallback-stats,
+        .fallback-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root-fallback">
+      <header class="fallback-header">
+        <div class="fallback-logo">Aitabi</div>
+        <nav class="fallback-nav" aria-label="主要ナビゲーション">
+          <a href="/stories">旅を探す</a>
+          <a href="/themes">テーマ</a>
+          <a href="/create">投稿する</a>
+          <a href="/about">Aitabiとは</a>
+        </nav>
+        <a class="fallback-button" href="/create">無料ではじめる</a>
+      </header>
+      <main class="fallback-hero">
+        <section id="fallback-copy">
+          <h1>ひとり旅の余韻を<br />AIとやさしく残す。</h1>
+          <p>写真とメモを渡すだけで、あなたの旅が読みたくなる物語に。大人の女性のひとり旅を、静かに美しく記録します。</p>
+          <div class="fallback-actions">
+            <a class="fallback-button" href="/create">旅の記録をはじめる</a>
+            <a class="fallback-secondary" href="/stories">みんなの旅を読む</a>
+          </div>
+        </section>
+        <div class="fallback-photo" aria-hidden="true"></div>
+      </main>
+      <section class="fallback-extra" id="fallback-extra"></section>
+    </div>
+    <div id="root"></div>
+    <script>
+      const fallbackPages = {
+        "/": {
+          title: "ひとり旅の余韻を<br />AIとやさしく残す。",
+          body: "写真とメモを渡すだけで、あなたの旅が読みたくなる物語に。大人の女性のひとり旅を、静かに美しく記録します。",
+          primary: "旅の記録をはじめる",
+          primaryHref: "/create",
+          secondary: "みんなの旅を読む",
+          secondaryHref: "/stories",
+          image: "/assets/photos/travel-01.jpg"
+        },
+        "/create": {
+          eyebrow: "CREATE",
+          title: "写真とメモから、<br />旅の物語をつくる。",
+          body: "旅先で残した写真、短いメモ、行き先を入れるだけ。AIが読みやすい下書きに整えます。",
+          primary: "AIで下書きを作成",
+          primaryHref: "/editor",
+          secondary: "下書き保存",
+          secondaryHref: "/mypage",
+          image: "/assets/photos/travel-05.jpg"
+        },
+        "/editor": {
+          eyebrow: "AI EDITOR",
+          title: "AI下書きを<br />あなたの声に整える。",
+          body: "見出し、語り口、長さを調整しながら、旅の余韻が伝わる記事へ磨きます。",
+          primary: "公開へ進む",
+          primaryHref: "/mypage",
+          secondary: "プレビュー",
+          secondaryHref: "/stories/atami",
+          image: "/assets/photos/travel-02.jpg"
+        },
+        "/stories": {
+          eyebrow: "STORIES",
+          title: "ひとり旅の記録を読む。",
+          body: "温泉、街歩き、朝ごはん。大人の女性が自分のペースで残した旅の物語を集めました。",
+          primary: "熱海の旅を読む",
+          primaryHref: "/stories/atami",
+          secondary: "テーマで探す",
+          secondaryHref: "/themes",
+          image: "/assets/photos/travel-03.jpg"
+        },
+        "/stories/atami": {
+          eyebrow: "STORY",
+          title: "熱海の湯けむりと、<br />ひとりの朝ごはん。",
+          body: "海を眺める宿、朝の喫茶店、湯上がりの静けさ。小さな感動を言葉に残した旅の記録です。",
+          primary: "保存する",
+          primaryHref: "/saved",
+          secondary: "一覧へ戻る",
+          secondaryHref: "/stories",
+          image: "/assets/photos/travel-02.jpg"
+        },
+        "/themes": {
+          eyebrow: "THEMES",
+          title: "今の気分から、<br />ひとり旅を探す。",
+          body: "温泉、海辺、朝ごはん、美術館。行き先が決まっていなくても、心が向くテーマから探せます。",
+          primary: "旅を探す",
+          primaryHref: "/stories",
+          secondary: "保存した旅を見る",
+          secondaryHref: "/saved",
+          image: "/assets/photos/travel-06.jpg"
+        },
+        "/mypage": {
+          eyebrow: "MY PAGE",
+          title: "私の旅の記録を<br />静かに整理する。",
+          body: "公開した旅、下書き、保存した旅をまとめて管理できます。",
+          primary: "新しい旅を記録する",
+          primaryHref: "/create",
+          secondary: "保存した旅",
+          secondaryHref: "/saved",
+          image: "/assets/photos/travel-04.jpg"
+        },
+        "/saved": {
+          eyebrow: "SAVED",
+          title: "保存した旅を、<br />次のヒントに。",
+          body: "気になる旅の記録を集めて、次のひとり旅のしおりとして残しておけます。",
+          primary: "テーマから探す",
+          primaryHref: "/themes",
+          secondary: "マイページへ",
+          secondaryHref: "/mypage",
+          image: "/assets/photos/travel-03.jpg"
+        },
+        "/about": {
+          eyebrow: "ABOUT",
+          title: "旅の余韻を、<br />あなたらしい言葉で。",
+          body: "Aitabiは、写真と短いメモから旅の流れや気持ちを整理し、読み返したくなる記事へ整えるAI旅記録サービスです。",
+          primary: "最初の旅を残す",
+          primaryHref: "/create",
+          secondary: "旅の記録を見る",
+          secondaryHref: "/stories",
+          image: "/assets/photos/travel-01.jpg"
+        },
+        "/pricing": {
+          eyebrow: "PRICING",
+          title: "旅の記録を、<br />あなたのペースで。",
+          body: "無料ではじめて、記録が増えてきたら必要な分だけアップグレードできます。",
+          primary: "無料ではじめる",
+          primaryHref: "/create",
+          secondary: "使い方を見る",
+          secondaryHref: "/about",
+          image: "/assets/photos/travel-04.jpg"
+        }
+      };
+      const fallbackPath = window.location.pathname.replace(/\/$/, "") || "/";
+      const fallbackPage = fallbackPages[fallbackPath] || fallbackPages["/"];
+      const fallbackCopy = document.getElementById("fallback-copy");
+      const fallbackPhoto = document.querySelector(".fallback-photo");
+      const fallbackExtra = document.getElementById("fallback-extra");
+      fallbackCopy.innerHTML = `
+        ${fallbackPage.eyebrow ? `<p class="fallback-eyebrow">${fallbackPage.eyebrow}</p>` : ""}
+        <h1>${fallbackPage.title}</h1>
+        <p>${fallbackPage.body}</p>
+        <div class="fallback-actions">
+          <a class="fallback-button" href="${fallbackPage.primaryHref}">${fallbackPage.primary}</a>
+          <a class="fallback-secondary" href="${fallbackPage.secondaryHref}">${fallbackPage.secondary}</a>
+        </div>
+      `;
+      fallbackPhoto.style.backgroundImage = `linear-gradient(120deg, rgba(248, 244, 239, 0.1), rgba(47, 111, 115, 0.18)), url("${fallbackPage.image}")`;
+      if (fallbackPath === "/mypage") {
+        fallbackExtra.innerHTML = `
+          <div class="fallback-dashboard">
+            <aside class="fallback-panel">
+              <h2 style="font-family:'Noto Serif JP','Yu Mincho',serif;font-size:28px;margin:0;">さくら</h2>
+              <p style="color:#51423b;line-height:1.8;">40代・東京 / 温泉と街歩きが好き</p>
+              <nav class="fallback-menu">
+                <a href="/mypage">マイページ</a>
+                <a href="/mypage">下書き</a>
+                <a href="/mypage">公開済み</a>
+                <a href="/saved">お気に入り</a>
+                <a href="/mypage">プロフィール</a>
+              </nav>
+            </aside>
+            <div>
+              <div class="fallback-panel">
+                <p class="fallback-eyebrow">MY PAGE</p>
+                <h2 style="font-family:'Noto Serif JP','Yu Mincho',serif;font-size:42px;margin:0;">旅の記録</h2>
+                <div class="fallback-stats">
+                  <div class="fallback-stat">公開した旅<strong>12</strong></div>
+                  <div class="fallback-stat">下書き<strong>3</strong></div>
+                  <div class="fallback-stat">保存した旅<strong>28</strong></div>
+                </div>
+              </div>
+              <div class="fallback-tabs">
+                <span class="fallback-chip">すべて</span>
+                <span class="fallback-chip">下書き</span>
+                <span class="fallback-chip">公開済み</span>
+              </div>
+              <div class="fallback-grid">
+                ${[
+                  ["海と湯けむりにほどける、冬の熱海ひとり旅", "/assets/photos/travel-02.jpg", "温泉 / 1泊2日"],
+                  ["金沢の路地で見つけた、静かなご褒美時間", "/assets/photos/travel-03.jpg", "街歩き / 美術館"],
+                  ["ひとりで味わう、京都の朝ごはん", "/assets/photos/travel-04.jpg", "グルメ / 日帰り"]
+                ].map(([title, image, meta]) => `
+                  <article class="fallback-card">
+                    <img src="${image}" alt="" />
+                    <div>
+                      <small style="color:#c98f8b;">${meta}</small>
+                      <h3>${title}</h3>
+                      <p style="color:#51423b;line-height:1.7;">旅先で残した写真とメモを、読み返したくなる記録へ整えました。</p>
+                    </div>
+                  </article>
+                `).join("")}
+              </div>
+            </div>
+          </div>
+        `;
+      } else {
+        fallbackExtra.innerHTML = "";
+      }
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
