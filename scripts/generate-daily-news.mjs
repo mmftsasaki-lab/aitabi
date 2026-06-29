@@ -9,8 +9,9 @@ const args = new Set(process.argv.slice(2));
 const dryRun = args.has("--dry-run");
 const sampleMode = args.has("--sample");
 
-const itemCount = Number(process.env.NEWS_ITEM_COUNT || 8);
-const maxCandidates = Number(process.env.NEWS_MAX_CANDIDATES || 45);
+const itemCount = Number(process.env.NEWS_ITEM_COUNT || 12);
+const aiItemCount = Number(process.env.NEWS_AI_ITEM_COUNT || 5);
+const maxCandidates = Number(process.env.NEWS_MAX_CANDIDATES || 70);
 const timezone = process.env.NEWS_TIMEZONE || "Asia/Tokyo";
 const model = process.env.OPENAI_MODEL || "gpt-5.4-mini";
 
@@ -30,11 +31,16 @@ const negativePatterns = [
   /炎上|批判殺到|不祥事|差別|虐待|ハラスメント/,
   /感染|病気|疾患|がん|ウイルス|医療崩壊|痛み|偏見|軽視/,
   /値上げ|倒産|破綻|不況|赤字|解雇|リストラ/,
-  /懸念|抗議|販売終了|終了へ|中止|停止|トラブル/
+  /懸念|抗議|販売終了|終了へ|中止|停止|トラブル|公開見送り/
 ];
 
 const positiveHints = [
   /発見|開発|公開|発売|開始|オープン|イベント|展示|受賞|記録|便利|季節|観光|文化|科学|宇宙|AI|ロボット|新サービス|キャンペーン|地域/
+];
+
+const aiPatterns = [
+  /AI|人工知能|生成AI|ChatGPT|OpenAI|LLM|大規模言語モデル|機械学習|ディープラーニング/,
+  /ロボット|自動運転|画像生成|音声認識|翻訳|Copilot|Gemini|Claude|Meta AI/
 ];
 
 const parser = new XMLParser({
@@ -178,11 +184,16 @@ function scoreItem(item) {
   if (negativePatterns.some((pattern) => pattern.test(haystack))) return -100;
 
   let score = 0;
+  if (isAiRelatedText(haystack)) score += 6;
   if (positiveHints.some((pattern) => pattern.test(haystack))) score += 4;
   if (/日本|国内|東京|大阪|京都|北海道|沖縄|地域|自治体|企業|大学/.test(haystack)) score += 3;
   if (/AI|科学|宇宙|文化|観光|食|季節|便利|アプリ|ガジェット|展示/.test(haystack)) score += 2;
   if (item.summary.length > 40) score += 1;
   return score;
+}
+
+function isAiRelatedText(value) {
+  return aiPatterns.some((pattern) => pattern.test(value));
 }
 
 function dedupeAndFilter(items) {
@@ -199,25 +210,45 @@ function dedupeAndFilter(items) {
       seen.add(key);
       return true;
     })
-    .map((item) => ({ ...item, score: scoreItem(item) }))
+    .map((item) => ({ ...item, aiRelated: isAiRelatedText(`${item.title} ${item.summary}`), score: scoreItem(item) }))
     .filter((item) => item.score >= 0)
     .sort((a, b) => b.score - a.score)
     .slice(0, maxCandidates);
+}
+
+function candidateToSummaryItem(item) {
+  return {
+    title: item.title,
+    source: item.source,
+    url: item.url,
+    summary: item.summary || "詳細はリンク先で確認できます。",
+    conversationStarter: item.aiRelated
+      ? "AIが身近な道具としてどう広がるか、話題にしやすそうです。"
+      : "この話題、日常でどう使われそうか話しやすそうです。",
+    tone: item.aiRelated ? "AI" : "穏やか",
+    aiRelated: item.aiRelated
+  };
+}
+
+function pickFallbackItems(candidates) {
+  const aiItems = candidates.filter((item) => item.aiRelated).slice(0, aiItemCount);
+  const used = new Set(aiItems.map((item) => item.url));
+  const nonAiItems = candidates
+    .filter((item) => !item.aiRelated && !used.has(item.url))
+    .slice(0, Math.max(0, itemCount - aiItems.length));
+  for (const item of nonAiItems) used.add(item.url);
+  const backfillItems = candidates
+    .filter((item) => !used.has(item.url))
+    .slice(0, Math.max(0, itemCount - aiItems.length - nonAiItems.length));
+  return [...aiItems, ...nonAiItems, ...backfillItems].slice(0, itemCount).map(candidateToSummaryItem);
 }
 
 function fallbackSummaries(candidates, dateString) {
   return {
     date: dateString,
     title: `${formatJapaneseDate(dateString)}の雑談向けニュース`,
-    intro: "公開RSSから、朝に軽く話しやすい話題を集めました。",
-    items: candidates.slice(0, itemCount).map((item) => ({
-      title: item.title,
-      source: item.source,
-      url: item.url,
-      summary: item.summary || "詳細はリンク先で確認できます。",
-      conversationStarter: "この話題、日常でどう使われそうか話しやすそうです。",
-      tone: "穏やか"
-    }))
+    intro: `公開RSSから、朝に軽く話しやすい話題を${itemCount}本集めました。うち${aiItemCount}本はAI関連を優先しています。`,
+    items: pickFallbackItems(candidates)
   };
 }
 
@@ -260,13 +291,15 @@ async function summarizeWithOpenAI(candidates, dateString) {
         {
           role: "system",
           content:
-            "あなたは日本語のニュース編集者です。朝の雑談に使いやすく、読み手の気分を重くしない話題を選びます。事件、事故、災害、訃報、炎上、病気、強い政治対立、強い不況感のある話題は避けます。誇張せず、出典候補の範囲だけで要約します。"
+            "あなたは日本語のニュース編集者です。朝の雑談に使いやすく、読み手の気分を重くしない話題を選びます。事件、事故、災害、訃報、炎上、病気、強い政治対立、強い不況感のある話題は避けます。誇張せず、出典候補の範囲だけで要約します。指定された本数を守り、そのうち指定された本数をAI関連ニュースにします。AI関連は生成AI、人工知能、LLM、ロボット、自動化、AI搭載サービス、AIガジェット、AI研究、AI活用事例を含みます。"
         },
         {
           role: "user",
           content: JSON.stringify({
             date: dateString,
             itemCount,
+            aiItemCount,
+            selectionRule: `${itemCount}本を選び、そのうち${aiItemCount}本はaiRelated=trueのAI関連ニュース、残り${itemCount - aiItemCount}本はaiRelated=falseの非AIニュースにする。どちらかの候補が不足する場合のみ、候補内で可能な最大数に調整する。`,
             outputLanguage: "ja-JP",
             requiredShape: {
               date: "YYYY-MM-DD",
@@ -279,16 +312,18 @@ async function summarizeWithOpenAI(candidates, dateString) {
                   url: "string",
                   summary: "2から3文",
                   conversationStarter: "雑談の切り口を1文",
-                  tone: "穏やか/前向き/便利/季節/文化/科学 など"
+                  tone: "AI/穏やか/前向き/便利/季節/文化/科学 など",
+                  aiRelated: "boolean"
                 }
               ]
             },
-            candidates: candidates.map(({ title, source, summary, url, publishedAt }) => ({
+            candidates: candidates.map(({ title, source, summary, url, publishedAt, aiRelated }) => ({
               title,
               source,
               summary,
               url,
-              publishedAt
+              publishedAt,
+              aiRelated
             }))
           })
         }
@@ -312,27 +347,71 @@ function normalizeSummary(summary, dateString, candidates) {
   const byUrl = new Map(candidates.map((item) => [item.url, item]));
   const items = toArray(summary.items)
     .filter((item) => item.title && item.url)
-    .slice(0, itemCount)
     .map((item) => {
       const candidate = byUrl.get(item.url);
+      const aiRelated = Boolean(item.aiRelated ?? candidate?.aiRelated ?? isAiRelatedText(`${item.title} ${item.summary || ""}`));
       return {
         title: normalizeWhitespace(item.title),
         source: normalizeWhitespace(item.source || candidate?.source || "出典"),
         url: item.url,
         summary: normalizeWhitespace(item.summary || candidate?.summary || ""),
         conversationStarter: normalizeWhitespace(item.conversationStarter || "会話のきっかけにしやすい話題です。"),
-        tone: normalizeWhitespace(item.tone || "穏やか")
+        tone: normalizeWhitespace(item.tone || (aiRelated ? "AI" : "穏やか")),
+        aiRelated
       };
     });
 
   if (!items.length) return fallbackSummaries(candidates, dateString);
+  const filledItems = enforceItemMix(items, candidates);
 
   return {
     date: summary.date || dateString,
     title: summary.title || `${formatJapaneseDate(dateString)}の雑談向けニュース`,
-    intro: summary.intro || "朝に読みやすい、穏やかな話題をまとめました。",
-    items
+    intro: summary.intro || `朝に読みやすい、穏やかな話題を${itemCount}本まとめました。うち${aiItemCount}本はAI関連です。`,
+    items: filledItems
   };
+}
+
+function enforceItemMix(items, candidates) {
+  const targetAiCount = Math.min(aiItemCount, candidates.filter((item) => item.aiRelated).length);
+  const usedUrls = new Set(items.map((item) => item.url));
+  const fillFromCandidates = (predicate) =>
+    candidates
+      .filter((candidate) => predicate(candidate) && !usedUrls.has(candidate.url))
+      .map((candidate) => {
+        usedUrls.add(candidate.url);
+        return candidateToSummaryItem(candidate);
+      });
+
+  const selected = items.slice(0, itemCount);
+  const missingAiCount = Math.max(0, targetAiCount - selected.filter((item) => item.aiRelated).length);
+  if (missingAiCount > 0) {
+    const aiFill = fillFromCandidates((candidate) => candidate.aiRelated).slice(0, missingAiCount);
+    for (const fillItem of aiFill) {
+      const replaceIndex = selected.findLastIndex((item) => !item.aiRelated);
+      if (replaceIndex >= 0) selected[replaceIndex] = fillItem;
+      else selected.push(fillItem);
+    }
+  }
+
+  let extraAiCount = Math.max(0, selected.filter((item) => item.aiRelated).length - targetAiCount);
+  if (extraAiCount > 0) {
+    const nonAiFill = fillFromCandidates((candidate) => !candidate.aiRelated).slice(0, extraAiCount);
+    for (const fillItem of nonAiFill) {
+      const replaceIndex = selected.findLastIndex((item) => item.aiRelated);
+      if (replaceIndex >= 0) {
+        selected[replaceIndex] = fillItem;
+        extraAiCount -= 1;
+      }
+      if (extraAiCount <= 0) break;
+    }
+  }
+
+  if (selected.length < itemCount) {
+    selected.push(...fillFromCandidates(() => true).slice(0, itemCount - selected.length));
+  }
+
+  return selected.slice(0, itemCount);
 }
 
 function escapeHtml(value) {
