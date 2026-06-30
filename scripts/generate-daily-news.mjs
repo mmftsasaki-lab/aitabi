@@ -476,7 +476,15 @@ function enforceItemMix(items, candidates) {
     selected.push(...fillFromCandidates(() => true).slice(0, itemCount - selected.length));
   }
 
-  return selected.slice(0, itemCount);
+  return selected.slice(0, itemCount).map((item) => ({
+    ...item,
+    tone: item.deepGenAiRelated ? "生成AI深掘り" : item.aiRelated ? normalizeNonDeepAiTone(item.tone) : item.tone || "穏やか"
+  }));
+}
+
+function normalizeNonDeepAiTone(tone) {
+  if (!tone || tone.includes("生成AI深掘り")) return "AI";
+  return tone;
 }
 
 function escapeHtml(value) {
