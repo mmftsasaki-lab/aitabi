@@ -41,8 +41,9 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.4-mini' }}
           NEWS_TIMEZONE: Asia/Tokyo
-          NEWS_ITEM_COUNT: "12"
-          NEWS_AI_ITEM_COUNT: "5"
+          NEWS_ITEM_COUNT: "14"
+          NEWS_AI_ITEM_COUNT: "7"
+          NEWS_DEEP_GENAI_ITEM_COUNT: "2"
 
       - name: Commit generated news
         uses: stefanzweifel/git-auto-commit-action@v5

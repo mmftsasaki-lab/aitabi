@@ -9,9 +9,10 @@ const args = new Set(process.argv.slice(2));
 const dryRun = args.has("--dry-run");
 const sampleMode = args.has("--sample");
 
-const itemCount = Number(process.env.NEWS_ITEM_COUNT || 12);
-const aiItemCount = Number(process.env.NEWS_AI_ITEM_COUNT || 5);
-const maxCandidates = Number(process.env.NEWS_MAX_CANDIDATES || 70);
+const itemCount = Number(process.env.NEWS_ITEM_COUNT || 14);
+const aiItemCount = Number(process.env.NEWS_AI_ITEM_COUNT || 7);
+const deepGenAiItemCount = Number(process.env.NEWS_DEEP_GENAI_ITEM_COUNT || 2);
+const maxCandidates = Number(process.env.NEWS_MAX_CANDIDATES || 90);
 const timezone = process.env.NEWS_TIMEZONE || "Asia/Tokyo";
 const model = process.env.OPENAI_MODEL || "gpt-5.4-mini";
 
@@ -29,9 +30,9 @@ const negativePatterns = [
   /地震|津波|噴火|台風|豪雨|洪水|土砂|災害|避難|猛暑被害/,
   /戦争|攻撃|侵攻|ミサイル|軍事|テロ|紛争|衝突/,
   /炎上|批判殺到|不祥事|差別|虐待|ハラスメント/,
-  /感染|病気|疾患|がん|ウイルス|医療崩壊|痛み|偏見|軽視/,
-  /値上げ|倒産|破綻|不況|赤字|解雇|リストラ/,
-  /懸念|抗議|販売終了|終了へ|中止|停止|トラブル|公開見送り/
+  /感染|病気|疾患|がん|ウイルス|医療崩壊|痛み|偏見|軽視|死んだ|死体|白骨/,
+  /値上げ|倒産|破綻|不況|赤字|解雇|リストラ|円安|コスト上昇|仕入れコスト/,
+  /懸念|抗議|販売終了|終了へ|中止|停止|トラブル|公開見送り|地面師|交尾/
 ];
 
 const positiveHints = [
@@ -41,6 +42,11 @@ const positiveHints = [
 const aiPatterns = [
   /AI|人工知能|生成AI|ChatGPT|OpenAI|LLM|大規模言語モデル|機械学習|ディープラーニング/,
   /ロボット|自動運転|画像生成|音声認識|翻訳|Copilot|Gemini|Claude|Meta AI/
+];
+
+const deepGenAiPatterns = [
+  /生成AI|ChatGPT|OpenAI|LLM|大規模言語モデル|基盤モデル|推論|AIエージェント|RAG|ファインチューニング/,
+  /画像生成|動画生成|音声生成|マルチモーダル|プロンプト|AIチップ|GPU|データセンター|Gemini|Claude|Copilot/
 ];
 
 const parser = new XMLParser({
@@ -184,6 +190,7 @@ function scoreItem(item) {
   if (negativePatterns.some((pattern) => pattern.test(haystack))) return -100;
 
   let score = 0;
+  if (isDeepGenAiRelatedText(haystack)) score += 10;
   if (isAiRelatedText(haystack)) score += 6;
   if (positiveHints.some((pattern) => pattern.test(haystack))) score += 4;
   if (/日本|国内|東京|大阪|京都|北海道|沖縄|地域|自治体|企業|大学/.test(haystack)) score += 3;
@@ -194,6 +201,10 @@ function scoreItem(item) {
 
 function isAiRelatedText(value) {
   return aiPatterns.some((pattern) => pattern.test(value));
+}
+
+function isDeepGenAiRelatedText(value) {
+  return deepGenAiPatterns.some((pattern) => pattern.test(value));
 }
 
 function dedupeAndFilter(items) {
@@ -210,7 +221,12 @@ function dedupeAndFilter(items) {
       seen.add(key);
       return true;
     })
-    .map((item) => ({ ...item, aiRelated: isAiRelatedText(`${item.title} ${item.summary}`), score: scoreItem(item) }))
+    .map((item) => ({
+      ...item,
+      aiRelated: isAiRelatedText(`${item.title} ${item.summary}`) || isDeepGenAiRelatedText(`${item.title} ${item.summary}`),
+      deepGenAiRelated: isDeepGenAiRelatedText(`${item.title} ${item.summary}`),
+      score: scoreItem(item)
+    }))
     .filter((item) => item.score >= 0)
     .sort((a, b) => b.score - a.score)
     .slice(0, maxCandidates);
@@ -222,32 +238,39 @@ function candidateToSummaryItem(item) {
     source: item.source,
     url: item.url,
     summary: item.summary || "詳細はリンク先で確認できます。",
-    conversationStarter: item.aiRelated
+    conversationStarter: item.deepGenAiRelated
+      ? "生成AIの仕組みや仕事への影響まで、少し深く話せそうです。"
+      : item.aiRelated
       ? "AIが身近な道具としてどう広がるか、話題にしやすそうです。"
       : "この話題、日常でどう使われそうか話しやすそうです。",
-    tone: item.aiRelated ? "AI" : "穏やか",
-    aiRelated: item.aiRelated
+    tone: item.deepGenAiRelated ? "生成AI深掘り" : item.aiRelated ? "AI" : "穏やか",
+    aiRelated: item.aiRelated || item.deepGenAiRelated,
+    deepGenAiRelated: item.deepGenAiRelated
   };
 }
 
 function pickFallbackItems(candidates) {
-  const aiItems = candidates.filter((item) => item.aiRelated).slice(0, aiItemCount);
-  const used = new Set(aiItems.map((item) => item.url));
+  const deepGenAiItems = candidates.filter((item) => item.deepGenAiRelated).slice(0, deepGenAiItemCount);
+  const used = new Set(deepGenAiItems.map((item) => item.url));
+  const aiItems = candidates
+    .filter((item) => item.aiRelated && !used.has(item.url))
+    .slice(0, Math.max(0, aiItemCount - deepGenAiItems.length));
+  for (const item of aiItems) used.add(item.url);
   const nonAiItems = candidates
     .filter((item) => !item.aiRelated && !used.has(item.url))
-    .slice(0, Math.max(0, itemCount - aiItems.length));
+    .slice(0, Math.max(0, itemCount - deepGenAiItems.length - aiItems.length));
   for (const item of nonAiItems) used.add(item.url);
   const backfillItems = candidates
     .filter((item) => !used.has(item.url))
-    .slice(0, Math.max(0, itemCount - aiItems.length - nonAiItems.length));
-  return [...aiItems, ...nonAiItems, ...backfillItems].slice(0, itemCount).map(candidateToSummaryItem);
+    .slice(0, Math.max(0, itemCount - deepGenAiItems.length - aiItems.length - nonAiItems.length));
+  return [...deepGenAiItems, ...aiItems, ...nonAiItems, ...backfillItems].slice(0, itemCount).map(candidateToSummaryItem);
 }
 
 function fallbackSummaries(candidates, dateString) {
   return {
     date: dateString,
     title: `${formatJapaneseDate(dateString)}の雑談向けニュース`,
-    intro: `公開RSSから、朝に軽く話しやすい話題を${itemCount}本集めました。うち${aiItemCount}本はAI関連を優先しています。`,
+    intro: `公開RSSから、朝に軽く話しやすい話題を${itemCount}本集めました。うち${aiItemCount}本はAI関連、さらに${deepGenAiItemCount}本はディープな生成AI話題を優先しています。`,
     items: pickFallbackItems(candidates)
   };
 }
@@ -291,7 +314,7 @@ async function summarizeWithOpenAI(candidates, dateString) {
         {
           role: "system",
           content:
-            "あなたは日本語のニュース編集者です。朝の雑談に使いやすく、読み手の気分を重くしない話題を選びます。事件、事故、災害、訃報、炎上、病気、強い政治対立、強い不況感のある話題は避けます。誇張せず、出典候補の範囲だけで要約します。指定された本数を守り、そのうち指定された本数をAI関連ニュースにします。AI関連は生成AI、人工知能、LLM、ロボット、自動化、AI搭載サービス、AIガジェット、AI研究、AI活用事例を含みます。"
+            "あなたは日本語のニュース編集者です。朝の雑談に使いやすく、読み手の気分を重くしない話題を選びます。事件、事故、災害、訃報、炎上、病気、強い政治対立、強い不況感のある話題は避けます。誇張せず、出典候補の範囲だけで要約します。指定された本数を守り、そのうち指定された本数をAI関連ニュースにします。AI関連は生成AI、人工知能、LLM、ロボット、自動化、AI搭載サービス、AIガジェット、AI研究、AI活用事例を含みます。さらに指定された本数はディープな生成AI話題にします。ディープな生成AI話題は、生成AIモデル、LLM、AIエージェント、RAG、推論、マルチモーダル、AIチップ、GPU、データセンター、業務実装、研究開発など、少し踏み込んで話せるものです。"
         },
         {
           role: "user",
@@ -299,7 +322,8 @@ async function summarizeWithOpenAI(candidates, dateString) {
             date: dateString,
             itemCount,
             aiItemCount,
-            selectionRule: `${itemCount}本を選び、そのうち${aiItemCount}本はaiRelated=trueのAI関連ニュース、残り${itemCount - aiItemCount}本はaiRelated=falseの非AIニュースにする。どちらかの候補が不足する場合のみ、候補内で可能な最大数に調整する。`,
+            deepGenAiItemCount,
+            selectionRule: `${itemCount}本を選び、そのうち${aiItemCount}本はaiRelated=trueのAI関連ニュースにする。AI関連ニュース${aiItemCount}本のうち${deepGenAiItemCount}本はdeepGenAiRelated=trueのディープな生成AI話題にする。残り${itemCount - aiItemCount}本はaiRelated=falseの非AIニュースにする。候補が不足する場合のみ、候補内で可能な最大数に調整する。`,
             outputLanguage: "ja-JP",
             requiredShape: {
               date: "YYYY-MM-DD",
@@ -312,18 +336,20 @@ async function summarizeWithOpenAI(candidates, dateString) {
                   url: "string",
                   summary: "2から3文",
                   conversationStarter: "雑談の切り口を1文",
-                  tone: "AI/穏やか/前向き/便利/季節/文化/科学 など",
-                  aiRelated: "boolean"
+                  tone: "生成AI深掘り/AI/穏やか/前向き/便利/季節/文化/科学 など",
+                  aiRelated: "boolean",
+                  deepGenAiRelated: "boolean"
                 }
               ]
             },
-            candidates: candidates.map(({ title, source, summary, url, publishedAt, aiRelated }) => ({
+            candidates: candidates.map(({ title, source, summary, url, publishedAt, aiRelated, deepGenAiRelated }) => ({
               title,
               source,
               summary,
               url,
               publishedAt,
-              aiRelated
+              aiRelated,
+              deepGenAiRelated
             }))
           })
         }
@@ -350,14 +376,18 @@ function normalizeSummary(summary, dateString, candidates) {
     .map((item) => {
       const candidate = byUrl.get(item.url);
       const aiRelated = Boolean(item.aiRelated ?? candidate?.aiRelated ?? isAiRelatedText(`${item.title} ${item.summary || ""}`));
+      const deepGenAiRelated = Boolean(
+        item.deepGenAiRelated ?? candidate?.deepGenAiRelated ?? isDeepGenAiRelatedText(`${item.title} ${item.summary || ""}`)
+      );
       return {
         title: normalizeWhitespace(item.title),
         source: normalizeWhitespace(item.source || candidate?.source || "出典"),
         url: item.url,
         summary: normalizeWhitespace(item.summary || candidate?.summary || ""),
         conversationStarter: normalizeWhitespace(item.conversationStarter || "会話のきっかけにしやすい話題です。"),
-        tone: normalizeWhitespace(item.tone || (aiRelated ? "AI" : "穏やか")),
-        aiRelated
+        tone: normalizeWhitespace(item.tone || (deepGenAiRelated ? "生成AI深掘り" : aiRelated ? "AI" : "穏やか")),
+        aiRelated,
+        deepGenAiRelated
       };
     });
 
@@ -367,13 +397,16 @@ function normalizeSummary(summary, dateString, candidates) {
   return {
     date: summary.date || dateString,
     title: summary.title || `${formatJapaneseDate(dateString)}の雑談向けニュース`,
-    intro: summary.intro || `朝に読みやすい、穏やかな話題を${itemCount}本まとめました。うち${aiItemCount}本はAI関連です。`,
+    intro:
+      summary.intro ||
+      `朝に読みやすい、穏やかな話題を${itemCount}本まとめました。うち${aiItemCount}本はAI関連で、${deepGenAiItemCount}本はディープな生成AI話題です。`,
     items: filledItems
   };
 }
 
 function enforceItemMix(items, candidates) {
   const targetAiCount = Math.min(aiItemCount, candidates.filter((item) => item.aiRelated).length);
+  const targetDeepGenAiCount = Math.min(deepGenAiItemCount, candidates.filter((item) => item.deepGenAiRelated).length);
   const usedUrls = new Set(items.map((item) => item.url));
   const fillFromCandidates = (predicate) =>
     candidates
@@ -384,6 +417,19 @@ function enforceItemMix(items, candidates) {
       });
 
   const selected = items.slice(0, itemCount);
+  const missingDeepGenAiCount = Math.max(
+    0,
+    targetDeepGenAiCount - selected.filter((item) => item.deepGenAiRelated).length
+  );
+  if (missingDeepGenAiCount > 0) {
+    const deepFill = fillFromCandidates((candidate) => candidate.deepGenAiRelated).slice(0, missingDeepGenAiCount);
+    for (const fillItem of deepFill) {
+      const replaceIndex = selected.findLastIndex((item) => !item.deepGenAiRelated);
+      if (replaceIndex >= 0) selected[replaceIndex] = fillItem;
+      else selected.push(fillItem);
+    }
+  }
+
   const missingAiCount = Math.max(0, targetAiCount - selected.filter((item) => item.aiRelated).length);
   if (missingAiCount > 0) {
     const aiFill = fillFromCandidates((candidate) => candidate.aiRelated).slice(0, missingAiCount);
@@ -394,11 +440,30 @@ function enforceItemMix(items, candidates) {
     }
   }
 
+  let extraDeepGenAiCount = Math.max(
+    0,
+    selected.filter((item) => item.deepGenAiRelated).length - targetDeepGenAiCount
+  );
+  if (extraDeepGenAiCount > 0) {
+    const aiFill = fillFromCandidates((candidate) => candidate.aiRelated && !candidate.deepGenAiRelated).slice(
+      0,
+      extraDeepGenAiCount
+    );
+    for (const fillItem of aiFill) {
+      const replaceIndex = selected.findLastIndex((item) => item.deepGenAiRelated);
+      if (replaceIndex >= 0) {
+        selected[replaceIndex] = fillItem;
+        extraDeepGenAiCount -= 1;
+      }
+      if (extraDeepGenAiCount <= 0) break;
+    }
+  }
+
   let extraAiCount = Math.max(0, selected.filter((item) => item.aiRelated).length - targetAiCount);
   if (extraAiCount > 0) {
     const nonAiFill = fillFromCandidates((candidate) => !candidate.aiRelated).slice(0, extraAiCount);
     for (const fillItem of nonAiFill) {
-      const replaceIndex = selected.findLastIndex((item) => item.aiRelated);
+      const replaceIndex = selected.findLastIndex((item) => item.aiRelated && !item.deepGenAiRelated);
       if (replaceIndex >= 0) {
         selected[replaceIndex] = fillItem;
         extraAiCount -= 1;
