@@ -32,7 +32,16 @@ const negativePatterns = [
   /炎上|批判殺到|不祥事|差別|虐待|ハラスメント/,
   /感染|病気|疾患|がん|ウイルス|医療崩壊|痛み|偏見|軽視|死んだ|死体|白骨/,
   /値上げ|倒産|破綻|不況|赤字|解雇|リストラ|円安|コスト上昇|仕入れコスト/,
-  /懸念|抗議|販売終了|終了へ|中止|停止|トラブル|公開見送り|地面師|交尾/
+  /懸念|抗議|販売終了|終了へ|中止|停止|トラブル|公開見送り|地面師|交尾|原発|核燃料|デブリ|ゴキブリ/,
+  /出産二次創作|不気味|キャッシング|莫大|質疑白熱|クソダサ|ヘドロ|臭い|カビ/
+];
+
+const typhoonPatterns = [
+  /台風|熱帯低気圧|進路予想|暴風域|強風域|気象庁|大雨情報|雨雲|天気図/
+];
+
+const typhoonHardNegativePatterns = [
+  /死亡|死去|遺体|行方不明|けが|怪我|重体|重傷|被害|被災|氾濫|土砂|浸水|停電|避難指示|避難命令/
 ];
 
 const positiveHints = [
@@ -70,6 +79,16 @@ function formatDate(date = new Date()) {
 function formatJapaneseDate(dateString) {
   const [year, month, day] = dateString.split("-");
   return `${year}年${Number(month)}月${Number(day)}日`;
+}
+
+function isTyphoonSeason(date = new Date()) {
+  const month = Number(
+    new Intl.DateTimeFormat("en-US", {
+      timeZone: timezone,
+      month: "numeric"
+    }).format(date)
+  );
+  return month >= 5 && month <= 10;
 }
 
 function toArray(value) {
@@ -187,9 +206,11 @@ async function collectItems() {
 function scoreItem(item) {
   const haystack = `${item.title} ${item.summary}`;
   if (!item.title || !item.url) return -100;
-  if (negativePatterns.some((pattern) => pattern.test(haystack))) return -100;
+  const typhoonInfo = isSeasonalTyphoonInfoText(haystack);
+  if (!typhoonInfo && negativePatterns.some((pattern) => pattern.test(haystack))) return -100;
 
   let score = 0;
+  if (typhoonInfo) score += 5;
   if (isDeepGenAiRelatedText(haystack)) score += 10;
   if (isAiRelatedText(haystack)) score += 6;
   if (positiveHints.some((pattern) => pattern.test(haystack))) score += 4;
@@ -205,6 +226,14 @@ function isAiRelatedText(value) {
 
 function isDeepGenAiRelatedText(value) {
   return deepGenAiPatterns.some((pattern) => pattern.test(value));
+}
+
+function isSeasonalTyphoonInfoText(value) {
+  return (
+    isTyphoonSeason() &&
+    typhoonPatterns.some((pattern) => pattern.test(value)) &&
+    !typhoonHardNegativePatterns.some((pattern) => pattern.test(value))
+  );
 }
 
 function dedupeAndFilter(items) {
@@ -225,6 +254,7 @@ function dedupeAndFilter(items) {
       ...item,
       aiRelated: isAiRelatedText(`${item.title} ${item.summary}`) || isDeepGenAiRelatedText(`${item.title} ${item.summary}`),
       deepGenAiRelated: isDeepGenAiRelatedText(`${item.title} ${item.summary}`),
+      typhoonInfo: isSeasonalTyphoonInfoText(`${item.title} ${item.summary}`),
       score: scoreItem(item)
     }))
     .filter((item) => item.score >= 0)
@@ -314,7 +344,7 @@ async function summarizeWithOpenAI(candidates, dateString) {
         {
           role: "system",
           content:
-            "あなたは日本語のニュース編集者です。朝の雑談に使いやすく、読み手の気分を重くしない話題を選びます。事件、事故、災害、訃報、炎上、病気、強い政治対立、強い不況感のある話題は避けます。誇張せず、出典候補の範囲だけで要約します。指定された本数を守り、そのうち指定された本数をAI関連ニュースにします。AI関連は生成AI、人工知能、LLM、ロボット、自動化、AI搭載サービス、AIガジェット、AI研究、AI活用事例を含みます。さらに指定された本数はディープな生成AI話題にします。ディープな生成AI話題は、生成AIモデル、LLM、AIエージェント、RAG、推論、マルチモーダル、AIチップ、GPU、データセンター、業務実装、研究開発など、少し踏み込んで話せるものです。"
+            "あなたは日本語のニュース編集者です。朝の雑談に使いやすく、読み手の気分を重くしない話題を選びます。事件、事故、災害、訃報、炎上、病気、強い政治対立、強い不況感のある話題は避けます。誇張せず、出典候補の範囲だけで要約します。指定された本数を守り、そのうち指定された本数をAI関連ニュースにします。AI関連は生成AI、人工知能、LLM、ロボット、自動化、AI搭載サービス、AIガジェット、AI研究、AI活用事例を含みます。さらに指定された本数はディープな生成AI話題にします。ディープな生成AI話題は、生成AIモデル、LLM、AIエージェント、RAG、推論、マルチモーダル、AIチップ、GPU、データセンター、業務実装、研究開発など、少し踏み込んで話せるものです。5月から10月は、死傷・被害・避難指示など重い内容を避けつつ、進路予想や備えに役立つ台風情報も候補に含めてかまいません。"
         },
         {
           role: "user",
@@ -324,6 +354,7 @@ async function summarizeWithOpenAI(candidates, dateString) {
             aiItemCount,
             deepGenAiItemCount,
             selectionRule: `${itemCount}本を選び、そのうち${aiItemCount}本はaiRelated=trueのAI関連ニュースにする。AI関連ニュース${aiItemCount}本のうち${deepGenAiItemCount}本はdeepGenAiRelated=trueのディープな生成AI話題にする。残り${itemCount - aiItemCount}本はaiRelated=falseの非AIニュースにする。候補が不足する場合のみ、候補内で可能な最大数に調整する。`,
+            typhoonRule: "5月から10月は、typhoonInfo=trueの候補があれば、生活に役立つ穏やかな気象情報として1本程度含めてもよい。死傷者、被害、避難指示など不安を強くする内容は選ばない。",
             outputLanguage: "ja-JP",
             requiredShape: {
               date: "YYYY-MM-DD",
@@ -342,14 +373,15 @@ async function summarizeWithOpenAI(candidates, dateString) {
                 }
               ]
             },
-            candidates: candidates.map(({ title, source, summary, url, publishedAt, aiRelated, deepGenAiRelated }) => ({
+            candidates: candidates.map(({ title, source, summary, url, publishedAt, aiRelated, deepGenAiRelated, typhoonInfo }) => ({
               title,
               source,
               summary,
               url,
               publishedAt,
               aiRelated,
-              deepGenAiRelated
+              deepGenAiRelated,
+              typhoonInfo
             }))
           })
         }
