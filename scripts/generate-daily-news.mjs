@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -12,6 +12,8 @@ const sampleMode = args.has("--sample");
 const itemCount = Number(process.env.NEWS_ITEM_COUNT || 14);
 const aiItemCount = Number(process.env.NEWS_AI_ITEM_COUNT || 7);
 const deepGenAiItemCount = Number(process.env.NEWS_DEEP_GENAI_ITEM_COUNT || 2);
+const aiMaxAgeHours = Number(process.env.NEWS_AI_MAX_AGE_HOURS || 24);
+const repeatLookbackDays = Number(process.env.NEWS_REPEAT_LOOKBACK_DAYS || 7);
 const maxCandidates = Number(process.env.NEWS_MAX_CANDIDATES || 90);
 const timezone = process.env.NEWS_TIMEZONE || "Asia/Tokyo";
 const model = process.env.OPENAI_MODEL || "gpt-5.4-mini";
@@ -81,6 +83,23 @@ function formatJapaneseDate(dateString) {
   return `${year}年${Number(month)}月${Number(day)}日`;
 }
 
+function parseDate(value) {
+  if (!value) return null;
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? null : date;
+}
+
+function hoursSince(value, now = new Date()) {
+  const date = parseDate(value);
+  if (!date) return null;
+  return (now.getTime() - date.getTime()) / 36e5;
+}
+
+function isFreshForAi(value, now = new Date()) {
+  const ageHours = hoursSince(value, now);
+  return ageHours !== null && ageHours >= 0 && ageHours <= aiMaxAgeHours;
+}
+
 function isTyphoonSeason(date = new Date()) {
   const month = Number(
     new Intl.DateTimeFormat("en-US", {
@@ -89,6 +108,34 @@ function isTyphoonSeason(date = new Date()) {
     }).format(date)
   );
   return month >= 5 && month <= 10;
+}
+
+async function readRecentPublishedUrls(currentDateString) {
+  const dir = join(root, "docs", "daily-news");
+  if (!existsSync(dir)) return new Set();
+
+  const files = await readdir(dir);
+  const currentDate = parseDate(`${currentDateString}T00:00:00Z`);
+  const urls = new Set();
+
+  for (const file of files) {
+    const match = file.match(/^(\d{4}-\d{2}-\d{2})\.md$/);
+    if (!match) continue;
+
+    const fileDateString = match[1];
+    const fileDate = parseDate(`${fileDateString}T00:00:00Z`);
+    if (!fileDate || fileDateString >= currentDateString) continue;
+
+    const ageDays = (currentDate.getTime() - fileDate.getTime()) / 864e5;
+    if (ageDays > repeatLookbackDays) continue;
+
+    const markdown = await readFile(join(dir, file), "utf8");
+    for (const urlMatch of markdown.matchAll(/\]\((https?:\/\/[^)]+)\)/g)) {
+      urls.add(urlMatch[1]);
+    }
+  }
+
+  return urls;
 }
 
 function toArray(value) {
@@ -208,6 +255,8 @@ function scoreItem(item) {
   if (!item.title || !item.url) return -100;
   const typhoonInfo = isSeasonalTyphoonInfoText(haystack);
   if (!typhoonInfo && negativePatterns.some((pattern) => pattern.test(haystack))) return -100;
+  const aiRelated = isAiRelatedText(haystack) || isDeepGenAiRelatedText(haystack);
+  if (aiRelated && !isFreshForAi(item.publishedAt)) return -100;
 
   let score = 0;
   if (typhoonInfo) score += 5;
@@ -236,7 +285,7 @@ function isSeasonalTyphoonInfoText(value) {
   );
 }
 
-function dedupeAndFilter(items) {
+function dedupeAndFilter(items, recentPublishedUrls = new Set()) {
   const seen = new Set();
   return items
     .map((item) => ({
@@ -246,6 +295,7 @@ function dedupeAndFilter(items) {
     }))
     .filter((item) => {
       const key = `${item.title.toLowerCase()}|${item.url}`;
+      if (recentPublishedUrls.has(item.url)) return false;
       if (seen.has(key)) return false;
       seen.add(key);
       return true;
@@ -300,7 +350,7 @@ function fallbackSummaries(candidates, dateString) {
   return {
     date: dateString,
     title: `${formatJapaneseDate(dateString)}の雑談向けニュース`,
-    intro: `公開RSSから、朝に軽く話しやすい話題を${itemCount}本集めました。うち${aiItemCount}本はAI関連、さらに${deepGenAiItemCount}本はディープな生成AI話題を優先しています。`,
+    intro: `公開RSSから、朝に軽く話しやすい話題を${itemCount}本集めました。新鮮な候補がある日は最大${aiItemCount}本をAI関連、最大${deepGenAiItemCount}本をディープな生成AI話題として優先します。`,
     items: pickFallbackItems(candidates)
   };
 }
@@ -353,7 +403,9 @@ async function summarizeWithOpenAI(candidates, dateString) {
             itemCount,
             aiItemCount,
             deepGenAiItemCount,
-            selectionRule: `${itemCount}本を選び、そのうち${aiItemCount}本はaiRelated=trueのAI関連ニュースにする。AI関連ニュース${aiItemCount}本のうち${deepGenAiItemCount}本はdeepGenAiRelated=trueのディープな生成AI話題にする。残り${itemCount - aiItemCount}本はaiRelated=falseの非AIニュースにする。候補が不足する場合のみ、候補内で可能な最大数に調整する。`,
+            selectionRule: `${itemCount}本を選ぶ。新鮮な候補が足りる場合は最大${aiItemCount}本をaiRelated=trueのAI関連ニュースにする。AI関連ニュースのうち最大${deepGenAiItemCount}本はdeepGenAiRelated=trueのディープな生成AI話題にする。AI候補が不足する日は古いAI記事を再掲せず、通常ニュースで埋める。`,
+            freshnessRule: `AI関連ニュースとディープな生成AI話題は、原則として公開から${aiMaxAgeHours}時間以内の候補だけを選ぶ。古いAI記事を無理に再掲しない。`,
+            repeatRule: `過去${repeatLookbackDays}日以内に掲載済みのURLは候補から除外済み。似た内容の再掲も避ける。`,
             typhoonRule: "5月から10月は、typhoonInfo=trueの候補があれば、生活に役立つ穏やかな気象情報として1本程度含めてもよい。死傷者、被害、避難指示など不安を強くする内容は選ばない。",
             outputLanguage: "ja-JP",
             requiredShape: {
@@ -431,7 +483,7 @@ function normalizeSummary(summary, dateString, candidates) {
     title: summary.title || `${formatJapaneseDate(dateString)}の雑談向けニュース`,
     intro:
       summary.intro ||
-      `朝に読みやすい、穏やかな話題を${itemCount}本まとめました。うち${aiItemCount}本はAI関連で、${deepGenAiItemCount}本はディープな生成AI話題です。`,
+      `朝に読みやすい、穏やかな話題を${itemCount}本まとめました。新鮮な候補がある日は最大${aiItemCount}本をAI関連、最大${deepGenAiItemCount}本をディープな生成AI話題として優先します。`,
     items: filledItems
   };
 }
@@ -728,7 +780,8 @@ async function writeOutput(summary) {
 async function main() {
   const dateString = formatDate();
   const rawItems = await collectItems();
-  const candidates = dedupeAndFilter(rawItems);
+  const recentPublishedUrls = await readRecentPublishedUrls(dateString);
+  const candidates = dedupeAndFilter(rawItems, recentPublishedUrls);
 
   if (!candidates.length) {
     throw new Error("ニュース候補が見つかりませんでした。RSSフィードまたは除外条件を確認してください。");
