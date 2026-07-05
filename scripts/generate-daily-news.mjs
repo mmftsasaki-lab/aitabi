@@ -112,13 +112,76 @@ function isTyphoonSeason(date = new Date()) {
   return month >= 5 && month <= 10;
 }
 
-async function readRecentPublishedUrls(currentDateString) {
+function normalizeTopicKey(title) {
+  return normalizeWhitespace(title || "")
+    .toLowerCase()
+    .replace(/【[^】]*】/g, "")
+    .replace(/\[[^\]]*\]/g, "")
+    .replace(/[「」『』“”"'\(\)（）［］\[\]【】]/g, "")
+    .replace(/[!?！？、。・:：;；,.\-‐‑–—_／/\\|]/g, " ")
+    .replace(/\b\d{4}[-/年]\d{1,2}[-/月]\d{1,2}日?\b/g, " ")
+    .replace(/\b\d+(\.\d+)?\s*(円|万円|億円|gb|tb|mb|kg|g|mm|cm|m|%|％)\b/gi, " ")
+    .replace(/\b\d+\b/g, " ")
+    .replace(/発売した|発表した|開始した|予定|価格は|としている|という|について|ました|ます/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function topicGrams(value, size = 3) {
+  const compact = normalizeTopicKey(value).replace(/\s+/g, "");
+  const grams = new Set();
+  for (let i = 0; i <= compact.length - size; i += 1) {
+    grams.add(compact.slice(i, i + size));
+  }
+  return grams;
+}
+
+function topicOverlap(left, right, size) {
+  const leftGrams = topicGrams(left, size);
+  const rightGrams = topicGrams(right, size);
+  const smallerSize = Math.min(leftGrams.size, rightGrams.size);
+  if (!smallerSize) return { overlap: 0, containment: 0, jaccard: 0 };
+
+  let overlap = 0;
+  for (const gram of leftGrams) {
+    if (rightGrams.has(gram)) overlap += 1;
+  }
+  return {
+    overlap,
+    containment: overlap / smallerSize,
+    jaccard: overlap / (leftGrams.size + rightGrams.size - overlap)
+  };
+}
+
+function isSameTopicKey(a, b) {
+  const left = normalizeTopicKey(a);
+  const right = normalizeTopicKey(b);
+  if (!left || !right) return false;
+  if (left === right) return true;
+
+  const compactLeft = left.replace(/\s+/g, "");
+  const compactRight = right.replace(/\s+/g, "");
+  const shorter = compactLeft.length <= compactRight.length ? compactLeft : compactRight;
+  const longer = compactLeft.length > compactRight.length ? compactLeft : compactRight;
+  if (shorter.length >= 8 && longer.includes(shorter)) return true;
+
+  const tri = topicOverlap(left, right, 3);
+  if ((tri.overlap >= 6 && tri.containment >= 0.6) || (tri.overlap >= 10 && tri.jaccard >= 0.35)) {
+    return true;
+  }
+
+  const bi = topicOverlap(left, right, 2);
+  return (bi.overlap >= 10 && bi.containment >= 0.35) || (bi.overlap >= 16 && bi.jaccard >= 0.12);
+}
+
+async function readRecentPublishedFingerprints(currentDateString) {
   const dir = join(root, "docs", "daily-news");
-  if (!existsSync(dir)) return new Set();
+  if (!existsSync(dir)) return { urls: new Set(), topicKeys: new Set() };
 
   const files = await readdir(dir);
   const currentDate = parseDate(`${currentDateString}T00:00:00Z`);
   const urls = new Set();
+  const topicKeys = new Set();
 
   for (const file of files) {
     const match = file.match(/^(\d{4}-\d{2}-\d{2})\.md$/);
@@ -135,9 +198,13 @@ async function readRecentPublishedUrls(currentDateString) {
     for (const urlMatch of markdown.matchAll(/\]\((https?:\/\/[^)]+)\)/g)) {
       urls.add(urlMatch[1]);
     }
+    for (const titleMatch of markdown.matchAll(/^##\s+\d+\.\s+(.+)$/gm)) {
+      const key = normalizeTopicKey(titleMatch[1]);
+      if (key) topicKeys.add(key);
+    }
   }
 
-  return urls;
+  return { urls, topicKeys };
 }
 
 function toArray(value) {
@@ -287,17 +354,20 @@ function isSeasonalTyphoonInfoText(value) {
   );
 }
 
-function dedupeAndFilter(items, recentPublishedUrls = new Set()) {
+function dedupeAndFilter(items, recentPublished = { urls: new Set(), topicKeys: new Set() }) {
   const seen = new Set();
+  const recentTopicKeys = [...recentPublished.topicKeys];
+  const selectedTopicKeys = [];
   return items
     .map((item) => ({
       ...item,
       title: normalizeWhitespace(item.title || ""),
-      summary: normalizeWhitespace(item.summary || "")
+      summary: normalizeWhitespace(item.summary || ""),
+      topicKey: normalizeTopicKey(`${item.title || ""} ${item.summary || ""}`)
     }))
     .filter((item) => {
       const key = `${item.title.toLowerCase()}|${item.url}`;
-      if (recentPublishedUrls.has(item.url)) return false;
+      if (recentPublished.urls.has(item.url)) return false;
       if (seen.has(key)) return false;
       seen.add(key);
       return true;
@@ -311,6 +381,12 @@ function dedupeAndFilter(items, recentPublishedUrls = new Set()) {
     }))
     .filter((item) => item.score >= 0)
     .sort((a, b) => b.score - a.score)
+    .filter((item) => {
+      if (recentTopicKeys.some((topicKey) => isSameTopicKey(item.topicKey, topicKey))) return false;
+      if (selectedTopicKeys.some((topicKey) => isSameTopicKey(item.topicKey, topicKey))) return false;
+      selectedTopicKeys.push(item.topicKey);
+      return true;
+    })
     .slice(0, maxCandidates);
 }
 
@@ -407,7 +483,7 @@ async function summarizeWithOpenAI(candidates, dateString) {
             deepGenAiItemCount,
             selectionRule: `${itemCount}本を選ぶ。新鮮な候補が足りる場合は最大${aiItemCount}本をaiRelated=trueのAI関連ニュースにする。AI関連ニュースのうち最大${deepGenAiItemCount}本はdeepGenAiRelated=trueのディープな生成AI話題にする。AI候補が不足する日は古いAI記事を再掲せず、通常ニュースで埋める。`,
             freshnessRule: `AI関連ニュースとディープな生成AI話題は、原則として公開から${aiMaxAgeHours}時間以内の候補だけを選ぶ。古いAI記事を無理に再掲しない。`,
-            repeatRule: `過去${repeatLookbackDays}日以内に掲載済みのURLは候補から除外済み。似た内容の再掲も避ける。`,
+            repeatRule: `過去${repeatLookbackDays}日以内に掲載済みのURLと、同じタイトル話題と判定した候補は除外済み。似た内容の再掲も避ける。`,
             typhoonRule: "5月から10月は、typhoonInfo=trueの候補があれば、生活に役立つ穏やかな気象情報として1本程度含めてもよい。死傷者、被害、避難指示など不安を強くする内容は選ばない。",
             outputLanguage: "ja-JP",
             requiredShape: {
@@ -782,8 +858,8 @@ async function writeOutput(summary) {
 async function main() {
   const dateString = formatDate();
   const rawItems = await collectItems();
-  const recentPublishedUrls = await readRecentPublishedUrls(dateString);
-  const candidates = dedupeAndFilter(rawItems, recentPublishedUrls);
+  const recentPublished = await readRecentPublishedFingerprints(dateString);
+  const candidates = dedupeAndFilter(rawItems, recentPublished);
 
   if (!candidates.length) {
     throw new Error("ニュース候補が見つかりませんでした。RSSフィードまたは除外条件を確認してください。");
