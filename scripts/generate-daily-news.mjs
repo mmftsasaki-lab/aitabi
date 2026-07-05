@@ -52,12 +52,14 @@ const positiveHints = [
 
 const aiPatterns = [
   /AI|人工知能|生成AI|ChatGPT|OpenAI|LLM|大規模言語モデル|機械学習|ディープラーニング/,
-  /ロボット|自動運転|画像生成|音声認識|翻訳|Copilot|Gemini|Claude|Meta AI/
+  /ロボット|自動運転|画像生成|音声認識|翻訳|Copilot|Gemini|Claude|Meta AI/,
+  /Codex|バイブコーディング|vibe coding|AIコーディング|コーディングエージェント|coding agent|Cursor|Claude Code|GitHub Copilot|Devin|Windsurf|Replit Agent|Lovable|Bolt|Cline/
 ];
 
 const deepGenAiPatterns = [
   /生成AI|ChatGPT|OpenAI|LLM|大規模言語モデル|基盤モデル|推論|AIエージェント|RAG|ファインチューニング/,
-  /画像生成|動画生成|音声生成|マルチモーダル|プロンプト|AIチップ|GPU|データセンター|Gemini|Claude|Copilot/
+  /画像生成|動画生成|音声生成|マルチモーダル|プロンプト|AIチップ|GPU|データセンター|Gemini|Claude|Copilot/,
+  /Codex|バイブコーディング|vibe coding|AIコーディング|コーディングエージェント|coding agent|Cursor|Claude Code|GitHub Copilot|Copilot Coding Agent|Devin|Windsurf|Replit Agent|Lovable|Bolt|Cline|コード生成|開発エージェント|コードレビュー自動化/
 ];
 
 const parser = new XMLParser({
