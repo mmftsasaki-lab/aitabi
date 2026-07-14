@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題 14本</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年7月15日</p>
+    <h1>朝の話題 14本</h1>
+    <p class="intro">きょうの朝雑談に使いやすい、軽めで前向きなニュースを14本に絞りました。AI関連は7本、そのうち生成AIを少し深掘りできる話題を2本入れています。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>Impress Watch</span></div>
+        <h2>ソフトバンク、AIが脆弱性診断・修正する「Patching as a Service」</h2>
+        <p>ソフトバンクとSB OAI Japanが、AI駆動型サイバーセキュリティ対策ソリューションの提供対象を3,000社に拡大し、本格提供を始めました。OpenAIの技術とソフトバンクの運用ノウハウを組み合わせ、重要インフラを支える企業向けに展開します。</p>
+        <p class="starter">AIが“守る側”に回るサービス、どこまで実用化が進むのか気になりますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2124945.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>商用利用OKのアニメ特化動画生成AI「AnimeGen」が無償公開</h2>
+        <p>AldeaLabが、アニメに特化した動画生成AIモデル「AnimeGen」を無償公開しました。Hugging Faceから入手でき、テキストから動画を作るT2Vと、画像から動画を作るI2Vの2種類が用意されています。</p>
+        <p class="starter">アニメ特化の生成AIは、創作の試しやすさが一段と広がりそうです。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2124932.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>Claudeの“性格”は言語で変わる。英語は厳しくアラビア語は温かい</h2>
+        <p>Anthropicが、Claudeの会話の価値観がモデルや言語によってどう変わるかを、約30万件の実際の会話から定量化した研究成果を発表しました。同じAIでも、使う言語で返答の雰囲気が変わる可能性が示されています。</p>
+        <p class="starter">言語によってAIの“話し方”が変わるのは、ちょっと面白い発見ですね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2124919.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>Dropbox、ClaudeやChatGPT・Geminiとの連携拡大</h2>
+        <p>DropboxがClaudeとの連携を始め、個人やチーム向けのコネクタや開発者向けプラグインを提供します。あわせてChatGPTやGeminiとの連携拡大も発表され、保存した資料をAIで扱いやすくする流れが進みます。</p>
+        <p class="starter">普段のファイル管理にAIが自然に入ってくると、仕事の進め方も変わりそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2124889.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>便利</span><span>PC Watch</span></div>
+        <h2>PFU、AIで高度なスキャンができる「ScanSnap Cloud+」提供開始</h2>
+        <p>PFUが、ScanSnap向けの新しいクラウドサービス「ScanSnap Cloud+」を提供開始しました。AIを使ってスキャン後の処理をより高度にできるサービスで、月額980円から利用できます。</p>
+        <p class="starter">書類整理をAIに任せられると、机の上も気分も少し軽くなりそうです。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2125014.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>ファミマ、旗艦店限定のFAMIMA商品を全国展開</h2>
+        <p>ファミリーマートが、旗艦店で先行販売していた「FAMIMA」関連商品を全国展開します。数量限定で、価格帯は350円から1,998円までと幅があります。</p>
+        <p class="starter">限定商品が全国に広がると、ちょっとした“お店巡り気分”も楽しめますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2125105.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>JR東日本、駅ロッカーからホテルへ手荷物を即日配送</h2>
+        <p>JR東日本が、駅の多機能ロッカーに預けた荷物を遠方のホテルへ即日配送するサービスを始めます。まずは東京～仙台間で、旅行中の荷物移動を軽くできる取り組みです。</p>
+        <p class="starter">移動中の荷物が減るだけで、旅の身軽さはかなり変わりそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2125008.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>自由が丘駅前の新ランドマーク「MUSE SQUARE」9月17日開業</h2>
+        <p>東急東横線・大井町線の自由が丘駅前で進む複合施設の商業エリアが、9月17日に開業します。店舗数は約60で、駅前の新しい立ち寄り先になりそうです。</p>
+        <p class="starter">駅前に新しい商業施設ができると、街歩きの楽しみが増えますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2125027.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>季節</span><span>Impress Watch</span></div>
+        <h2>ローソン、「コンビニ車中泊」エリア拡大</h2>
+        <p>ローソンが、店舗駐車場を使った車中泊サービスを7月17日から4県28店舗に広げます。買い物や休憩と組み合わせやすく、旅の選択肢が増える取り組みです。</p>
+        <p class="starter">コンビニで車中泊できると、ドライブ旅の自由度が上がりそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2125088.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>季節</span><span>Impress Watch</span></div>
+        <h2>東京都、自然公園利用ルールに「クマに出会わないために」追加</h2>
+        <p>東京都が、奥多摩や高尾の公園を対象とする自然公園利用ルールに、クマに関する注意項目を追加しました。山歩きの前に確認しておくと安心な、穏やかな注意喚起です。</p>
+        <p class="starter">夏の山歩き前に、こうした基本ルールを見直しておくと安心ですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2125066.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>文化</span><span>ITmedia NEWS</span></div>
+        <h2>ピカピカの一円玉流通へ、11年ぶり量産</h2>
+        <p>造幣局が、平成27年度以来11年ぶりに1円硬貨の量産を行っていると動画で紹介しました。2026年度は1億3200万枚を製造する予定で、身近なお金の話題としてちょっとした雑学になります。</p>
+        <p class="starter">普段あまり意識しない1円玉の製造、意外と話題になりますね。</p>
+        <a href="https://www.itmedia.co.jp/news/articles/2607/14/news105.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>文化</span><span>ITmedia NEWS</span></div>
+        <h2>「ポケモンGO」、開発チーム名を「Scopely Explore」に変更</h2>
+        <p>「Pokemon GO」の開発チーム名が「Scopely Explore」に変わり、ゲーム起動時の「Niantic」ロゴもなくなりつつあります。ゲームの見え方が少し変わる、ファン向けの話題です。</p>
+        <p class="starter">長く親しまれたロゴが変わると、ちょっとした節目を感じますね。</p>
+        <a href="https://www.itmedia.co.jp/news/articles/2607/14/news053.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>Claude Coworkが動かない!? 動かすために必要な仕様とBIOS設定とは [Sponsored]</h2>
+        <p>「Claude Coworkを入れたのに動かない」——その多くは、性能不足ではなく設定の問題だ。Claude CoworkはあなたのPCの中で仮想マシンを動かすため、Windowsでは仮想化(Hyper-V)が有効でないと起動せず、しばしばBIOS/UEFIのVT-x設定やWindowsのエディションが壁になる。本記事は、使い方とDispatchを一通り押さえたうえで、“実際に動かすために必要な設定と仕様”を、つまずきポイントまで含めて具体的にまとめる。</p>
+        <p class="starter">生成AIの仕組みや仕事への影響まで、少し深く話せそうです。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/topic/special/2120834.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>AIで「人間が頂点の時代終わる」――孫正義氏が考える2040年 人類が生きる道は“スーパーヒューマン化”</h2>
+        <p>「人間が頂点の生命体の時代は終わるんです」──孫正義氏が7月14日の「SoftBank World 2026」特別講演で語った。AIエージェントが100兆個に達する2040年、人類に残された道は「スーパーヒューマン」になることだという。</p>
+        <p class="starter">生成AIの仕組みや仕事への影響まで、少し深く話せそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/articles/2607/14/news115.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
