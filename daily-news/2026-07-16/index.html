@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題 14本</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年7月16日</p>
+    <h1>朝の話題 14本</h1>
+    <p class="intro">今日は、AIの新機能やローカルLLM、夏らしい便利グッズ、街の新スポットまで、軽めに話しやすいニュースを中心にまとめました。AI関連は7本、そのうち深掘りしやすい生成AI話題を2本入れています。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>Google画像検索、25周年で“Pinterest風”新ホーム画面 「AI Overviews」での画像生成も</h2>
+        <p>Google画像検索に、パーソナライズされた画像ギャラリー風の新ホーム画面と、AI Overviews内での画像生成機能が加わります。まずは米国向けに英語で、数週間かけて順次展開されます。</p>
+        <p class="starter">画像検索が“探す場所”から“眺める場所”に近づいてきましたね。</p>
+        <a href="https://www.itmedia.co.jp/news/articles/2607/15/news070.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>ChatGPT、ワールドカップの勝敗予想に予測市場「Kalshi」のデータを反映開始</h2>
+        <p>OpenAIは、ChatGPTのワールドカップ関連の回答に、予測市場Kalshiのデータを反映し始めました。試合の勝敗予想を尋ねると、データに基づく勝利予想グラフが表示される仕組みです。</p>
+        <p class="starter">AIの答えに“世の中の予想”を混ぜると、見え方が少し変わりそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/articles/2607/15/news060.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>AMDのNPUでLLMが動く！音声認識や画像生成も使えるローカルAIツール「Lemonade Server」</h2>
+        <p>AMDのNPUを使って、端末上でLLMや音声認識、画像生成を動かすローカルAIツールが紹介されています。クラウドに頼りすぎず、手元のPCでAIを使う流れが見えやすい話題です。</p>
+        <p class="starter">“AIはクラウドで使うもの”という前提が少しずつ変わってきていますね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/topic/feature/2125083.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>スマホで27B級LLMが動く！PrismMLが「Bonsai 27B」を無料公開</h2>
+        <p>PrismMLが、27B級のLLM「Bonsai 27B」シリーズをApache 2.0ライセンスで公開しました。ノートPCやスマートフォン級の端末でも扱えることをうたっており、ローカルAIの選択肢が広がりそうです。</p>
+        <p class="starter">スマホでここまで動くと、AIの“持ち歩き方”がかなり変わりそうです。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2125273.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>Instagram、リールのAI翻訳が日本語対応 声質再現やリップシンクも</h2>
+        <p>Instagramのリール動画向けAI翻訳機能が日本語に対応しました。声質再現やリップシンクにも触れられており、公開アカウントなら無料で使えます。</p>
+        <p class="starter">短い動画でも、言葉の壁が下がると見られる相手がぐっと増えそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2125272.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>AI</span><span>ITmedia NEWS</span></div>
+        <h2>セガのゲーム、NVIDIA「RTX Spark」で遊べるように 秋葉原で協業30周年を祝う</h2>
+        <p>NVIDIAとセガが、今後のセガタイトルをNVIDIAの新型チップ「RTX Spark」搭載PCに対応させると発表しました。協業30周年を記念するイベントで明らかにされたもので、ゲームとAI向けチップの接点としても注目されます。</p>
+        <p class="starter">ゲーム会社と半導体メーカーの長い付き合いって、意外と面白いですよね。</p>
+        <a href="https://www.itmedia.co.jp/news/articles/2607/15/news131.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>穏やか</span><span>ITmedia NEWS</span></div>
+        <h2>民泊仲介Airbnb、国内利用者比率5割へ 非観光地への分散や地方創生策活用</h2>
+        <p>民泊仲介大手のAirbnb（エアビーアンドビー）が国内利用者を拡大する事業戦略を打ち出し、若年層を中心に認知度向上に注力している。国内旅行者には非観光地への分散や政府の地方創生施策の活用など、訪日客と異なる手法で需要の開拓につなげる考え。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/articles/2607/15/news071.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>東京駅直結「トフロム八重洲」9月10日開業 FRONT竣工で街区完成</h2>
+        <p>東京駅前の大規模複合施設「TOFROM YAESU」の開業日が9月10日に決まり、街区全体も完成しました。商業エリアなどの公開もあり、都心の新しい待ち合わせ先として話題になりそうです。</p>
+        <p class="starter">東京駅周辺は、行くたびに景色が更新されていく感じがあります。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2125494.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>JALと東電、ガス料金でマイルが貯まる「JALガス」</h2>
+        <p>JALと東京電力エナジーパートナーが、ガス料金の支払いでマイルやポイントがたまる新サービスを始めます。JMB会員向けで、日常の固定費を少しお得に見直したい人に向きそうです。</p>
+        <p class="starter">毎月の支払いでマイルがたまると、ちょっと得した気分になりますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2125398.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>ファミマとドコモ、能登半島でキッチンカー型の移動販売店舗</h2>
+        <p>ファミリーマートとNTTドコモ、NTTドコモビジネスが、能登地域で移動販売店舗の実証実験を始めました。キッチンカー型で、地域の買い物を支える取り組みとして注目されます。</p>
+        <p class="starter">移動販売は、地域の“ちょっと欲しい”を支える形として頼もしいですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2125282.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>科学</span><span>Impress Watch</span></div>
+        <h2>JR東、水素ハイブリッド電車「HYBARI」 27年度末営業運転</h2>
+        <p>JR東日本が、日本初の水素ハイブリッド電車「HYBARI」を2027年度末に営業運転へ導入すると発表しました。鶴見線や南武線での運行が予定されており、次世代の鉄道技術として話題になりそうです。</p>
+        <p class="starter">電車の動力が少しずつ変わっていくのは、未来感があります。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2125111.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>便利</span><span>家電 Watch</span></div>
+        <h2>トルコ電動モビリティブランドのe-bikeが日本に 型式認定も取得</h2>
+        <p>トルコ発の電動モビリティブランドのe-bike 2車種が日本で発売されました。型式認定も取得しており、街乗りの選択肢として気軽に見られるニュースです。</p>
+        <p class="starter">海外ブランドのe-bikeが増えると、街の移動の雰囲気も変わりそうです。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2124954.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>季節</span><span>Impress Watch</span></div>
+        <h2>ファミマ、「コンビニサングラス」にスクエアタイプ</h2>
+        <p>ファミリーマートのオリジナルアパレル「コンビニエンスウェア」から、新しいスクエア型サングラスが登場します。手に取りやすい価格帯で、夏の外出用に気軽に試せるアイテムです。</p>
+        <p class="starter">コンビニでサングラスまでそろうと、夏の準備がかなり手軽ですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2125321.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>文化</span><span>家電 Watch</span></div>
+        <h2>ハリオからコーヒー専用グラス 香りや味わいに変化</h2>
+        <p>HARIOが、コーヒーの香りや味わいを楽しみやすくするテイスティンググラスを発売しました。モカとゲイシャの2種類があり、朝の一杯を少し丁寧に楽しみたい人に向きそうです。</p>
+        <p class="starter">同じコーヒーでも、グラスが変わると印象が変わるのが面白いですね。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2125216.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
