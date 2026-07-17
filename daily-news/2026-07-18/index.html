@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝のひとことニュース 14本</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年7月18日</p>
+    <h1>朝のひとことニュース 14本</h1>
+    <p class="intro">今日は、AIの新モデルや生成AIの実務活用、身近な便利ガジェットまで、話しやすい話題を中心にまとめました。重すぎないニュースを軸に、気になるものをさっと拾える構成です。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>中国AIも“ミュトス級”に到達か Moonshot AIが「Kimi K3」発表、一部ベンチでFable 5抜き首位</h2>
+        <p>Moonshot AIが大規模言語モデル「Kimi K3」を発表しました。パラメータ数2.8兆の“世界初のオープン3T級モデル”とうたい、一部ベンチマークでは高い成績も示しています。</p>
+        <p class="starter">中国発の大規模モデル、どこまで来たのか気になりますね。</p>
+        <a href="https://www.itmedia.co.jp/news/articles/2607/17/news079.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>Netflix「今年配信の約300作品で生成AI活用」 制作は2倍速で制作費は半額の実例も</h2>
+        <p>Netflixは、制作パートナーによる生成AI活用が広がっていると明らかにしました。2026年には約300本でワークフローが使われる見込みで、ポストプロダクションでの効率化事例も紹介されています。</p>
+        <p class="starter">映像制作の現場でも、AIが“当たり前の道具”になってきましたね。</p>
+        <a href="https://www.itmedia.co.jp/news/articles/2607/17/news065.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>欧州委員会、GoogleにAIアシスタントの相互運用と検索データ共有を命令──Googleは「安全性を損なう」と反発</h2>
+        <p>欧州委員会が、Android上で競合AIアシスタントにGemini同等のアクセスを認めることなどをGoogleに求めました。Googleは、プライバシーやセキュリティへの影響を懸念して反発しています。</p>
+        <p class="starter">AIアシスタントの“使いやすさ”と“安全性”、どちらを優先するか難しいですね。</p>
+        <a href="https://www.itmedia.co.jp/news/articles/2607/17/news063.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>AI</span><span>ITmedia NEWS</span></div>
+        <h2>Google、「NotebookLM」を「Gemini Notebook」に改称 Geminiエコシステムへの統合を強化</h2>
+        <p>GoogleがAI搭載リサーチツール「NotebookLM」の名称変更を発表しました。機能は維持しつつ、Geminiエコシステムとの統合を強める方向です。</p>
+        <p class="starter">名前が変わると、使い方のイメージも少し変わりそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/articles/2607/17/news062.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>ローカルLLMが資料を自動作成「LM Studio Bionic」、無料のAIエージェント</h2>
+        <p>ローカルLLMを使うAIエージェント「LM Studio Bionic」が初期プレビューとして公開されました。MacとWindows向けに無料で配布されており、手元の環境で試しやすいのが特徴です。</p>
+        <p class="starter">ローカルで動くAIエージェントは、試してみたくなりますね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2125939.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>ソニー、aiboに新型試作機 将来の機能検討で東大・UCバークレーと協力</h2>
+        <p>ソニーが、aiboの将来機能やサービスの可能性を広げる研究協力を進めると発表しました。SIGGRAPH 2026では、研究開発用途向けの試作機も展示する予定です。</p>
+        <p class="starter">aiboの次の進化がどんな方向に行くのか、想像がふくらみます。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2126022.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>AI</span><span>PC Watch</span></div>
+        <h2>MSI、Core Ultra 5 322搭載で指紋認証対応のミニPC</h2>
+        <p>MSIがCore Ultra 5 322搭載のミニPCを発表しました。指紋認証にも対応しており、コンパクトさと使い勝手を両立したモデルです。</p>
+        <p class="starter">小型PCでも、認証機能まで入るとかなり便利そうですね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2126036.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>&quot;いまさら再使用ロケット&quot;ではない JAXA「RV-X」の強みとは?</h2>
+        <p>2026年7月11日、JAXAは約10年開発してきた再使用ロケット実験機「RV-X」の飛行試験を実施しました。機体は高度約11mまで上昇し、約16m水平に移動して無事に着陸しました。これは地上付近での短時間の飛行ですが、次世代ロケットの再使用化に向けて歩みを進めたのです。日本のこれまでの再使用ロケット開発と、今回の試験で獲得できる技術、また将来に向けて必要な要素を概観してみましょう。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/topic/2125727.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>Uber、高松空港に「専用のりば」設置 国内空港初</h2>
+        <p>Uber Japanと高松空港が、国内空港で初めて専用のりばの運用を始めました。空港到着後の配車や事前予約の利用者が、同じ場所から乗車できます。</p>
+        <p class="starter">空港での移動が少しスムーズになるのは、地味にうれしいですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2126006.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>Suicaのコード決済「テッペイ」、加盟店募集開始 今秋スタート</h2>
+        <p>JR東日本が、秋開始予定のコード決済サービス「teppay」の加盟店募集を始めます。申し込みはWebフォームで受け付ける予定です。</p>
+        <p class="starter">Suica系の新しい決済、日常でどう広がるか注目ですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2126109.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>便利</span><span>PC Watch</span></div>
+        <h2>3万円台の14型モバイルOLEDモニター。Acer新ブランド「ProDesigner」初上陸</h2>
+        <p>Acerがクリエイター向けの新ブランド「ProDesigner」を日本で展開します。第1弾は14型OLEDのモバイルモニターで、持ち運びやすさが魅力です。</p>
+        <p class="starter">外でも色のきれいな画面を使えると、作業の気分が上がりそうです。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2125972.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>ローソン、ゴーストレストランを香川・徳島・島根・鳥取で開始</h2>
+        <p>ローソンが、店内厨房で調理して宅配する「ゴーストレストラン」を複数県で導入しました。デリバリー専用の商品を提供する仕組みです。</p>
+        <p class="starter">コンビニが“配達向けの厨房”にもなるのは面白いですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2126043.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>西川、身長別の太さで寝つきが良くなる抱きまくら「ネムハグ」</h2>
+        <p>西川が、身長別に太さを変えた抱きまくらを発売します。エビデンスに基づいて、スムーズな入眠をサポートするとしています。</p>
+        <p class="starter">寝具も“自分に合うサイズ”を選ぶ時代になってきました。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2126098.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>季節</span><span>家電 Watch</span></div>
+        <h2>調味料は白だしだけ! 夏野菜の焼きびたし</h2>
+        <p>夏野菜を使った焼きびたしのレシピ紹介です。ナス、ズッキーニ、パプリカを使い、温かくても冷たくしても楽しめます。</p>
+        <p class="starter">暑い日は、さっと作れて冷やして食べられる料理が助かりますね。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/column/precooking/2124727.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
