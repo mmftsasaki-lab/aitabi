@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題 14本</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年8月5日</p>
+    <h1>朝の話題 14本</h1>
+    <p class="intro">今朝は、AIの新機能や日本語LLM、身近な便利ガジェット、季節の暮らしに役立つ話題を中心にまとめました。重すぎないニュースを選び、雑談のきっかけにしやすい順で並べています。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>資料を渡すだけでクイズや表計算を自動生成！Gemini Notebook強化版がPro全員に展開完了</h2>
+        <p>Googleの調査ツール「Gemini Notebook」で、資料をもとに小テストや表計算を作る強化版の体験が、Google AI Proの全ユーザーに展開完了しました。要約だけでなく、学習や整理にそのまま使える形へ広がっているのがポイントです。</p>
+        <p class="starter">資料を入れるだけで問題集まで作れるなら、仕事や勉強の下ごしらえがかなり楽になりそうですね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2130486.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>Sakana AI、日本に特化したAIモデル「Sakana Namazu」提供開始</h2>
+        <p>Sakana AIが、日本語に特化したLLM「Sakana Namazu」の提供を始めました。API経由で使える従量課金制で、初期費用や月額費用がないのも特徴です。</p>
+        <p class="starter">日本語に強いモデルが増えると、社内文書や問い合わせ対応の使い勝手も変わりそうです。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2130476.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>EU、AIの透明性義務の適用を開始 生成コンテンツにラベルとマーク義務、違反に最大1500万ユーロ</h2>
+        <p>EUでAI規制法に基づく透明性ルールの適用が始まり、生成AIやディープフェイクを扱う事業者にラベル表示などが求められます。AIとの対話の明示や機械可読マークの付与が対象で、運用の実務に影響しそうです。</p>
+        <p class="starter">AIの中身だけでなく、どう見せるかまでルール化が進んでいるのが興味深いですね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/04/2000000366/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>マネーフォワード ME、未分類明細のカテゴリをAIが提案(iOS)</h2>
+        <p>「マネーフォワード ME」のiOS版で、未分類の明細に対してAIがカテゴリを提案する機能が始まりました。家計簿の手入力を少し減らせる、実用寄りのAI活用例です。</p>
+        <p class="starter">家計簿アプリのAI提案が増えると、続けやすさがかなり変わりそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2130522.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>生成AI</span><span>Impress Watch</span></div>
+        <h2>Genspark、オープンソースAIオフィス「GenOffice」を無料公開</h2>
+        <p>Gensparkが、PC・Mac向けのAIオフィススイート「GenOffice」のAlpha版を無料公開しました。ソースコードもGitHubで公開されており、オープンソースで使える点が注目されます。</p>
+        <p class="starter">“AI入りのオフィスソフト”が無料で広がると、試してみる人も一気に増えそうですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2130320.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>楽天ペイ、圏外でも決済できる「オフラインコード払い」</h2>
+        <p>楽天ペイが、通信状態が悪い場面でも支払える「オフラインコード払い」を順次提供開始しました。電波が不安定な場所でも使いやすく、日常の決済体験を補強する機能です。</p>
+        <p class="starter">地下や混雑した場所でも使いやすい決済は、いざという時に助かりますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2130467.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>季節</span><span>家電 Watch</span></div>
+        <h2>夏の暑さに防熱シールドカーテン 閉めても暗くならない</h2>
+        <p>アルミと糸を組み合わせた高機能カーテンが公開され、暑さ対策の選択肢として注目されています。閉めても室内が暗くなりにくい点が、夏の暮らしに使いやすそうです。</p>
+        <p class="starter">エアコンだけに頼らず、窓まわりを工夫するのも夏の定番になってきましたね。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2130308.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>季節</span><span>NHKニュース</span></div>
+        <h2>夏の甲子園 きょう開幕 夕方に開会式【1日目 見どころも】</h2>
+        <p>夏の全国高校野球が甲子園球場で開幕します。暑さ対策として開会式を夕方に行うなど、夏ならではの運営の工夫が続いています。</p>
+        <p class="starter">今年も“暑さ対策込みの甲子園”として、運営の工夫にも注目が集まりそうです。</p>
+        <a href="http://www3.nhk.or.jp/news/html/20260805/k10015196351000.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>スタバ、新幹線ホームに出店拡大 27年に名古屋と京都</h2>
+        <p>スターバックスが、2027年にJR名古屋駅とJR京都駅の新幹線ホーム上に店舗をオープンすると発表しました。移動の合間に立ち寄れる場所が増えるのは、旅好きにはうれしい話題です。</p>
+        <p class="starter">新幹線ホームのスタバは、旅の“ちょっとした楽しみ”が増えそうですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2130477.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>日清、茨城県つくばみらい市に「カップヌードル特化型工場」</h2>
+        <p>日清食品が、カップヌードルに特化した工場を茨城県つくばみらい市に建設すると発表しました。2029年度中の稼働を予定しており、ブランドの存在感をさらに高めそうです。</p>
+        <p class="starter">“特化型工場”という言葉だけでも、日清らしいワクワク感がありますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2130500.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>鳥貴族、「お子様プレート」をグランドメニューに 創業以来初</h2>
+        <p>鳥貴族が、創業以来初となる「お子様プレート」をグランドメニューに加えました。家族で利用しやすいメニューが増えるのは、外食の選択肢としてうれしい動きです。</p>
+        <p class="starter">居酒屋チェーンでも家族向けメニューが広がると、使い方の幅が広がりますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2130315.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>水を飲まずにビールを飲むと倒れる「ふらつくビアグラスbyよなよなエール」</h2>
+        <p>よなよなエールが、ビールだけを注ぐと倒れるユニークなグラスを予約販売します。遊び心のある商品で、夏の雑談ネタとしても盛り上がりそうです。</p>
+        <p class="starter">こういう“ちょっと笑える道具”は、暑い時期の気分転換にもなりますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2130539.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>生成AI深掘り</span><span>Impress Watch</span></div>
+        <h2>「アップルは間違えている」 OpenAIが開発者引き抜き訴訟に反論</h2>
+        <p>OpenAIは4日(米国時間)、OpenAIがAppleの情報を不正に利用しているとして、Appleが7月に提起した訴訟について、「彼らの対応が誤っていた」とする声明を発表した。Appleは2月にOpenAIにこの問題について連絡したとしているが、弁護士が誤った人物にメールしていたなどの問題があるとする。</p>
+        <p class="starter">生成AIの仕組みや仕事への影響まで、少し深く話せそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2130474.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>「中国軍がDeepSeek製AIを無人航空機に活用」「時速50kmの軍用車両にも搭載」 きょう公開の防衛白書</h2>
+        <p>防衛省は8月4日、国家防衛の現状と課題をまとめた「防衛白書」の最新版を公開した。AIやドローンといった最新技術の状況にも触れ、中国の人民解放軍が生成AI「DeepSeek」のAIモデルを無人航空機や軍用車両に活用しているとの認識を示した。</p>
+        <p class="starter">生成AIの仕組みや仕事への影響まで、少し深く話せそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/04/2000000382/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
