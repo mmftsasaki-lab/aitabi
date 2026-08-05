@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題 14本</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年8月6日</p>
+    <h1>朝の話題 14本</h1>
+    <p class="intro">AIインフラや身近な便利サービス、季節の買い物まで、朝の雑談に使いやすい話題を中心に14本選びました。AI関連は7本、そのうち深掘りしやすい生成AI・データ基盤系を2本入れています。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>キオクシア、フラッシュメモリでメモリ容量を増やせるモジュール発表 DRAMの容量不足を補う</h2>
+        <p>キオクシアが、CXL対応のメモリ拡張モジュール「KIOXIA XL1シリーズ」を発表しました。フラッシュメモリでDRAMを補い、AIで増えるデータセンターのメモリ需要に応える狙いです。</p>
+        <p class="starter">AI向けの機材は、GPUだけでなくメモリの工夫もどんどん広がっていますね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/05/2000000400/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>Impress Watch</span></div>
+        <h2>SpaceXとNVIDIA、宇宙データセンターに向け衛星用AI計算基盤を開発</h2>
+        <p>SpaceXが、開発中の宇宙データセンター衛星向けにNVIDIAとAI計算基盤を設計すると発表しました。衛星搭載を前提にした構成で、AIインフラの置き場所が宇宙に広がる構想です。</p>
+        <p class="starter">データセンターが宇宙に行くと、冷却や電力の考え方も変わりそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2130764.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>生成AI深掘り</span><span>Impress Watch</span></div>
+        <h2>クラウドフレア、AIエージェントに“身元と財布”持たせる新機能</h2>
+        <p>Cloudflareが、AIエージェント向けのIDと決済機能を提供する「Cloudflare Wallets」と「cloudflare.pay」を発表しました。設定した範囲内でオンライン購入まで行えるようにする仕組みです。</p>
+        <p class="starter">AIに“買い物を任せる”時代のルール作りが少しずつ進んでいますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2130686.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>AI</span><span>PC Watch</span></div>
+        <h2>1kg切りで交換式バッテリのdynabook、Core Ultraシリーズ3に刷新</h2>
+        <p>Dynabookが、1kg切りの軽量ノートPC群をCore Ultraシリーズ3搭載モデルに刷新します。NPU内蔵で、Copilot+ PCに準拠したAI対応の使い勝手が特徴です。</p>
+        <p class="starter">軽さとAI対応を両立するノートPCは、持ち歩き用途で注目されそうです。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2130738.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>穏やか</span><span>ITmedia NEWS</span></div>
+        <h2>バンダイ、トレカ巡りマイナカードでの本人確認を導入へ</h2>
+        <p>バンダイが、トレーディングカードゲームブランドでマイナンバーカードを使った本人確認の導入を検討しています。利用者の確認を強めることで、運営の安心感を高める狙いです。</p>
+        <p class="starter">人気商品の抽選や本人確認は、各社で工夫が増えていますね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/05/2000000405/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>ローソン、店内調理で「焼きそば」 “炒めロボ”導入拡大</h2>
+        <p>ローソンが、店内調理ロボの導入店舗を増やし、新たに焼きそばを提供します。コンビニでできたてメニューを広げる取り組みとして注目されます。</p>
+        <p class="starter">コンビニで“できたて”が増えると、昼ごはんの選び方も変わりそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2130707.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>チャージスポット、小田急全70駅に導入へ</h2>
+        <p>モバイルバッテリーシェアのCHARGESPOTが、小田急電鉄の全70駅への設置を目指します。通勤や外出先で、充電切れ対策がしやすくなりそうです。</p>
+        <p class="starter">駅で借りて駅で返せる仕組みは、日常の小さな不安を減らしてくれますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2130736.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>PUDOなど受取ロッカーを「デジタルアドレス」で使いやすく 11月から実証</h2>
+        <p>GMOメイクショップなど4社が、デジタルアドレスを使って荷物の受け取り方法を広げる実証を11月に始めます。再配達の削減や物流負荷の低減につなげる狙いです。</p>
+        <p class="starter">住所の書き方が変わると、受け取りの手間もかなり減りそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2130864.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>季節</span><span>Impress Watch</span></div>
+        <h2>新大阪の新幹線ホームに「カップ氷」自販機 移動時も冷たいドリンク</h2>
+        <p>JR新大阪駅の新幹線ホームに、カップ氷を買える自販機が設置されます。暑い時期の移動で、飲み物を冷たく保ちやすくなる工夫です。</p>
+        <p class="starter">夏の新幹線ホームでは、こういう小さな工夫がうれしいですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2130888.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>前向き</span><span>Impress Watch</span></div>
+        <h2>ローソンは団地を再生できるか 東日本初「ハッピーローソンタウン」オープン</h2>
+        <p>ローソンが、集合住宅型店舗「ハッピーローソンタウン日野高幡台店」をオープンしました。買い物だけでなく、地域の交流拠点もめざす取り組みです。</p>
+        <p class="starter">お店が地域の“ちょっとした居場所”になる発想は面白いですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2130576.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>セイコー 5スポーツ、ホンダ「モトコンポ」とコラボ</h2>
+        <p>セイコー 5スポーツが、ホンダのモトコンポとコラボした限定モデルを発売します。レトロ感のある題材で、時計好きには話題になりそうです。</p>
+        <p class="starter">昔の名車とのコラボは、見ているだけでも楽しいですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2130393.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>タリーズ、新宿サザンテラス店で焼き立てパンを提供</h2>
+        <p>タリーズが、店舗で焼き上げたパンを提供する新店舗をオープンします。コーヒーと一緒に焼き立てを楽しめるのが特徴です。</p>
+        <p class="starter">朝に焼き立てパンがあるカフェは、それだけで少し気分が上がります。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2130771.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>季節</span><span>家電 Watch</span></div>
+        <h2>女性向け防災セット、ワコールの使いきり下着入り アイリスオーヤマ</h2>
+        <p>アイリスオーヤマが、ワコールとコラボした女性向け防災セットを発売します。必要なものをまとめやすく、備えを見直すきっかけになりそうです。</p>
+        <p class="starter">防災グッズは、実際に使う場面を想像して選ぶと納得感がありますね。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2130414.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>HBM高騰の救世主か。キオクシアが放つ1,000万IOPSのGPU直通SSD「GP1」</h2>
+        <p>GPUのAI処理には大容量かつ高速なメモリが欠かせないが、そもそもGPUと組み合わせるHBMは容量が足りず、メモリの高騰、需給逼迫の問題も深刻化している。それを打破しようとしているのが、キオクシアが8月4日に発表したAIアプリケーション向けの超高速SSD「KIOXIA GP1」シリーズだ。</p>
+        <p class="starter">生成AIの仕組みや仕事への影響まで、少し深く話せそうです。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2130608.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
