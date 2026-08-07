@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題まとめ</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年8月7日</p>
+    <h1>朝の話題まとめ</h1>
+    <p class="intro">きょうの朝雑談に使いやすい、軽めで前向きなニュースを14本に絞りました。AI関連は7本、そのうち生成AIを少し深掘りできる話題を2本入れています。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>Impress Watch</span></div>
+        <h2>AIエージェントへの“過度な期待”とリスク ガートナーが指摘</h2>
+        <p>ガートナージャパンが、AIエージェントなどの技術トレンドをまとめた「日本における未来のデジタル・ワークプレースのハイプ・サイクル：2026年」を発表しました。期待が先行しやすい領域として、導入時はできることと限界を見極める視点が大切だとしています。</p>
+        <p class="starter">AIは便利ですが、まずはどこまで任せるかを決めるのが大事ですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2131136.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>Impress Watch</span></div>
+        <h2>Metaもコーディングエージェント 「Muse Code」公開</h2>
+        <p>Metaが、最新AIモデル「Muse Spark 1.2」と、それを使うターミナル型コーディングエージェント「Muse Code」のベータ版を発表しました。macOSとLinuxに対応し、開発作業を支える用途が想定されています。</p>
+        <p class="starter">コードを書く相棒が、どんどん“ターミナルの中”に入ってきていますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2131088.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>AI</span><span>PC Watch</span></div>
+        <h2>ChatGPTからAdobeを使えるプラグイン登場。写真/動画編集や資料作成も</h2>
+        <p>Adobeが、ChatGPTから同社のプロ向けクリエイティブツールを使えるプラグインの提供を始めました。作りたいものを伝えると、写真や動画の編集、資料作成などを支援できるのが特徴です。</p>
+        <p class="starter">“お願いすると作業が進む”体験は、仕事の流れをかなり変えそうです。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2131335.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>AI</span><span>ITmedia NEWS</span></div>
+        <h2>ワークマン、実は画像生成AIを導入していた 間に合わない商品撮影を代替 アプリ通知開封も1.5倍</h2>
+        <p>ワークマンが、商品撮影の一部を画像生成AIで代替している活用例が紹介されました。撮影が間に合わない場面を補うほか、アプリ通知の開封率向上にもつながったとしています。</p>
+        <p class="starter">AIは派手な機能より、現場の“間に合わせる力”で効いてきますね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/06/2000000370/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>AI</span><span>ITmedia NEWS</span></div>
+        <h2>アプリが遅い原因をAIがトレースログから分析してくれる「Windows Performance Analyzer MCP」 Microsoftがプレビュー公開</h2>
+        <p>Microsoftが、Windowsアプリの遅さの原因調査をAIに依頼できる「Windows Performance Analyzer MCP」のアーリープレビューを公開しました。トレースログを手がかりに、分析の手間を減らす用途が見込まれます。</p>
+        <p class="starter">“重い理由をAIに聞く”という発想は、開発者にはかなり助かりそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/06/2000000434/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>AI</span><span>ITmedia NEWS</span></div>
+        <h2>Googleのジェフ・ディーン氏、独立してAI実験を大規模自動化する新会社Discovery Loop設立</h2>
+        <p>Googleのチーフサイエンティストだったジェフ・ディーン氏が、新会社「Discovery Loop」の設立を発表しました。フロンティアAIモデルと計算基盤を使い、実験や検証など研究プロセス全体の自動化を目指すとしています。</p>
+        <p class="starter">研究の進め方そのものをAIで変える、という話はかなりスケールが大きいですね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/06/2000000408/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>AI/文化</span><span>Impress Watch</span></div>
+        <h2>ハンズ50周年 “東急ハンズ”ロゴ復活やAI「てて丸」</h2>
+        <p>ハンズが創業50周年の企画を始め、旧「東急ハンズ」ロゴを使った限定グッズなどを展開します。あわせて、独自のAI接客サービス「てて丸」もスタートしました。</p>
+        <p class="starter">昔なじみのロゴとAI接客の組み合わせが、ちょっと面白いですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2131220.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>穏やか</span><span>ITmedia NEWS</span></div>
+        <h2>Google、新型スマホ「Pixel 11シリーズ」を予告 8月12日に予約購入スタート</h2>
+        <p>米Googleの日本法人が、新型Pixelスマートフォンの予約受付を8月12日午後11時に始めると告知した。新製品発表イベント「Made by Google」は翌13日午前7時を予定しているほか、同じ13日には、東京・表参道に日本初のGoogle直営店もオープンする。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/04/2000000385/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>NASA、再突入迫る宇宙望遠鏡「Swift」救出ミッションが難航 救援機に何が?</h2>
+        <p>軌道が下がってこのままでは再突入を待つ状態となったNASAの宇宙望遠鏡「Swift」を救うため、民間企業が衛星を救う軌道上サービス宇宙機「LINK」が打上げられました。ところが救出する側の衛星が姿勢制御の異常でSwiftへの接近・捕獲を始められるか不透明になっています。チャレンジングな救出ミッションの経緯と現在地を整理します。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/topic/2130505.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>季節</span><span>家電 Watch</span></div>
+        <h2>東京都民が選んだ暑さ対策グッズ この夏に試してみたい4選</h2>
+        <p>暑さが続くなか、東京都民が選んだ暑さ対策グッズが紹介されました。エアコンや水分補給に加えて、外出時に使いやすいアイテムを試すヒントになります。</p>
+        <p class="starter">この暑さだと、ひとつ持っているだけで助かるグッズが増えますね。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/topic/topic/2129258.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>ドコモ、15歳以下スマホデビュープラン刷新 「親子割」も</h2>
+        <p>NTTドコモが、5歳以上15歳以下向けの料金プランと「親子割」を8月7日から提供開始します。スマホを持ち始める家庭向けの選択肢が広がる内容です。</p>
+        <p class="starter">子どものスマホデビューは、料金プラン選びもひとつのイベントですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2131321.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>東京メトロ、銀座線・丸ノ内線を大増発 計212本</h2>
+        <p>東京メトロが、銀座線と丸ノ内線で計212本の増発を行うと発表しました。9月のダイヤ改正で、日中の運転間隔が短くなります。</p>
+        <p class="starter">通勤やお出かけの“待ち時間短縮”は、地味にうれしいニュースです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2131246.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>文化</span><span>ITmedia NEWS</span></div>
+        <h2>「プチプチ」の川上産業、「プチプチ株式会社」に社名変更 創業58年で</h2>
+        <p>川上産業が、創業58年で初めて社名を変更し、「プチプチ株式会社」になります。長く親しまれてきた商品名を前面に出した、分かりやすい変更です。</p>
+        <p class="starter">商品名がそのまま社名になるのは、覚えやすくて親しみがありますね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/06/2000000419/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>季節</span><span>Impress Watch</span></div>
+        <h2>デザインも機能も多彩なサンダル コロンビア・KEEN・Teva・HOKA・OOFOS</h2>
+        <p>夏のレジャーから普段履きまで使いやすいサンダルの選び方が紹介されています。アウトドア系ブランドの特徴を比べながら、自分に合う一足を探す内容です。</p>
+        <p class="starter">暑い日は、足元を変えるだけでも気分がかなり軽くなります。</p>
+        <a href="https://www.watch.impress.co.jp/docs/topic/2130016.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
