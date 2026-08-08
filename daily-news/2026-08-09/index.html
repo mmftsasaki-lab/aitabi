@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題メモ</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年8月9日</p>
+    <h1>朝の話題メモ</h1>
+    <p class="intro">今朝は、AIのちょっと深めの話題と、夏らしい便利ネタ、気分が重くなりにくいニュースを中心にまとめました。天気は不安定なので、外出予定がある人は空模様もあわせてチェックしたいところです。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>VRAM 16GBでも安いRadeon RX 9000、GeForceで言うとどのぐらいの性能？</h2>
+        <p>大容量VRAMを搭載しつつ比較的手頃な価格帯で注目されるRadeon RX 9000シリーズを、改めて整理して紹介する記事です。GPUのスペックや性能感を見直したい人に向いた内容で、PC選びの比較材料にもなります。</p>
+        <p class="starter">最近のGPUは、性能だけでなくVRAM容量で選ぶ人も増えてきましたよね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/topic/readitnow/2131747.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>季節</span><span>NHKニュース</span></div>
+        <h2>北日本と東日本中心 9日も大気の状態が非常に不安定の見込み</h2>
+        <p>北日本から西日本にかけて、8日は局地的な大雨となった地域がありました。9日も大気の状態が非常に不安定になる見込みで、急な雨や川の増水には注意が必要です。</p>
+        <p class="starter">夏は晴れていても、急に空模様が変わることがありますね。</p>
+        <a href="http://www3.nhk.or.jp/news/html/20260808/k10015200211000.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>季節</span><span>Impress Watch</span></div>
+        <h2>iPhoneで夏の花火をきれいに撮ろう 誰でもできる撮影のコツ【2026年版】</h2>
+        <p>夏の花火をスマートフォンで撮るときの、基本的なコツをまとめた記事です。夜景や明るい光をきれいに残したいときに、すぐ試しやすいポイントが紹介されています。</p>
+        <p class="starter">花火大会の写真、毎年うまく撮れそうで意外と難しいですよね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/topic/2131230.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>AI/便利</span><span>Impress Watch</span></div>
+        <h2>X、収益化プログラムを一新 「オリジナル投稿」が基準に</h2>
+        <p>Xが収益還元プログラムを刷新し、9月8日から新しい「オリジナルコンテンツ報酬」を始めます。今後は、オリジナルな投稿を増やす方向に制度が変わる見通しです。</p>
+        <p class="starter">SNSの収益化は、投稿の作り方にも影響しそうですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2131768.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>便利</span><span>ITmedia NEWS</span></div>
+        <h2>熊本県の「トラック通れた道マップ」、日野コンピューターシステムが公開</h2>
+        <p>熊本県近辺で、トラックが通行できた道を可視化する地図が公開されています。物流や移動の参考にしやすい、実用寄りの取り組みです。</p>
+        <p class="starter">こういう地図があると、普段の移動や仕事の段取りにも役立ちそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/08/2000000461/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>G-SHOCK、ゴールド×ブラウンの「MASTER OF G」3モデル</h2>
+        <p>G-SHOCKの新作として、ゴールドやブラウンを基調にした「MASTER OF G」3モデルが登場します。見た目の存在感があり、夏のファッション小物としても話題にしやすい内容です。</p>
+        <p class="starter">腕時計は、色づかいひとつで印象がかなり変わりますよね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2130825.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>穏やか</span><span>ITmedia NEWS</span></div>
+        <h2>「ゲーム運営の修羅場過ぎる」 コロコロコミック系漫画サイトの新作が話題 Gitツリー見てガチャ不具合の犯人探し</h2>
+        <p>小学館の漫画配信サイト「週刊コロコロコミック」に掲載されている新作漫画「まだサ終しないんですか？」が、IT関係者を中心にXで話題だ。ソーシャルゲーム開発の現場をテーマにした作品だが、バージョン管理ツールの履歴を見て不具合の犯人探しをする描写などが「修羅場すぎる」と注目を浴びている。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/08/2000000458/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>穏やか</span><span>ITmedia NEWS</span></div>
+        <h2>写真加工アプリ「SNOW」にステマで措置命令 報酬付きでX投稿依頼、広告表示なし 消費者庁</h2>
+        <p>消費者庁は8月6日、写真加工アプリ「SNOW」を運営する韓国企業と日本法人の2社に対し、広告と明示しないX投稿を第三者に依頼していたとして、景品表示法に基づく措置命令を出した。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/06/2000000428/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>便利</span><span>家電 Watch</span></div>
+        <h2>バッファロー、燃えにくい半固体のモバイルバッテリー</h2>
+        <p>半固体電解質を採用したモバイルバッテリーが発表されました。安全性に配慮した設計で、外出時の持ち歩きアイテムとして注目されます。</p>
+        <p class="starter">モバイルバッテリーは、安心感も選ぶポイントになってきました。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2130660.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>博多駅前「明治公園」に飲食店・スパ・立体園路 7日開園</h2>
+        <p>博多駅前の明治公園が整備され、店舗棟や立体園路、複数の広場を備えて開園しました。駅前で立ち寄りやすい新しい憩いの場として、散歩や待ち合わせにも使いやすそうです。</p>
+        <p class="starter">駅前にこういう空間があると、ちょっとした寄り道が楽しくなりますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2131542.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>Fire TVやEchoなどAmazonデバイスが安い アマゾン「Summer Sale」</h2>
+        <p>Amazonデバイスがセール対象になっていて、Fire TVやEchoなどが値引きされています。家の中のちょっとした便利グッズを見直すきっかけになりそうです。</p>
+        <p class="starter">セールを見ると、つい“あると便利”な物を探したくなりますよね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2131742.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>LINEMO、追加料金なしで「Starlink Direct」利用可能に</h2>
+        <p>LINEMOの一部プランで、追加料金なしで「Starlink Direct」が使えるようになります。通信の選択肢が広がる話題として、外出先での安心感につながりそうです。</p>
+        <p class="starter">つながり方の選択肢が増えるのは、いざという時に心強いですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2131710.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>文化</span><span>家電 Watch</span></div>
+        <h2>ムーミンのかわいい体重計や温湿度計 北欧デザイン</h2>
+        <p>ムーミンとコラボした体重計や温湿度計などが発売されました。実用品にキャラクターデザインが加わっていて、部屋に置く楽しさもありそうです。</p>
+        <p class="starter">毎日使う道具が好きなデザインだと、少し気分が上がりますよね。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2131409.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>便利</span><span>PC Watch</span></div>
+        <h2>【本日みつけたお買い得品】ロジクールの高級マウス「MX MASTER 4」が最安値！Amazonで3千円弱の割引</h2>
+        <p>ロジクールのハイエンドマウスが、Amazonで値引き販売されています。作業効率を上げたい人には、ちょっと気になるお買い得情報です。</p>
+        <p class="starter">マウスを替えるだけで、作業の快適さがかなり変わることがあります。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/todays_sales/2131751.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
