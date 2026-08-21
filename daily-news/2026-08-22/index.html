@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題まとめ</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年8月22日</p>
+    <h1>朝の話題まとめ</h1>
+    <p class="intro">今日は、AIの新機能やサービス連携が目立つ一方で、暮らしに役立つ小さな便利ネタも多めです。重くなりすぎない範囲で、仕事や日常の会話に使いやすい14本を選びました。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>OpenAI、企業向けデータ即時削除を強化する新安全技術</h2>
+        <p>OpenAIが、企業向けサービスでデータ保護を保ちながら安全性を高める仕組み「Private Safety Processing」を発表しました。Zero Data Retentionの考え方を維持しつつ、より複雑なタスクにも対応しやすくする狙いです。</p>
+        <p class="starter">企業向けAIは、便利さと安心感の両立がどこまで進むのか気になりますね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2134407.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>Slack、AIとチームで協働する「Slack Code」を発表 ClaudeやDevinを専用チャネルで操作</h2>
+        <p>Slackが、AIコーディングエージェントと一緒に作業しやすくする「Slack Code」を発表しました。専用のコードチャネルで計画や差分、プレビューを確認しながら指示でき、人間の承認を経て実行する流れです。</p>
+        <p class="starter">チャットの中でAIに仕事を頼む形は、かなり自然になってきましたね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/21/2000000667/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>Stripe、AIモデルゲートウェイのOpenRouterを買収</h2>
+        <p>決済プラットフォームのStripeが、AIモデルのゲートウェイやルーティングを手がけるOpenRouterの買収に合意しました。複数のAIモデルを使い分ける流れが、サービス基盤の側でも広がっていることがうかがえます。</p>
+        <p class="starter">AIを“どのモデルに振り分けるか”まで含めて、仕組み化が進んでいますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2134389.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>Adobe Firefly、音楽・音声・効果音生成に対応 商用利用も可能</h2>
+        <p>Adobe Fireflyで、音楽・音声・効果音を生成する機能の一般提供が始まりました。生成したオーディオは商用利用に対応しており、動画や制作物の音づくりにも使いやすくなります。</p>
+        <p class="starter">画像だけでなく音までAIで作れると、制作の流れがかなり変わりそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2134515.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>はてな、AI常駐の掲示板サービス「はてなパークス」</h2>
+        <p>はてなが、ディスカッションフォーラム「はてなパークス」を正式公開しました。AIが常駐する掲示板サービスとして、会話ややり取りの補助を取り入れた形です。</p>
+        <p class="starter">掲示板にAIがいると、会話の雰囲気がどう変わるのか興味があります。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2134581.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>穏やか</span><span>ITmedia NEWS</span></div>
+        <h2>数学界を騒がせた“あの図形”を実際に作製→新しい光学素材の卵に 東大などがNature系列誌で発表</h2>
+        <p>東京大学や東京科学大学、NTTに所属する研究者らがNature Communicationsで発表した論文「Chiral Diffraction from Aperiodic Monotile Structure」は、長年数学界で未解決だった難問から生まれた非周期的なタイルの並び方を実際のナノ構造として作製し、そこに光を当てて特異な現象を観測することに世界で初めて成功した研究報告だ。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/19/2000000586/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>穏やか</span><span>ITmedia NEWS</span></div>
+        <h2>中国の動画サイト「bilibili」にグローバル版アプリ 日本でも配信開始 まずはAndroidから</h2>
+        <p>中国の動画共有サービス「bilibili」は8月19日、グローバル版アプリの提供を開始したと発表した。まずAndroid版をGoogle Playで配信しており、本人確認書類なしでアカウントを登録できる。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/20/2000000643/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>Qwen3.8 27Bが驚異の6.2GBに!? Unslothが新量子化技術で実現</h2>
+        <p>Unslothが、新しい量子化技術「Dynamic v3.0」を発表し、Qwen3.8-27Bの小型化版を提供し始めました。GGUF形式で多くの推論エンジンに対応しており、比較的大きなモデルを扱いやすくする工夫が進んでいます。</p>
+        <p class="starter">モデルを軽くして動かしやすくする工夫は、実用面でかなり大事ですね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2134411.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>生成AI深掘り</span><span>Impress Watch</span></div>
+        <h2>SpaceX、100万機のAI衛星「スターマインド」計画は実現するか?</h2>
+        <p>SpaceXが、軌道上AIデータセンター衛星の構想「Starmind」を紹介し、NVIDIAのRubin GPUとVera CPUを採用するとしています。地上の電力や冷却の制約を避ける発想として、宇宙でAI計算を行う構想が話題です。</p>
+        <p class="starter">AI計算を宇宙でやる発想は、スケール感がすごいですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/topic/2133658.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>穏やか</span><span>ITmedia NEWS</span></div>
+        <h2>Google、読者がワンクリックで“推しメディア”登録できるボタン公開</h2>
+        <p>Googleが、検索やDiscover、Googleニュースのパーソナライズ機能を拡充しました。サイト上から「優先するニュース提供元」に登録できるボタンや、見たいトピックを自然言語で指定できる機能が加わります。</p>
+        <p class="starter">ニュースの見つけ方も、だんだん“自分仕様”になってきました。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/21/2000000668/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>季節</span><span>Impress Watch</span></div>
+        <h2>豊洲にドッグパーク・ピックルボールコート 三井不動産、TBSら</h2>
+        <p>東京・豊洲に、ドッグランやピックルボールコートなどを備えた都市型施設が9月にプレオープンします。愛犬と一緒に過ごしながら、家族で楽しめる場を目指す内容です。</p>
+        <p class="starter">豊洲は、週末のおでかけ先としてさらに選択肢が増えそうですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2134492.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>寺院・神社にキャッシュレス決済を 「おまいりPay」活用</h2>
+        <p>寺院・神社向けのキャッシュレス決済サービスが提供開始されました。参拝時の支払いをしやすくする仕組みとして、鎌倉大仏殿高徳院から本格導入されます。</p>
+        <p class="starter">お寺や神社でもキャッシュレスが広がると、参拝の形も少しずつ変わりそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2134701.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>プラス、防災EC「ソナティブ」 備蓄診断・期限通知</h2>
+        <p>家庭向けの防災アイテムを選びやすくするオンラインショップ「SONAtive」が公開されました。備蓄診断や期限通知など、日常の備えを続けやすくする機能を備えています。</p>
+        <p class="starter">防災グッズは、買うだけでなく“続けて管理する”のが大事ですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2134657.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>マネーフォワードME、アプリUIを刷新 タブは5つに</h2>
+        <p>マネーフォワード MEのアプリ版が刷新され、「マイページ」が新設されました。お金の見え方を整理しやすくするUI変更として案内されています。</p>
+        <p class="starter">家計アプリは、画面が見やすいだけでも使う気分がかなり変わりますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2134734.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
