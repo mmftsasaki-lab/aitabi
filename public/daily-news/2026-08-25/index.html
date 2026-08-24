@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題 14本</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年8月25日</p>
+    <h1>朝の話題 14本</h1>
+    <p class="intro">AIの学び方からロボット、暮らしに役立つ家電や気象まで、朝の雑談にしやすい話題を中心にまとめました。AI関連は新しめの候補から7本、うち2本は少し踏み込んで話せる生成AIネタを入れています。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>Impress Watch</span></div>
+        <h2>アンソロピック、AIの使い方を学べる「Claude Academy」 日本語対応</h2>
+        <p>Anthropicが、AIを安全かつ効果的に使うための学習サイト「Claude Academy」を公開しました。Claudeの使い方に限らず、AIを使うときの考え方や基本的な活用法も学べる内容で、一部を除き日本語表示にも対応します。</p>
+        <p class="starter">AIを使う前に、まず“使い方を学ぶ場”があるのは親切ですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2134964.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>AIが最大3.2倍高速に、LFM2.5用ドラフトモデル無償公開</h2>
+        <p>Liquid AIが、LFM2.5ファミリー向けの推論を速くする「DSparkドラフトモデル」を公開しました。投機的デコーディングを使い、出力品質を保ちながら最大3.2倍の高速化をうたっています。</p>
+        <p class="starter">“速さを上げるためのモデル”という発想は、生成AIらしい工夫ですよね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2135116.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>AI</span><span>PC Watch</span></div>
+        <h2>8GBのGPUで35Bモデルが高速動作！MoE特化の実行環境「FreeToken」</h2>
+        <p>無料で使えるAIモデル実行環境「FreeToken」が公開されました。メモリに余裕がないGPUでも、MoE系の大きめモデルを動かしやすくする狙いがあり、ローカルAIを試したい人に気になる内容です。</p>
+        <p class="starter">“VRAMが少なくても大きめのモデルを動かしたい”という悩み、わりと共感する人が多そうです。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2134988.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>Anthropic、ミュトスの提供を拡大 ツール経由でセキュリティ対策強化</h2>
+        <p>Anthropicが最上位モデル「Claude Mythos 5」を、Claude Security経由で使えるようにすると発表しました。パートナー各社のサイバー防衛ツールにも導入し、企業向けのセキュリティ用途を広げます。</p>
+        <p class="starter">AIが“文章を書く道具”から“守る側の道具”にも広がっている感じがありますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2134847.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>Google Antigravityに「リモートコントロール」 複数端末から開発確認・指示</h2>
+        <p>GoogleのAIソフトウェア開発環境「Antigravity」に、別端末からセッションを操作できる「Remote Control」が追加されました。ブラウザ経由で接続でき、ノートPCやサーバーなど複数のマシンで動く開発環境をまとめて扱いやすくします。</p>
+        <p class="starter">開発環境を“どの端末からでも見に行ける”のは、地味に便利そうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2134952.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>AI</span><span>PC Watch</span></div>
+        <h2>マウス、約95万円のRyzen AI Max+搭載ミニPC「DAIV CX-A9A60」発売</h2>
+        <p>マウスコンピューターが、Ryzen AI Max+ 395を搭載したミニPC「DAIV CX-A9A60」を発売しました。ローカルで比較的大きなモデルを動かしたい人向けの選択肢として注目されそうです。</p>
+        <p class="starter">ミニPCでも“ローカルAIを本気で動かす”時代になってきましたね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2134937.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>甲子園でAI活用の自動運転EVバス レベル4取得へ実証</h2>
+        <p>西宮市と阪神電気鉄道が、甲子園エリアで自動運転EVバスの実証実験を始めます。まずはレベル2で運行し、2027年度中のレベル4認可取得を目指す計画です。</p>
+        <p class="starter">球場周辺の移動が、少しずつ未来っぽくなっていきますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2135075.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>穏やか</span><span>ITmedia NEWS</span></div>
+        <h2>LINE、着せかえ表示問題を謝罪 希望者に返金へ</h2>
+        <p>LINEヤフーは8月20日、LINEアプリの一部の「着せかえ」でメニューアイコンがデフォルト表示になっている問題について経緯を説明し、謝罪した。返金を希望する日本国内のユーザーからは専用フォームで申請を受け付ける。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/21/2000000675/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>穏やか</span><span>家電 Watch</span></div>
+        <h2>サンコー、タコやエビまるごとプレスできるせんべいメーカー2</h2>
+        <p>サンコーは、身近な食材でパリパリせんべいが作れる「復刻版 プレスでパリパリなんでもせんべいメーカー2」を8月21日に発売した。価格は5,480円。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2134480.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>穏やか</span><span>NHKニュース</span></div>
+        <h2>北日本と東日本中心 9日も大気の状態が非常に不安定の見込み</h2>
+        <p>8日は北日本から西日本にかけての広い範囲で大気の状態が非常に不安定になり、「記録的短時間大雨」の気象防災速報があわせて7回発表されるなど局地的な大雨となりました。9日も大気の状態が非常に不安定になる見込みで、低い土地の浸水や急な川の増水などに十分注意が必要です。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="http://www3.nhk.or.jp/news/html/20260808/k10015200211000.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>丸の内を最高品質モバイルエリアに ドコモと三菱地所が共同構築</h2>
+        <p>NTTドコモと三菱地所が、丸の内エリアで新しい通信環境を共同で整備すると発表しました。景観に配慮しながら、2027年度のサービス提供を目指します。</p>
+        <p class="starter">都心の“つながりやすさ”を磨く取り組みは、通勤や外出の話題にもつなげやすいですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2135089.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>東京・八重洲の3地区開発、最後の名称は「ヤエス コア」</h2>
+        <p>東京駅前・八重洲の再開発で、最後の施設名称が「YAESU CORE」に決まりました。完成は2029年1月末の予定で、周辺の街づくりの進展が見えてきます。</p>
+        <p class="starter">駅前の再開発は、名前が決まると一気に身近に感じますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2134976.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>ローソン、手巻おにぎり全品を一律10円値下げ コメ価格低下で</h2>
+        <p>ローソンが、9月29日から手巻おにぎり全品を一律10円値下げします。商品の仕様は変えず、米の市場価格が低下したことを受けた対応です。</p>
+        <p class="starter">コンビニのおにぎりが少しでも安くなるのは、朝の話題としてうれしいですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2135092.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>グーグル、お気に入りのニュースを検索やDiscoverで見つけやすく強化</h2>
+        <p>Googleが、検索やDiscover、Googleニュースで表示される内容を調整しやすくする機能を発表しました。好きなサイトを優先表示しやすくするなど、ニュースの見つけ方を自分向けに整えやすくなります。</p>
+        <p class="starter">毎朝見るニュースを少し自分好みに寄せられるのは便利そうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2134659.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
