@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題メモ</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年8月30日</p>
+    <h1>朝の話題メモ</h1>
+    <p class="intro">今朝は、AIの新しいサービスや半導体の動き、暮らしに役立つ道具や乗り物の話題を中心に、軽めに拾いました。気になるものを1つずつ、雑談のきっかけにどうぞ。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>「FANZAスタジオ」爆誕へ 成人向けAIマンガに違和感を覚えるマンガ家も期待する部分とは？</h2>
+        <p>成人向けECサイト「FANZA」で、生成AIを使って作品を作り公開できるサービス「FANZAスタジオ」の先行体験が始まりました。AIで作品制作のハードルが下がる一方、表現の幅や作り方にどう影響するかも注目されています。</p>
+        <p class="starter">AIで創作の入口が広がると、どんなジャンルが一番変わりそうでしょうか。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/30/2000000911/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>Impress Watch</span></div>
+        <h2>OpenAI、Cursorへのモデル提供を終了 理由は「SpaceXによる買収」</h2>
+        <p>OpenAIは、コーディングエージェント「Cursor」への最新モデル提供を終了すると発表しました。SpaceXによるCursor買収を受けた対応で、提供終了予定日は11月12日とされています。</p>
+        <p class="starter">AI開発ツールは、提供元の契約や買収で使い勝手が変わることがありますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2136717.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>キオクシアとSanDisk、日本に約5兆円投資へ フラッシュメモリ増産 政府の支援前提</h2>
+        <p>キオクシアとSanDiskが、日本でフラッシュメモリの増産に向けた大規模投資を進める方針です。政府支援を前提にした計画で、半導体供給の強化につながる動きとして注目されています。</p>
+        <p class="starter">半導体の増産ニュースは、スマホやPCの価格や供給にもつながりそうですね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/28/2000000879/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>穏やか</span><span>PC Watch</span></div>
+        <h2>6,480円で3台切替、サンワサプライのテンキーレス無線キーボード</h2>
+        <p>サンワサプライは、落ち着いたデザインと、さらりとした滑らかな触り心地にこだわったとするテンキーレスワイヤレスキーボード「400-SKB087」を発売した。直販価格は6,480円。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2136586.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>コクヨ、高級筆記具「KOKUYO WP ファインライター」にディープな新色</h2>
+        <p>コクヨは、高級筆記具「KOKUYO WP」の「ファインライター」から、ディープブルー、ディープグリーン、ディープレッドの3色を定番色として9月2日に発売する。価格は5,000円(税別)。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2135844.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>マネックス証券に「ドコモの銀行」から自動入金 本格連携開始</h2>
+        <p>ドコモSMTBネット銀行(ドコモの銀行)とマネックス証券は、自動入金(スイープ)サービスを8月28日から開始した。同時に、ドコモSMTBネット銀行の銀行口座開設時にマネックス証券の証券口座も同時に申込める機能も提供開始している。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2136458.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>穏やか</span><span>ITmedia NEWS</span></div>
+        <h2>悪質UIを体験できる「ダークパターン博物館」が話題 解約迷路、偽の閉じるボタンなど 全8種</h2>
+        <p>Webサイトに仕掛けられた悪質なUIデザイン「ダークパターン」を安全に体験できるサイト「ダークパターン博物館」が、Xで話題を集めている。文化祭風の8つの展示を巡り、罠を見破るとスタンプがもらえる仕組みだ。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/26/2000000817/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>東京BRT、9月から東京駅へ延伸 晴海フラッグから築地・銀座経由</h2>
+        <p>東京BRTが、晴海五丁目ターミナルと東京駅八重洲を結ぶ新ルートを9月に開設すると発表しました。築地・銀座を経由するため、都心への移動がさらに便利になりそうです。</p>
+        <p class="starter">新しいバス路線ができると、通勤やお出かけの選択肢が増えてうれしいですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2136635.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>有楽町ビル跡地「YURAKUCHO PARK」着工 都心で前例のない設計に挑戦</h2>
+        <p>有楽町駅前の跡地で進む「YURAKUCHO PARK」の新築工事が、9月に始まります。人工地盤の構築など、都心ならではの新しい設計・施工に挑む計画です。</p>
+        <p class="starter">駅前の再開発は、街の雰囲気が少しずつ変わるのを見る楽しさがありますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2136448.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>文化</span><span>ITmedia NEWS</span></div>
+        <h2>指輪型の「たまごっち」誕生 カラー液晶搭載で30種以上のたまごっちに成長</h2>
+        <p>指輪型のたまごっち「Tamagotchi ring」が発表されました。カラー液晶を備え、30種以上のたまごっちに成長する仕様で、懐かしさと新しさが同居したアイテムです。</p>
+        <p class="starter">昔の人気玩具が、今の形で戻ってくるのはちょっとワクワクしますね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/27/2000000832/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>文化</span><span>ITmedia NEWS</span></div>
+        <h2>大人向け「スーパーカー自転車」は和テイストだった リトラクタブルライトにRFID認証など装備満載</h2>
+        <p>昭和の人気玩具を思わせる「スーパーカー自転車」が、大人向けとして復活しました。リトラクタブルライトやRFID認証など、懐かしさと現代的な機能を組み合わせた作りが特徴です。</p>
+        <p class="starter">子どものころ憧れたデザインが、大人向けに進化して戻るのは面白いですね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/29/2000000934/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>季節</span><span>ITmedia NEWS</span></div>
+        <h2>風速15mでも裏返らない晴雨兼用傘、アンベル「タフネス アンチフリップ」開発者に聞く「全天候での安心感」を支える技術</h2>
+        <p>晴雨兼用の折りたたみ傘「タフネス アンチフリップ」は、風に強い設計が特徴です。天気が変わりやすい時期でも使いやすく、日常の安心感を高める道具として紹介されています。</p>
+        <p class="starter">傘は毎日使うものだからこそ、丈夫さがあると安心感が違いますね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/27/2000000825/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>季節</span><span>ITmedia NEWS</span></div>
+        <h2>「洋服の青山」初の空調ウェア、自腹レビュー “きちんと感”なのに涼しい、よく考えられたデザインに驚いた</h2>
+        <p>「洋服の青山」が手がける初の空調ウェアが紹介されています。見た目の“きちんと感”を保ちながら涼しさも意識したデザインで、暑い時期の通勤や外出に役立ちそうです。</p>
+        <p class="starter">暑さ対策も、見た目との両立ができると使いやすさが増しますね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/26/2000000795/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>松屋、食料残渣活用「牛めし屋さんのリサイクル堆肥」をカインズで販売</h2>
+        <p>松屋フーズが、店舗で出た食料残渣を活用した堆肥の販売を始めました。家庭菜園や園芸で使える、身近なリサイクルの取り組みとして話題になりそうです。</p>
+        <p class="starter">外食チェーン発の堆肥って、ちょっと意外で覚えやすい話題ですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2136510.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
