@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題 14本</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年8月29日</p>
+    <h1>朝の話題 14本</h1>
+    <p class="intro">今日は、AIの新着を中心に、暮らしや季節の話題もまじえて拾いました。重すぎないニュースを、雑談のきっかけにしやすい順で並べています。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>Anthropic、AIで物理機器を制御する共通規格「MHS」発表 将来オープンソース化へ</h2>
+        <p>Anthropicが、AIエージェントが実験・製造機器を安全に操作するための共通仕様「Model Hardware Standard（MHS）」を発表しました。機器ごとの統合作業を減らし、基本命令や安全制限を標準化して自律制御しやすくする狙いです。先行導入事例を公開しながら、安全性評価のうえでオープンソース化を目指すとしています。</p>
+        <p class="starter">AIがソフトだけでなく、実機の操作まで標準化していく流れは面白いですね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/28/2000000897/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>無料のLM Studio、DFlash/DSpark/MTPで推論を高速化</h2>
+        <p>ローカルでLLMを動かす「LM Studio」の最新版が、投機的デコーディング手法のDFlash、DSpark、MTP Draftersに対応しました。アプリ側の工夫で、推論の体感速度を上げやすくするアップデートです。無料で入手できるため、手元のPCで試しやすいのも特徴です。</p>
+        <p class="starter">ローカルAIは、モデルだけでなく“速く動かす工夫”もどんどん進んでいますね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2136645.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>キオクシアとサンディスク、国内に5兆円投資 29年度に北上で新棟稼働</h2>
+        <p>キオクシアとサンディスクが、2032年までに日本国内で総額約5兆円を投資する計画を発表しました。AI普及に伴うフラッシュメモリ需要の拡大を見込み、四日市工場や北上工場で生産設備や関連インフラ、技術開発への投資を進める方針です。政府支援を前提にした計画としています。</p>
+        <p class="starter">AIの話題はモデルだけでなく、支える半導体投資にも広がっていますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2136440.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>AI</span><span>PC Watch</span></div>
+        <h2>HBMの再設計でAI性能アップへ。NVIDIAが「NVHBM」発表</h2>
+        <p>NVIDIAが、HBM内にメモリコントローラを内蔵するなどしてAIアクセラレータの性能向上を狙う技術「NVHBM」を発表しました。帯域幅の向上や消費電力の削減につながるとしています。AI向け計算基盤の効率を高める取り組みとして注目されます。</p>
+        <p class="starter">AIチップは、演算性能だけでなくメモリまわりの工夫も重要になってきましたね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2136398.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>AI</span><span>PC Watch</span></div>
+        <h2>最大40 TOPSのエッジAIコンピュータ「Arduino VENTUNO Q」国内発売へ</h2>
+        <p>スイッチサイエンスが、最大40 TOPSのNPUを備えるエッジAIコンピュータ「Arduino VENTUNO Q」の国内取り扱いを発表しました。16GBメモリ搭載で、技適取得などの準備が整い次第販売する予定です。手元でAI処理を試したい開発者向けの選択肢になりそうです。</p>
+        <p class="starter">小型でもAI処理がかなりできる時代になってきましたね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2136553.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>AI</span><span>ITmedia NEWS</span></div>
+        <h2>Hugging Face、あひる型ロボット「Microduck」発表 399ドルで予約開始</h2>
+        <p>Pollen Roboticsが、二足歩行ロボット「Microduck」を発表し、予約受付を始めました。399ドルの小型設計で、強化学習による動作学習に特化しています。SDKやシミュレーターをOSSとして公開し、家庭や教室でも試しやすいプラットフォームを目指します。</p>
+        <p class="starter">ロボットが“買って試す”対象として身近になってきた感じがありますね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/28/2000000901/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>高市総理、AI家庭教師で「物価高対策シミュレーター」を作る 「こういうのが欲しかった」</h2>
+        <p>高市総理が、チームみらいの安野党首らからAI家庭教師を受け、最新AIの使い方を体験しました。音声のやりとりだけで「物価高対策シミュレーター」を作り、政策の効果検討にAIを使えることを確認したといいます。総理は「こういうのが欲しかった」と評価しました。</p>
+        <p class="starter">AIが政策のたたき台づくりにも使われる時代なんですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2136675.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>穏やか</span><span>ITmedia NEWS</span></div>
+        <h2>R-18ゲームをiPhoneでも……DMM GAMES、iOS向け独自ストアを31日に公開</h2>
+        <p>App Storeを介さずにゲームアプリをインストールできる「代替マーケットプレイス」」で、R-18版タイトルも配信するのが特徴だ。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/28/2000000881/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>文化</span><span>ITmedia NEWS</span></div>
+        <h2>ダサいスライド資料を作る大会が開催中 応募フォームもダサい</h2>
+        <p>学生向けテックカンファレンスに向けて、あえて“ダサい”スライド資料を募る企画が行われています。優勝者にはイベント登壇の権利などが贈られるとのことです。肩の力を抜いて参加できる、少しユーモラスな企画です。</p>
+        <p class="starter">真面目な場でも、こういう遊び心のある企画があると親しみやすいですね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2608/28/2000000902/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>相鉄、新型車両「13000系」をGREEN×EXPOで実車展示 床下見学も</h2>
+        <p>相鉄グループが、2027年開催のGREEN×EXPO 2027に向けた展示企画で、新型車両「13000系」を搬入しました。車両の陸上輸送や展示方法の詳細も明らかにしています。鉄道好きには、実車を間近で見られる楽しみがありそうです。</p>
+        <p class="starter">新型車両をイベントでじっくり見られるのは、鉄道ファンにはうれしい話題ですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2136598.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>吉田カバン、バッグ仕様の「ほぼ日手帳×POTR」手帳カバー</h2>
+        <p>吉田カバンが、POTRブランドから「ほぼ日手帳」とコラボした手帳カバーを9月1日に発売します。A6とA5の2サイズで、バッグのような仕様が特徴です。新しい手帳シーズンを意識するきっかけになりそうです。</p>
+        <p class="starter">来年の手帳まわりを考え始めると、ちょっと秋の気分が近づきますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2136647.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>口をつけずに膨らませられるネックピロー マーナ</h2>
+        <p>マーナが、少し離れた位置から息を吹き込んで膨らむネックピローを発売しました。価格は3,630円で、移動時のちょっとした快適さを意識したアイテムです。旅行や帰省の準備を考える時期にも使いやすそうです。</p>
+        <p class="starter">こういう小物は、あると地味に助かるタイプの便利グッズですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2135816.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>ファミマ、限定デザインのカップヌードル NIGOコラボ</h2>
+        <p>ファミリーマートが、NIGO氏のブランド「HUMAN MADE」とのコラボ第3弾として、限定デザインの「カップヌードル HUMAN MADE」を9月1日に発売します。雑貨やせんべいも数量限定で展開する予定です。コンビニで見つける楽しさがありそうな企画です。</p>
+        <p class="starter">限定パッケージって、つい手に取りたくなりますよね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2136519.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>便利</span><span>家電 Watch</span></div>
+        <h2>東芝の自動ゴミ収集付き掃除機 本体フィルターも自動掃除</h2>
+        <p>東芝ライフスタイルが、自動ゴミ収集機能付きのコードレス掃除機を10月上旬に発売します。本体フィルターも自動で掃除する仕組みで、日々の手入れを減らせるのが特徴です。掃除の手間を少し軽くしてくれそうな家電です。</p>
+        <p class="starter">掃除機は、使うたびに“お手入れの少なさ”がありがたく感じますね。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2136030.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
