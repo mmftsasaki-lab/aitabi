@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題まとめ</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年9月5日</p>
+    <h1>朝の話題まとめ</h1>
+    <p class="intro">今日は、AIの新モデルや身近な便利ガジェット、駅や街の新しい動きまで、気軽に話しやすいニュースを中心にまとめました。重すぎない範囲で、雑談のきっかけになりそうな14本です。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>OpenAI、「GPT-6 Astra」を一部組織向けに公開 サイバー能力が初の「Critical」に</h2>
+        <p>OpenAIが新モデル「GPT-6 Astra」を公開し、サイバーセキュリティ能力が自社基準で最高の「Critical」に達したとしています。提供版は悪用防止のため防御用途に限定され、高度な機能は段階的に開放する方針です。</p>
+        <p class="starter">AIの性能向上が進む一方で、使い方の線引きもどんどん細かくなってきましたね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2609/04/2000001153/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>Impress Watch</span></div>
+        <h2>OpenAI、次世代モデル「GPT‑6 Astra」公開 &quot;世界最高の知能&quot;</h2>
+        <p>OpenAIが次世代モデル「GPT‑6 Astra」を発表し、数学やコーディング、PC操作などで高い性能をうたっています。専門業務を高速かつ高精度に処理できるとしており、実務での使い道にも注目が集まりそうです。</p>
+        <p class="starter">“世界最高の知能”という言い方、実際の仕事でどこまで体感できるのか気になります。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2138177.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>グーグル、天気予報AI「WeatherNext 3」 降水予報が最大50%向上</h2>
+        <p>Google DeepMindとGoogle Researchが、AI天気予報モデル「WeatherNext 3」を発表しました。衛星データを取り込み、1時間ごとの高解像度予測を行うことで、より地域に即した天気予報を目指します。</p>
+        <p class="starter">朝の天気チェックが、AIで少しずつ細かくなっていくのは便利ですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2138283.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>次世代AIスマートリング「RingConn Gen 3」を1名様にプレゼント[Sponsored]</h2>
+        <p>日々の体調管理やパフォーマンス維持において、「スマートリング」が気になっている人は多いのではないでしょうか? 装着しやすく、睡眠時や作業中もストレスなく着け続けられるため、手軽さと精度の高さを両立したアイテムとして注目されています。</p>
+        <p class="starter">AIが身近な道具としてどう広がるか、話題にしやすそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/topic/special/2135690.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>AI</span><span>ITmedia NEWS</span></div>
+        <h2>新宿駅に「ごみ箱ロボット」出現 改札内を自動巡回 JR東が実証実験</h2>
+        <p>JR東日本が、新宿駅の改札内コンコースで自動走行する「移動式ごみ箱ロボット」の実証実験を行います。平日に巡回してごみを収集する仕組みで、駅の省力化や利便性向上が期待されます。</p>
+        <p class="starter">駅でロボットを見かける日常、もうかなり近づいてきましたね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2609/04/2000001199/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>便利</span><span>家電 Watch</span></div>
+        <h2>ダイソンのロボット掃除機、90日ゴミ捨て不要なサイクロンドック 水拭きも</h2>
+        <p>ダイソンが、吸引と水拭きに対応するロボット掃除機の新シリーズを発売しました。ゴミ捨ての手間を減らすサイクロンドックを備え、家事の負担を軽くする工夫が目立ちます。</p>
+        <p class="starter">掃除の“ちょっと面倒”を減らす家電は、忙しい朝ほどありがたいですね。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2138308.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>穏やか</span><span>家電 Watch</span></div>
+        <h2>シャープ、軽量ミニベロe-bikeを欧州で披露</h2>
+        <p>シャープがベルリンのIFA 2026で、e-bikeやAI搭載製品などの新製品や試作機を披露しました。電動アシスト自転車のような移動系アイテムも含まれており、家電メーカーの広がりが感じられます。</p>
+        <p class="starter">家電メーカーの展示会でe-bikeが並ぶと、事業の広がりを感じます。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2138092.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>KDDI、「光」「5G」両対応ホームルーターでネット接続「auひかりプラス」</h2>
+        <p>KDDIが、光回線と5G回線を組み合わせて使える家庭向けインターネット接続サービスを発表しました。開通工事前から5Gで使え、工事後は自動で光回線に切り替わるのが特徴です。</p>
+        <p class="starter">引っ越し直後でもネットが使いやすいのは、かなり助かります。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2138431.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>街</span><span>Impress Watch</span></div>
+        <h2>名古屋駅前にヨドバシカメラ 駅直結「名鉄名古屋店」9月16日オープン</h2>
+        <p>ヨドバシカメラが、名鉄名古屋駅と直結する新店舗を9月16日にオープンします。雨の日でも立ち寄りやすい駅直結型で、通勤や買い物のついでに使いやすそうです。</p>
+        <p class="starter">駅直結の大型店は、ちょっとした買い物でも便利そうですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2138347.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>街</span><span>Impress Watch</span></div>
+        <h2>「津田沼パルコ」跡地が駅前広場「ATOCHI」に 10月オープン</h2>
+        <p>津田沼PARCO跡地に、駅前広場「ATOCHI」が10月1日にオープンします。将来の開発までの暫定活用ですが、駅前の風景が少し変わる話題として注目されます。</p>
+        <p class="starter">“跡地”が広場として生まれ変わるのは、街の変化を感じます。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2138391.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>街</span><span>Impress Watch</span></div>
+        <h2>「自由が丘 ミューズスクエア」竣工 駅前の新ランドマークが9月17日開業</h2>
+        <p>自由が丘駅前で複合施設「自由が丘 ミューズスクエア」が竣工し、商業施設は9月17日に開業します。商業・事務所・住宅で構成される駅前の新しい拠点として話題になりそうです。</p>
+        <p class="starter">駅前に新しいランドマークができると、街歩きの楽しみも増えますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2138244.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>千歳線新駅名「Fビレッジ駅」に決定 北海道ボールパーク隣接</h2>
+        <p>北広島市とJR北海道が、千歳線の新駅名を「Fビレッジ駅」に決めたと発表しました。北海道ボールパークに隣接する駅で、今後の利用シーンにも注目が集まります。</p>
+        <p class="starter">駅名が決まると、街の地図が少しずつ完成していく感じがします。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2138393.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>文化</span><span>ITmedia NEWS</span></div>
+        <h2>「三省堂書店池袋本店」閉店へ 11年の歴史に幕、惜しむ声続々</h2>
+        <p>池袋駅に直結した利便性や選書のセンスで親しまれてきた三省堂書店池袋本店が閉店します。長く使われてきた書店の節目として、惜しむ声が広がっています。</p>
+        <p class="starter">駅前の本屋さんがなくなる話は、やっぱり少し寂しいですね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2609/04/2000001163/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>AI</span><span>ITmedia NEWS</span></div>
+        <h2>X、プロフィールのポストをいいね順に並べ替え可能に</h2>
+        <p>Xのプロフィール画面で、過去のポストを人気順に並べ替えられるようになりました。いいね数が多い投稿を見つけやすくなり、過去の反応が大きかった話題を振り返りやすくなります。</p>
+        <p class="starter">自分の“ウケた投稿”を見返すの、ちょっとした自己分析になりそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2609/03/2000001120/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
