@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題まとめ</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年9月8日</p>
+    <h1>朝の話題まとめ</h1>
+    <p class="intro">きょうは、AIの近況や便利ガジェット、暮らしに役立つ新サービスを中心に、軽めに話しやすいニュースを14本選びました。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>AI創薬候補、6種の「老化時計」で生物学的年齢の低下を示唆</h2>
+        <p>生成AIで設計した治療薬候補の再解析で、血中タンパク質から測る6種の「老化時計」すべてに変化が見られたという話題です。生物学的年齢が最大約6歳分低下したとされますが、老化への直接的な作用を確認するには今後の検証が必要としています。</p>
+        <p class="starter">AIが薬づくりだけでなく、体の変化の見方にも関わってくるのが面白いですね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2609/08/2000001239/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>GMKtec、192GBメモリで300B級LLMをローカル推論するミニPC「EVO-X5 Pro」</h2>
+        <p>192GBメモリとRyzen AI Max+ PRO 495を搭載し、300B級のLLMをローカルで動かせるミニPCがIFA 2026で発表されました。クラウドに頼らず大きめのモデルを試せる点が、開発用途ではかなり気になります。</p>
+        <p class="starter">自宅の小型PCでここまで動くと、AIの使い方の幅が広がりそうです。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2138676.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>【西川和久の不定期コラム】家庭にあるPCのLLMリソースを束ねるNVIDIA「PAIR」、早速試してみた！</h2>
+        <p>家庭内にある複数のPCの計算資源を束ねてLLMに活用するNVIDIA「PAIR」を試したコラムです。手元の機材をまとめて使う発想は、AIを“買う”より“組み合わせる”方向の面白さがあります。</p>
+        <p class="starter">家にあるPCを寄せ集めてAIに使う発想は、ちょっとDIY感があって楽しいですね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/column/nishikawa/2138806.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>AI</span><span>PC Watch</span></div>
+        <h2>【PC短評】薄っ！速っ！でも25時間駆動。「OmniBook Ultra 14」を触って驚いた</h2>
+        <p>Copilot+ PC基準を上回る性能をうたう、HPのプレミアムノート「OmniBook Ultra 14」の短評です。薄型筐体ながら長時間駆動も特徴で、持ち歩きやすさとAI対応の両立が印象的です。</p>
+        <p class="starter">軽くて長持ちするAI PCは、通勤や出先で使う人にうれしいですね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/column/short-review/2138909.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>AI</span><span>ITmedia NEWS</span></div>
+        <h2>カメラのないAIグラス、「RayNeo iO」はどこまでやれるのか 盗撮疑惑とは無縁になるが機能面は？</h2>
+        <p>カメラを搭載しないAIグラス「RayNeo iO」を試したレビューです。盗撮の心配が少ない設計が特徴で、AIグラスを日常で使うときの安心感に注目が集まっています。</p>
+        <p class="starter">カメラなしのAIグラスなら、気軽に試しやすそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2609/07/2000001208/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>AI</span><span>ITmedia NEWS</span></div>
+        <h2>AIで「今日着た服」を自動判定 1日の“服コスパ”が分かるシステムがスゴイ</h2>
+        <p>AIを使って、その日に着た服を判定し、着用回数から“服コスパ”を見える化する仕組みが紹介されています。服を減価償却のように管理する発想がユニークで、日々の買い物を見直すきっかけにもなりそうです。</p>
+        <p class="starter">服の元を取れたかをAIで見る、という発想がちょっと新鮮ですね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2609/07/2000001213/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>AI</span><span>PC Watch</span></div>
+        <h2>PCを開梱したら即戦力になるWindows開発環境「Project Zenith」</h2>
+        <p>Microsoftが、PCを開いてすぐに開発作業へ入れる新しい開発者向け環境「Project Zenith」を発表しました。まずはRyzen AI Max搭載機から展開される見込みで、セットアップの手間を減らしたい開発者には気になる動きです。</p>
+        <p class="starter">最初の設定に時間を取られないPCは、仕事の始まりがかなり楽になりそうです。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2138625.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>穏やか</span><span>家電 Watch</span></div>
+        <h2>TSUTAYA漫画レンタルでゴールデンカムイを読む</h2>
+        <p>旅行で北海道に行くので、ヤングジャンプコミックスの「ゴールデンカムイ」を読み返しています。ゴールデンカムイはアイヌの奪われた埋蔵金を巡る、北海道を舞台にした漫画。埋蔵金のありかは網走監獄を脱獄した囚人たちの身体に刺青として刻まれており、漫画では監獄の様子も描かれます。今回の旅行では明治に建てられた網走監獄が保存公開されている博物館にも足を運ぶ予定なので、読んでおきたかったのです。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/column/iikoto/2138437.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>テスラ、ロボタクシー車両「サイバーキャブ」を日本初公開 東名阪でイベント</h2>
+        <p>Tesla Japanは、「Robotaxi(ロボタクシー)」向けに開発した専用車両「Cybercab(サイバーキャブ)」を日本初公開するイベント「Cybercab Japan Tour」を、9月に東京・大阪・名古屋の全4会場で開催する。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2138659.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>東海道新幹線の最上位席「Supreme Class」 座席端末でプレミアム商品を販売</h2>
+        <p>東海道・山陽新幹線の最上位席「Supreme Class」で、座席端末からプレミアム商品を注文できる仕組みが紹介されました。個室タイプは10月1日開始予定で、移動時間の過ごし方が少し特別になりそうです。</p>
+        <p class="starter">新幹線の中で注文まで完結するのは、移動の楽しみが増えますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2138858.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>東京・八重洲の新グルメスポットを見てきた 「トフロム八重洲」9月10日開業</h2>
+        <p>東京駅前の複合施設「TOFROM YAESU」の商業ゾーンが9月10日に開業します。内覧会の様子が伝えられており、駅前で新しい食事や買い物の選択肢が増えそうです。</p>
+        <p class="starter">東京駅の周りは新しい店が増えるたびに、寄り道したくなります。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2138908.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>ニトリで小型家電の回収 東日本・東海エリアに拡大</h2>
+        <p>ニトリが実施している小型家電の無料リサイクル回収が、東北・甲信越・北陸・東海エリアにも広がります。家で眠っている古い家電を整理しやすくなり、片付けのきっかけにもなりそうです。</p>
+        <p class="starter">使わなくなった家電をまとめて出せると、部屋もすっきりしそうですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2138714.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>PayPay、「UnionPay App」(銀聯QR)に対応</h2>
+        <p>PayPayが「UnionPay App」(銀聯QR)に対応し、加盟店で利用できるようになりました。訪日客や海外利用の場面で、支払いの選択肢が広がる動きです。</p>
+        <p class="starter">決済手段が増えると、旅行先でも支払いがしやすくなりますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2138581.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>便利</span><span>家電 Watch</span></div>
+        <h2>山崎実業、炊飯器に貼れるマグネットしゃもじ</h2>
+        <p>山崎実業から、炊飯器に貼り付けて置けるマグネットしゃもじが登場しました。置き場所に困りがちなキッチン小物をすっきりまとめられる、実用的なアイデア商品です。</p>
+        <p class="starter">しゃもじの置き場問題、地味だけど毎日の小さなストレスですよね。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2138638.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
