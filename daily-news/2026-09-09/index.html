@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>今朝の気になるニュース14本</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年9月9日</p>
+    <h1>今朝の気になるニュース14本</h1>
+    <p class="intro">朝の雑談で話しやすい、軽めで新しめの話題を中心に14本選びました。AIは7本、そのうち生成AIを少し深掘りできる話題を2本入れています。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>Meta、パーソナルAIエージェント「Muse」発表 メール送信や買い物も代行（まずは米国で無料提供開始）</h2>
+        <p>Metaが、メール送信や旅行予約、Webフォーム入力などを代行するパーソナルAIエージェント「Muse」を発表しました。専用アプリやWhatsAppから使え、決済やログイン情報との連携にも対応するとしています。</p>
+        <p class="starter">自分の代わりにここまでやってくれるAI、まず何を任せてみたいですか？</p>
+        <a href="https://www.itmedia.co.jp/news/article/2609/09/2000001294/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>ChatGPT Workに“自分の文体”学習機能 GmailやSlackの文章から言い回しやクセを模倣</h2>
+        <p>OpenAIが、ChatGPT Workにユーザーの文体を学習する機能を追加しました。GmailやSlackの文章をもとに、言い回しやクセをまねた文章を作れるようになります。</p>
+        <p class="starter">メールの“いつもの書き方”まで覚えてくれると、仕事はかなり楽になりそうですね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2609/08/2000001256/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>Adobe Premiere、タイムライン上で動画・効果音をAI生成</h2>
+        <p>AdobeがPremiereとAfter Effectsの新機能を発表しました。Premiereでは、タイムライン上で動画や効果音を生成できる機能が追加され、After EffectsではAIアシスタントがベータ提供されます。</p>
+        <p class="starter">動画編集ソフトの中で素材まで作れると、作業の流れがかなり変わりそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2139044.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>音楽生成AI「Lyria 3.5」、Geminiアプリで全ユーザー開放</h2>
+        <p>Googleの音楽生成AIモデル「Lyria 3.5」が、GeminiアプリとGemini APIで使えるようになりました。ボーカル入りの楽曲まで、プロンプトや画像から手軽に作れるのが特徴です。</p>
+        <p class="starter">文章や画像から曲まで作れると、創作の入り口がぐっと広がりますね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2138938.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>AI</span><span>PC Watch</span></div>
+        <h2>国連人権高等弁務官、AIが人類を脅かすリスクを警告。安全規制と独立検証を要求</h2>
+        <p>国連人権高等弁務官が、先進的なAIが制御されなければ人類にとって大きなリスクになり得ると警告しました。安全性を確保するため、拘束力のある規則や独立した検証を早急に整えるよう求めています。</p>
+        <p class="starter">便利さが増すほど、安全の見える化も大事になってきますね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2139271.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>便利</span><span>PC Watch</span></div>
+        <h2>机からPCが消えた。モニター裏に収まるデルの超小型AI PC [Sponsored]</h2>
+        <p>デルの超小型デスクトップPCが紹介されています。本体は小型で、オプションのスタンドを使えばモニター背面に取り付けられるのが特徴です。</p>
+        <p class="starter">机まわりをすっきりさせたい人には、かなり気になる形ですね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/topic/special/2135353.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>「スターバックス専用自販機」日本初登場・全国展開</h2>
+        <p>スターバックスとサントリーが、日本初となる「スターバックス専用自動販売機」を9月中旬から全国で順次展開します。手軽に買える新しい飲み方として広がりそうです。</p>
+        <p class="starter">専用自販機が増えると、ちょっとした休憩の選択肢が増えてうれしいですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2139135.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>文化</span><span>ITmedia NEWS</span></div>
+        <h2>「ペンギンを返して」 Suica新キャラ候補3案公開でSNSに戸惑いの声 一般投票は8日から</h2>
+        <p>JR東日本がSuicaの新イメージキャラクター候補3案を公開し、SNSで話題になっています。2027年3月末で卒業する「Suicaのペンギン」を惜しむ声も多く、一般投票が始まっています。</p>
+        <p class="starter">長く親しまれたキャラが変わると、つい反応したくなりますよね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2609/08/2000001290/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>東京・有明に最大規模の「チームラボ」アートミュージアム</h2>
+        <p>東京都が、有明北地区の開発事業者としてチームラボを代表組合員とする事業者を決定しました。過去最大スケールのデジタルアートミュージアムやカフェ、緑地などを整備する計画です。</p>
+        <p class="starter">有明に新しいデジタルアートの拠点ができるのは楽しみですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2139213.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>「令和のトキワ荘」高輪に JR東日本が若手クリエイター拠点</h2>
+        <p>JR東日本が、TAKANAWA GATEWAY CITYに若手クリエイターやアーティスト向けの住居・アトリエ拠点を2027年3月に開設します。入居希望者の問い合わせ受付も始まりました。</p>
+        <p class="starter">若手が集まる創作拠点って、街の空気まで変わりそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2139192.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>三井住友カード、クレカ乗車でイベント時の運賃割引 LUUP連携も</h2>
+        <p>三井住友カードが、stera transitを使った「クレカ乗車」や事前登録型サービスの新展開を発表しました。地域や交通の課題解決を目指し、イベント時の運賃割引やLUUP連携も進めます。</p>
+        <p class="starter">移動と決済がつながると、ちょっとしたお出かけが便利になりそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2139102.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>JR東日本、2030年代初めに全駅「Suica」対応 新改札やスマホ改札を導入</h2>
+        <p>JR東日本が、2030年代初めに全駅でSuicaを利用できるようにすると発表しました。新しい改札ソリューションやスマホ改札の導入も進める方針です。</p>
+        <p class="starter">改札の通り方が、これからさらに変わっていきそうですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2139095.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>科学</span><span>Impress Watch</span></div>
+        <h2>アサヒ飲料、「CO2を食べる自販機」のCO2をマンションのタイルに</h2>
+        <p>アサヒ飲料が、CO2を回収する自販機の取り組みを建築現場やマンションのタイルに活用すると発表しました。回収したCO2吸収材を建材に使う計画で、環境配慮の広がりが注目されます。</p>
+        <p class="starter">自販機の“回収したCO2”が建材になる発想は、ちょっと未来っぽいですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2138855.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>「データセンターの排熱で温泉を作ろう」が難しい3つの理由 本職のDC技術者にガチで考えてもらった</h2>
+        <p>AI需要に伴い注目度が高まるデータセンター。昨今は環境問題の表出に伴い電力消費や排熱なども問題視されているが、こうした議論のたびに「排熱でお湯を沸かして温泉にすればいいのでは」といったアイデアが注目を集めるのをご存じだろうか。</p>
+        <p class="starter">生成AIの仕組みや仕事への影響まで、少し深く話せそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2609/08/2000000887/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
