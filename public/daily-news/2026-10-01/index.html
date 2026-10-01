@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題まとめ</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年10月1日</p>
+    <h1>朝の話題まとめ</h1>
+    <p class="intro">10月1日の朝に、気分が重くなりにくい話題を14本に絞ってまとめました。AIは7本、そのうち生成AIを少し深掘りできる話題を2本入れています。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>「声」もパブリシティー権の保護対象に 津田健次郎さんのAI声模倣訴訟で東京地裁が判断──削除請求自体は棄却</h2>
+        <p>生成AIで声を模倣したとみられる動画をめぐる訴訟で、東京地裁は人の声もパブリシティー権の保護対象になり得ると判断しました。一方で、削除請求そのものは動画がすでに消えていたことを理由に退けています。</p>
+        <p class="starter">AIで“声”を扱うときのルール作り、これからさらに話題になりそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2609/30/2000001892/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>たった4人で10カ国超を担当、飲食チェーンの海外進出を支える生成AI活用</h2>
+        <p>飲食業の海外展開を支える現場で、生成AIを使った業務効率化の事例が紹介されています。少人数でも広い地域を担当しやすくする工夫として、実務寄りの使い方が見えてきます。</p>
+        <p class="starter">“人手を増やす”以外のやり方として、AI活用のヒントがありそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2609/30/2000001789/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>AI</span><span>ITmedia NEWS</span></div>
+        <h2>米Micron、AI需要で売上高は前年同期比4.8倍、純利益は11.8倍と過去最高を更新</h2>
+        <p>Micron Technologyの決算では、AI普及に伴うデータセンター向けメモリ需要の拡大が業績を押し上げました。売上高と純利益はいずれも過去最高で、次年度も高水準を見込んでいます。</p>
+        <p class="starter">AIの話題はソフトだけでなく、メモリのような部品にも広がっていますね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2610/01/2000001914/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>ミニPCでローカルAIエージェントはどこまで動く？「LM Studio Bionic」で試した</h2>
+        <p>ミニPC上でローカルAIエージェントを動かす試みを紹介する記事です。クラウドに頼らず手元のPCでどこまでできるか、という観点で読めます。</p>
+        <p class="starter">自宅のPCでAIを動かすと、使い方のイメージがぐっと広がります。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/topic/feature/2144569.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>AI</span><span>PC Watch</span></div>
+        <h2>OpenAI「Codex Cloud」がGitHub連携、クラウドでAIコーディング</h2>
+        <p>OpenAIのクラウド版CodexがGitHubアカウントと連携できるようになりました。コード保管サービスとAIコーディングのつながりが強まり、開発の流れがさらにスムーズになりそうです。</p>
+        <p class="starter">開発ツールにAIが自然に入ってくる流れ、かなり定着してきました。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2144612.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>AI</span><span>ITmedia NEWS</span></div>
+        <h2>トランプ政権、AI安全対策は「企業の自主規制」で合意 監視委員会の設置も検討</h2>
+        <p>トランプ米大統領は9月29日（現地時間）、AIの安全対策を巡り、AI開発大手が自主的に対処することで合意したと明らかにした。政府の規制強化ではなく、企業の自主規制を前提にAI開発の促進を優先する姿勢を鮮明にした形だ。</p>
+        <p class="starter">AIが身近な道具としてどう広がるか、話題にしやすそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2609/30/2000001882/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>AI時代に接近する決済とトークン Stripeが描くエージェンティックエコノミー</h2>
+        <p>Stripeがイベントで、AIを新たな経済主体として捉える「エージェンティックエコノミー」を打ち出しました。決済やトークンの話題とあわせて、AIがサービスの中でどう動くかを考える材料になります。</p>
+        <p class="starter">AIが“使われる側”から“動く側”になると、サービス設計も変わりそうですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2144549.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>穏やか</span><span>ITmedia NEWS</span></div>
+        <h2>クオカードのLINEキャンペーンシステムに不正アクセス 当選情報など流出の恐れ</h2>
+        <p>プリペイドカード「QUOカード」を発行するクオカード（東京都中央区）は9月29日、同社のLINE公式アカウントのキャンペーンシステムに第三者による不正アクセスがあったと発表した。一部の利用者のLINE表示名とキャンペーン当選情報が、第三者に閲覧されたか、流出した可能性があるという。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2609/30/2000001878/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>穏やか</span><span>ITmedia NEWS</span></div>
+        <h2>楽天モバイルのauローミング縮小 マップ公開、ほぼ半減エリアも……さらに「順次縮小」へ</h2>
+        <p>10月以降のローミングエリアを示す着色面積を9月末時点と比べると、首都圏や大阪・京都などの都市部ではほぼ半減するようだ。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2609/30/2000001885/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>便利</span><span>PC Watch</span></div>
+        <h2>高速化した「Fire TV Stick 4K」登場。テレビの給電で駆動</h2>
+        <p>Fire TV Stick 4Kの新製品が発表され、動作の高速化がうたわれています。テレビの給電で使える点も含め、リビングでの使い勝手がさらによくなりそうです。</p>
+        <p class="starter">テレビ周りの機器は、ちょっとした改良でも体感が変わりますね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2144635.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>季節</span><span>ITmedia NEWS</span></div>
+        <h2>ヤマレコ、投稿写真を地図上でまとめて確認できる「みんなの写真マップ」提供開始 登山前の情報収集に</h2>
+        <p>登山コミュニティの投稿写真を地図上で探せる新機能が始まりました。山の様子を事前に確認しやすくなり、登山前の情報収集に役立ちそうです。</p>
+        <p class="starter">行く前に現地の写真を見られると、計画が立てやすくなります。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2609/30/2000001895/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>大阪駅に新グルメスポット「バルチカM」 駅西側まちづくり完成</h2>
+        <p>大阪駅西側で進められてきた開発の一環として、新しい飲食エリアの開業計画が発表されました。駅周辺のまちづくりが一区切りを迎える話題です。</p>
+        <p class="starter">駅の周りが少しずつ変わっていくのを見るのは楽しいですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2144528.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>イオン、「そよらつくば学園の森」10月25日開業 茨城初</h2>
+        <p>茨城県つくば市に新しいショッピングセンターが開業します。地域初出店の形で、買い物の選択肢が増えるニュースです。</p>
+        <p class="starter">新しい商業施設は、近所の“いつもの場所”候補が増えるのがうれしいです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2144597.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>科学</span><span>Impress Watch</span></div>
+        <h2>JR東、3Dプリンターで駅舎建設 築78年の釜石線 小佐野駅建替え</h2>
+        <p>JR東日本が、建設用3Dプリンターを使って駅舎を建て替える計画を発表しました。駅の建設に新しい工法を取り入れる取り組みとして注目されます。</p>
+        <p class="starter">駅舎づくりにも3Dプリンターが入ってくる時代なんですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2144630.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
