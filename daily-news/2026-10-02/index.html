@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>今朝の話題 14本</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年10月2日</p>
+    <h1>今朝の話題 14本</h1>
+    <p class="intro">朝の雑談に使いやすい、軽めで話しやすいニュースを14本に絞りました。AI関連は7本、そのうち深掘りしやすい生成AI話題を2本入れています。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>ChatGPTにAIでバーチャル試着機能とカメラでの書類スキャン→PDF化機能</h2>
+        <p>OpenAIは、ChatGPTにバーチャル試着やお気に入り保存などの新機能を追加しました。商品情報カードから自分の写真を使って服やアクセサリーを着用した姿を生成でき、iOSアプリでは書類を連続撮影して1つのPDFにまとめるスキャン機能も使えます。</p>
+        <p class="starter">試着までアプリでできると、買い物のしかたがかなり変わりそうですね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2610/02/2000001945/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>コーディングも法務もGPT-6 Astra超え。Google「Gemini 4 Argon」</h2>
+        <p>Googleがフロンティアモデル「Gemini 4 Argon」を発表しました。1回の処理で数十万トークンを扱える設計で、ソフトウェア開発や法務・財務のような長く複雑な業務を想定しています。</p>
+        <p class="starter">長文をまとめて扱えるAIは、仕事の下調べにも使い道が広がりそうです。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2144721.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>AI</span><span>家電 Watch</span></div>
+        <h2>VIVANTとコラボした特別なLOVOT</h2>
+        <p>GROOVE Xは、家族型ロボット「LOVOT(らぼっと)」向けの日曜劇場『VIVANT』とのコラボレーションアイテム4種類を、10月7日より日本橋三越本店で先行販売する。ロゴTシャツ、トートバッグ、キーチャームの3種類は10月21日より「LOVOT ウェブストア」でも発売する。価格は1,680円～16,980円。</p>
+        <p class="starter">AIが身近な道具としてどう広がるか、話題にしやすそうです。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2144768.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>生成AI</span><span>Impress Watch</span></div>
+        <h2>Notion、日本エンプラARR 169%成長 AIの“コンテキストレイヤー”へ</h2>
+        <p>Notionが日本でのエンタープライズ事業を強化していると説明しました。日本は米国以外で2番目に大きな市場で、AI時代の「コンテキストレイヤー」を担う存在を目指すとしています。</p>
+        <p class="starter">AI時代の“情報の置き場所”をどう作るか、という話は仕事にもつながりますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2144936.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>富山「YKK AP ARENA」がオープン AI活用で回遊促進</h2>
+        <p>富山市の「YKK AP ARENA」を起点に、AIやデジタル技術を活用した街づくりプロジェクトが始まります。観戦前後の観光プランを提案する「観戦計画AI」などを整え、試合日以外も人が集まる拠点を目指します。</p>
+        <p class="starter">スポーツ観戦と街歩きをつなぐAI、週末のお出かけと相性がよさそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2144789.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>AI</span><span>ITmedia NEWS</span></div>
+        <h2>SIE、PS5向けAI採用画質向上技術「QSSR」発表 AMDと共同開発、「Marvel&#39;s Wolverine」と「Ghost of Yōtei」が初対応</h2>
+        <p>ソニー・インタラクティブエンタテインメントが、PS5向けのAIアップスケーリング技術「QSSR」を発表しました。PS5 Pro向け技術を軽量化し、無印のPS5でもAIによる画質向上を実現する狙いです。</p>
+        <p class="starter">ゲーム機の画質向上にもAIが入ると、見え方の進化が楽しみになります。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2610/02/2000001946/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>マネーフォワード、「従業員の健康管理」に参入</h2>
+        <p>マネーフォワードが「マネーフォワード クラウド健康管理」を10月中旬から提供します。ストレスチェックや健康診断の管理を、AIによる入力代行や報告書の自動作成で効率化する仕組みです。</p>
+        <p class="starter">事務作業をAIで減らせると、担当者の負担も少し軽くなりそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2144967.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>穏やか</span><span>ITmedia NEWS</span></div>
+        <h2>日本原子力機構に不正アクセス 研究者の顔写真付き身分証など漏えい</h2>
+        <p>日本原子力研究開発機構（JAEA）が、研究者向けのWebサイトが不正アクセスを受け、情報が漏えいしたと発表した。茨城県東海村にある原子力科学研究所の利用者175人分の顔写真付き身分証明証や健康診断の結果などが漏えいした。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2610/01/2000001942/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>アマゾン「Kindle」一新 最軽量16GBやアルミデザイン、カラーモデル</h2>
+        <p>AmazonがKindleシリーズを刷新し、最軽量モデルやアルミデザイン、カラーディスプレイ搭載モデルを順次発売します。読書端末の選択肢が広がり、用途に合わせて選びやすくなりました。</p>
+        <p class="starter">読書の秋に、端末の新モデルが出るとつい気になります。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2145024.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>こどもNISA、口座開設の事前申込が各社でスタート</h2>
+        <p>2027年開始予定の「こどもNISA」に向けて、各証券会社で事前申込が始まりました。0～17歳が対象で、子ども名義で年間60万円、総額600万円まで非課税で運用できます。</p>
+        <p class="starter">子どもの将来に向けた準備として、早めに情報を見ておく人が増えそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2144840.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>G-SHOCK、“ブルーサファイアクリスタル”で1000万円超えの特別モデル</h2>
+        <p>カシオがG-SHOCKの特別モデルを発表しました。ブルーサファイアクリスタルを使った限定20本の超高級モデルで、コレクション性の高い一本です。</p>
+        <p class="starter">G-SHOCKの“特別版”は、毎回どんな素材を使うのか見るだけでも楽しいですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2144874.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>LINEミニアプリ、事業者収益80%に アップル手数料引き下げで</h2>
+        <p>LINEヤフーがAppleのプログラム参加を発表し、審査を通過したLINEミニアプリでは決済手数料が下がります。事業者への収益配分が80%に引き上がるため、サービス運営のしやすさが増しそうです。</p>
+        <p class="starter">手数料の変化は、普段使うサービスの裏側をのぞく感じがします。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2144828.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>カラオケまねきねこ、毎日歌える定額制「うたホ」 同伴1人も無料</h2>
+        <p>カラオケまねきねこが定額制サービス「うたホ」を始めました。月額制で毎日利用でき、同伴1人も無料になるため、歌うのが好きな人には使い勝手のよい内容です。</p>
+        <p class="starter">定額で毎日行けるなら、練習派にもかなり魅力的ですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2144896.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>季節</span><span>家電 Watch</span></div>
+        <h2>熱い緑茶を2分で飲み頃まで冷ます湯呑みがお気に入り!【今日のいいね！】</h2>
+        <p>熱いお茶を短時間で飲み頃にできる湯呑みを紹介する記事です。ちょっとした工夫で日常の飲み物が楽しみやすくなる、気軽な生活ネタになっています。</p>
+        <p class="starter">朝の一杯をちょうどいい温度で飲めると、ちょっと得した気分になります。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/column/iine/2144156.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
