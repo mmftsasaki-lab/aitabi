@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題メモ</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年10月17日</p>
+    <h1>朝の話題メモ</h1>
+    <p class="intro">今朝は、AIの実装やロボットの話題が多めです。暮らしに近い新製品から、生成AIの研究・評価まで、軽く話しやすいものを中心にまとめました。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>「カレー作りたい」と注文→ロボが野菜をピックする「未来の八百屋」 AWS×安川電機が披露</h2>
+        <p>CEATEC 2026で、AWSと安川電機が「未来の八百屋」と題したデモを展示しています。話しかけると生成AIが具材を提案し、ロボットが棚から野菜を取り出す仕組みです。</p>
+        <p class="starter">もし近所のスーパーにこういう売り場があったら、何を頼んでみたいですか？</p>
+        <a href="https://www.itmedia.co.jp/news/article/2610/16/2000002326/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>Microsoft、社内エンジニア数万人を対象に「Claude Code」「Copilot CLI」導入の影響を分析 生産性どう変わる</h2>
+        <p>Microsoftの研究者らが、コマンドラインで動くAIコーディングツールの利用状況と生産性への影響を調べた論文を発表しました。社内の大規模な実運用を対象にしている点が、実装寄りの話題として興味深いです。</p>
+        <p class="starter">AIコーディングツールは、使う人によって便利さの差がかなり出そうですよね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2610/16/2000002277/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>AI</span><span>家電 Watch</span></div>
+        <h2>電動モビリティやロボットの進化がすごい! 子供のように未来にワクワク</h2>
+        <p>今週10月13日～16日開催の「Japan Mobility Show bizweek 2026」に行ってきました。国内自動車メーカーをはじめ、スタートアップ／大学・研究機関、事業会社やコンソーシアムなどが一堂に会し、これまでにないシナジーや新たな価値を生み出す場として「あなたが動けば、世界が動く。」がスローガンです。来年は大規模な一般向け総合ショーが開催されます。</p>
+        <p class="starter">AIが身近な道具としてどう広がるか、話題にしやすそうです。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/column/iikoto/2148456.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>AI</span><span>ITmedia NEWS</span></div>
+        <h2>コードを書かずに“自分専用IME” 日英を自動切り替えできる「Meltype」にAI変換を載せてみた</h2>
+        <p>日本語の文章に英単語を混ぜるたび、入力モードを切り替えたりF10キーを押したり――。そんな日本語入力の“宿命”を、変換エンジンに手を入れずに解消しようとする常駐ツール「Meltype」が登場した。試してみると便利さと同時に弱点も見えてきたため、筆者はAIにビルドを任せ、自分好みの改造に踏み込んだ。</p>
+        <p class="starter">AIが身近な道具としてどう広がるか、話題にしやすそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2610/16/2000002336/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>Amazon、会話を記憶するAIデバイス「Bee」 74.99ドルから</h2>
+        <p>Amazonが、会話を要約して予定やタスクを覚えるパーソナルAIデバイスを発表しました。価格は74.99ドルからで、日本での発売は未定です。</p>
+        <p class="starter">“覚えておいてくれるAI”が身近になると、メモの取り方も変わりそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2148709.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>PhotoshopなどアドビアプリがRTX Spark最適化 処理速度は最大2倍に</h2>
+        <p>アドビが主要アプリをRTX Spark向けに最適化し、AIを使う制作ワークフローの高速化を図ると発表しました。画像や動画の編集をする人には、作業時間の短縮につながりそうな話題です。</p>
+        <p class="starter">制作ソフトの高速化って、地味だけどかなりうれしい改善ですよね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2148815.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>AI</span><span>PC Watch</span></div>
+        <h2>【Hothotレビュー】128GBの統合メモリで大型ローカルAIを動かす。RTX Spark搭載「ProArt P14」</h2>
+        <p>統合メモリ128GBを備えたノートPCで、大型のローカルAIを動かすレビューです。持ち運べるサイズでどこまでAI処理ができるか、実機ベースでイメージしやすい内容になっています。</p>
+        <p class="starter">ノートPCでもローカルAIをしっかり動かせる時代、かなり近づいてきましたね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/column/hothot/2148879.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>穏やか</span><span>ITmedia NEWS</span></div>
+        <h2>Tesla、新型「Roadster」発表 SpaceX技術で“飛べる”モデルも 日本でも予約受付中</h2>
+        <p>Teslaは、次世代EVスポーツカー「Roadster」を発表した。2028年の生産開始を目指し国内予約も受付中だ。路面に吸い付く吸引システムやSpaceXの冷ガススラスター技術を搭載し、最上位モデルでは空中浮上やロール回転、0-60mph加速0.59秒未満を実演した。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2610/16/2000002323/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>穏やか</span><span>ITmedia NEWS</span></div>
+        <h2>緊急地震速報発表→すぐ取り消し 震度7予測も、実際は震度1 アラートに困惑の声</h2>
+        <p>気象庁は10月16日午後0時40分ごろ、同0時36分ごろに千島列島でマグニチュード9.9、予想最大震度7の地震が発生したとして、緊急地震速報を発表した。しかし約8分後の午後0時48分ごろに速報を取り消し。同庁によると、この時間帯には北海道の渡島地方東部で地震があったが、震度1で津波の心配はないという。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2610/16/2000002327/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>西鉄、nimocaのアプリチャージやバスのクレカ乗車拡大 三井住友カード連携</h2>
+        <p>西日本鉄道とニモカ、三井住友カードがキャッシュレス推進で連携します。バスのクレカ乗車拡大や、スマホ経由のチャージなど、日常の移動が少し便利になりそうです。</p>
+        <p class="starter">交通系ICとクレカの連携、使う側としてはかなり助かりそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2148784.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>東京都、スマホからレアメタル回収 ドコモ・KDDIがデータ移行支援</h2>
+        <p>東京都が、使い終えたスマホから希少資源を回収する取り組みを進めます。通信各社がデータ移行を支援するので、機種変更のついでに参加しやすそうです。</p>
+        <p class="starter">古いスマホの中身を整理しつつ、資源回収にもつながるのはいい流れですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2148764.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>セブンカフェにキリマンジャロなどこだわり3種「セレクトブレンド」</h2>
+        <p>セブンカフェに、産地の違う豆を選べる新しいブレンドが登場します。10月20日発売で、いつものコーヒーを少し選ぶ楽しみが増えそうです。</p>
+        <p class="starter">コンビニコーヒーでも、好みで選べるとちょっと特別感がありますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2148713.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>季節</span><span>Impress Watch</span></div>
+        <h2>カシオ プロトレック、数字ダイヤル「PRW-51」に全面蓄光×オールブラック</h2>
+        <p>カシオのプロトレックに、全面蓄光のダイヤルを採用した新モデルが登場します。アウトドア向けらしい見やすさと、オールブラックの落ち着いた雰囲気が特徴です。</p>
+        <p class="starter">暗い場所でも見やすい時計って、実用性が高くて頼もしいですよね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2148160.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>季節</span><span>家電 Watch</span></div>
+        <h2>リズム、メンテしやすい卓上加湿器</h2>
+        <p>リズムが、手入れしやすいコンパクトな卓上加湿器を発売しました。乾燥が気になり始める時期に、デスク周りで使いやすそうな製品です。</p>
+        <p class="starter">そろそろ加湿器を出そうか、と思い始める季節ですね。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2148695.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
