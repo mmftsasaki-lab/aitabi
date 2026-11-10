@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題 14本</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年11月10日</p>
+    <h1>朝の話題 14本</h1>
+    <p class="intro">今朝は、AIの新モデルや検索・予約の便利機能、暮らしに近い新サービスを中心に、気軽に話しやすいニュースをそろえました。重すぎない範囲で、技術・文化・生活の小ネタも混ぜています。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>AdobeとDisneyが戦略的提携 「Firefly Foundry」でDisney専用の生成AIモデル開発へ</h2>
+        <p>AdobeとDisneyが、複数年の戦略的提携を発表しました。Firefly Foundryを使い、Disneyの作風に合わせた安全なカスタム生成AIモデルを共同開発するという内容です。映像制作やテーマパーク開発など、幅広い制作工程での活用が想定されています。</p>
+        <p class="starter">「作品の世界観に合わせたAI」って、クリエイティブの現場ではかなり実用的になってきましたね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2611/10/2000003050/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>Google、第8世代TPUに「8tx」と「8i Max」を追加 機密データ処理と大規模AIエージェントに特化</h2>
+        <p>Googleが、第8世代TPUに新モデル2種を追加しました。機密データ処理向けの「8tx」と、長大コンテキスト処理向けの「8i Max」で、AIエージェントの利用拡大を見据えた設計です。ソフトウェアのオープンソース化や資源効率化の強化もあわせて発表されています。</p>
+        <p class="starter">AIが長い文脈を扱うほど、チップ側の工夫もどんどん重要になりますね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2611/10/2000003043/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>Anthropic、「Claude Fable 5.2」と「Claude Mythos 5.2」発表 API料金2割下げ、出力は最大30％高速化</h2>
+        <p>Anthropicが最上位AIモデルの新版を発表し、速度と価格の両面で改善しました。出力は最大30％高速化、API料金は2割下げとなっており、長時間の推論やエージェント型コーディングを意識した内容です。主要クラウドや各種アプリで同日提供が始まっています。</p>
+        <p class="starter">性能アップと値下げが同時に来ると、開発側はかなり試しやすくなりそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2611/10/2000003042/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>生成AI深掘り</span><span>Impress Watch</span></div>
+        <h2>PFN、金融特化の小規模AI「PLaMo 3.0 Fin」 GPU1枚から動作</h2>
+        <p>Preferred Networksが、金融機関向けの小規模言語モデル「PLaMo 3.0 Fin」を公開しました。Hugging Faceでオープンウェイトとして提供され、閉域環境やオンプレミス環境にも導入しやすい設計です。GPU1枚から動く点も、実務導入のしやすさにつながりそうです。</p>
+        <p class="starter">大規模モデルだけでなく、現場で回る“小さめで強いAI”も注目ですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2154924.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>生成AI深掘り</span><span>Impress Watch</span></div>
+        <h2>Cursor、Webアプリを共有できる新機能</h2>
+        <p>コーディングエージェントのCursorが、Webアプリの構築からデプロイまでを自動化し、リンクで共有できる新機能を始めました。作りたいアプリを説明するだけで、データベースや認証の設定まで進められるのが特徴です。有料プランで利用できます。</p>
+        <p class="starter">「作る」だけでなく「公開する」までAIが手伝う流れが、かなり自然になってきました。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2154816.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>グーグル、AIモード検索でレストラン予約に対応 ぐるなび、一休など</h2>
+        <p>Googleが、検索のAIモードでレストラン予約に対応すると発表しました。ぐるなびや一休などと連携し、空席情報をまとめて見られるようになります。今後数週間で順次展開される予定です。</p>
+        <p class="starter">検索から予約まで一気につながると、外食の予定も立てやすくなりそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2154915.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>AI</span><span>PC Watch</span></div>
+        <h2>相づち・割り込み対応の日本語AI「Shizuku-Duplex」発表</h2>
+        <p>Shizuku AIが、全二重で日本語対話ができるモデル「Shizuku-Duplex」を発表しました。相手の話を聞きながら相づちを打ち、話し終わる前から応答できるのが特徴です。AIキャラクター「しずく」の基盤技術として開発されています。</p>
+        <p class="starter">会話の“間”まで自然になると、AIとのやり取りの印象もかなり変わりそうですね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2154838.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>楽天、自社衛星通信網を本格整備へ 国家戦略「J-LEO」に採択</h2>
+        <p>楽天グループとAST SpaceMobileが、衛星インフラ整備事業「J-LEO」に採択された新会社を設立します。日本でスマホと衛星が直接つながる通信サービスを、2029年3月末までに始める計画です。通信の選択肢が広がる取り組みとして注目されます。</p>
+        <p class="starter">地上の電波が届きにくい場所でもつながる仕組みは、かなり心強いですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2154947.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>米AmazonでUber Eatsを直接注文 プライム会員は送料無料</h2>
+        <p>Amazonが、米国のプライム会員向けにUber Eatsの直接注文サービスを始めました。対象注文では配達料が無料になります。現時点では米国のみで、日本など他地域への展開は案内されていません。</p>
+        <p class="starter">買い物サイトの中でそのままフードデリバリーまで使えるのは、かなり便利そうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2154700.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>文化</span><span>家電 Watch</span></div>
+        <h2>横浜花博の開幕前にトゥンクトゥンクと最新技術を楽しく学ぶ RFIDを体験してきた</h2>
+        <p>2027年開催のGREEN×EXPO 2027に向けて、新しい参加型プログラムが紹介されました。RFIDなどの技術を、会場のキャラクターと一緒に楽しく学べる内容です。開幕前から、展示の雰囲気を少し先取りできる話題です。</p>
+        <p class="starter">博覧会は、技術を“学ぶ”より“体験する”形が増えてきていますね。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2154356.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>500円で行列スキップ “怒られ“から“あり“に進化した飲食店ファストパス「SuiSui」</h2>
+        <p>追加料金で行列をスキップできる飲食店向けファストパス「SuiSui」が、全国100店舗以上に広がっています。導入店舗には、みそかつの矢場とんやラーメンのつじ田などがあります。待ち時間を減らしたい人には、使いどころがわかりやすいサービスです。</p>
+        <p class="starter">“並ぶか、お金で時間を買うか”の選択肢が、外食でも少しずつ定着してきましたね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/topic/2154224.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>便利</span><span>ITmedia NEWS</span></div>
+        <h2>秋葉原「スマートごみ箱」22台新設 ごみを自動で約5分の1に圧縮、たまり具合は遠隔で把握</h2>
+        <p>千代田区が、秋葉原中央通りと駅周辺にスマートごみ箱を設置しました。ごみを自動で圧縮し、たまり具合を通信で把握して回収に生かします。街歩きの快適さを支える、実用的な取り組みです。</p>
+        <p class="starter">観光地や繁華街では、こういう“見えない工夫”があると助かりますね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2611/09/2000003031/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>小田急電鉄、新型80000形の円形窓から眺望を楽しめる4人掛け「展望シート」</h2>
+        <p>小田急電鉄が、新型ロマンスカー80000形の座席デザインを公開しました。円形窓から景色を楽しめる4人掛けの「展望シート」が用意されます。移動そのものを楽しめる、ちょっとわくわくする新型車両です。</p>
+        <p class="starter">電車の“移動時間”が、景色を楽しむ時間になるのはいいですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2154855.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>脱GPUへ一手、Googleが独自AIチップ「TPU」に新モデル2種</h2>
+        <p>Googleのクラウドサービス事業部門となるGoogle Cloudは11月9日(米国時間)、AI演算装置であるTPU(Tensor Processing Unit)の最新製品「TPU 8tx」と「TPU 8i Max」を発表した。TPUは、同社が社内のAI環境(一般消費者向けのGeminiや法人向けGemini Enterpriseなど)やクラウドサービス事業の顧客向けに提供しているもの。</p>
+        <p class="starter">生成AIの仕組みや仕事への影響まで、少し深く話せそうです。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2154906.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
