@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題まとめ</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年11月16日</p>
+    <h1>朝の話題まとめ</h1>
+    <p class="intro">きょうの朝雑談に使いやすい、重すぎないニュースを中心に14本選びました。AI関連は7本、そのうち生成AIを少し深掘りできる話題を2本入れています。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>【西川和久の不定期コラム】GPUモリモリVRAM 112GBで「DeepSeek-V4.1-Flash」を動かしてみた</h2>
+        <p>大容量VRAM環境で、DeepSeek-V4.1-Flashを実際に動かした検証記事です。モデルをローカルで扱うときのハードウェア要件や、動かし方のイメージがつかみやすい内容です。</p>
+        <p class="starter">ローカルで大きめのAIを動かすには、やっぱりGPUの力がかなり重要そうですね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/column/nishikawa/2156560.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>Impress Watch</span></div>
+        <h2>【西田宗千佳のイマトミライ】アドビがMCPに対応する理由 「絵を作る」AIから「ワークフロー」のAIに</h2>
+        <p>アドビがMCPに対応する背景を、生成AIの使い方の変化という観点から追った記事です。単発の画像生成だけでなく、作業全体を支える流れにAIが入っていく話として読めます。</p>
+        <p class="starter">AIが“作品を作る道具”から“仕事の流れを整える道具”に変わってきている感じがありますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/series/nishida/2156554.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>AI</span><span>ITmedia NEWS</span></div>
+        <h2>金曜に起きた「Outlook使えない」問題、土曜午後に復旧……「Microsoft 365」障害、約36時間続く</h2>
+        <p>Microsoft 365で起きた障害が、土曜午後に復旧したと伝えています。OutlookやCopilotにも影響が出て、業務の足元を支えるサービスの安定性が話題になりました。</p>
+        <p class="starter">普段あたりまえに使っているサービスほど、止まると存在感が大きいですよね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2611/16/2000003209/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>穏やか</span><span>家電 Watch</span></div>
+        <h2>スマホとつながる位牌 故人の声や映像よみがえる</h2>
+        <p>松戸家は、スマートフォンをかざすと故人の声や写真、映像を再生できる位牌「想音(おもね)」シリーズを、11月11日に発売した。個人供養向けの「想音」と、複数の位牌をひとつにまとめる「おまとめ位牌」をラインナップし、価格はいずれも68,000円〜。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2155549.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>Microsoft 365、接続障害から回復 後日詳細を報告へ</h2>
+        <p>Microsoftは14日、Microsoft 365の多くのサービスで接続障害が発生した問題について全ての地域で回復したと告知した。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2156470.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>科学</span><span>PC Watch</span></div>
+        <h2>タフブック、国内出荷比率を1割未満から3割へ。異常気象の現場を狙う</h2>
+        <p>堅牢PC/タブレット「タフブック」の新モデルが発表されました。現場用途を意識した製品で、国内出荷比率を高めていく方針も示されています。</p>
+        <p class="starter">現場向けの端末は、使う場所が過酷なほど価値がはっきり出ますね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2156558.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>季節</span><span>家電 Watch</span></div>
+        <h2>すぐ温まる電気ストーブ エディオン</h2>
+        <p>エディオンのプライベートブランドから、電気ストーブ2機種が11月17日に発売されます。これからの季節に向けて、手軽に暖を取りたい人向けの選択肢になりそうです。</p>
+        <p class="starter">朝の冷え込みが強くなる時期は、こういうシンプルな暖房器具が頼りになります。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2156171.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>穏やか</span><span>NHKニュース</span></div>
+        <h2>北日本と東日本中心 9日も大気の状態が非常に不安定の見込み</h2>
+        <p>8日は北日本から西日本にかけての広い範囲で大気の状態が非常に不安定になり、「記録的短時間大雨」の気象防災速報があわせて7回発表されるなど局地的な大雨となりました。9日も大気の状態が非常に不安定になる見込みで、低い土地の浸水や急な川の増水などに十分注意が必要です。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="http://www3.nhk.or.jp/news/html/20260808/k10015200211000.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>X、投稿できる画像数を最大20枚まで拡大</h2>
+        <p>Xで、1回の投稿に添付できる画像枚数が最大20枚に増えました。写真をまとめて見せたいときや、記録を並べて共有したいときに使いやすくなりそうです。</p>
+        <p class="starter">旅行写真やイベントの記録を一気に載せやすくなるのは便利ですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2156511.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>便利</span><span>家電 Watch</span></div>
+        <h2>【家電ミニレビュー】携帯おしり洗浄器使ってみた 出先での温水洗浄便座ロスを救う</h2>
+        <p>外出先でも使いやすい携帯おしり洗浄器を試したレビューです。日常のちょっとした不便を減らすアイテムとして、実用性の高さが伝わります。</p>
+        <p class="starter">“ないと困る”系の便利グッズって、使ってみると意外と生活に効きますよね。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/column_review/kdnreview/2155516.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>便利</span><span>PC Watch</span></div>
+        <h2>【ギア推し】ラピトリ調整も即座にダイヤルで。ソフト不要のロジクール「PRO X2 RAPID」</h2>
+        <p>キーボード本体のダイヤルや表示で、設定ソフトを開かずに調整できる点が紹介されています。ゲーム用途だけでなく、操作の手軽さを重視する人にも気になる製品です。</p>
+        <p class="starter">ソフトを開かずに本体だけで調整できるのは、思った以上に快適そうです。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/column/gamingdevice/2156370.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>西鉄、新クレカ「nimocle」の公式キャラクター「青いトリ」</h2>
+        <p>西鉄の新クレジットカード「nimocle」に合わせた公式キャラクターが発表されました。交通系の新サービスに、親しみやすいデザインを添える動きとして見られます。</p>
+        <p class="starter">新しいカードやサービスにキャラクターが付くと、少し身近に感じやすくなりますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2156264.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>科学</span><span>PC Watch</span></div>
+        <h2>【今すぐ読みたい！人気記事】眠っているPC、まだ捨てないで！最軽量級OS「Lubuntu」で古いPCを完全再生 - PC Watch</h2>
+        <p>古いPCを軽量OSで再生するという、実用的な見直し方を紹介する記事です。買い替え前に試せる選択肢として、手元の機材を活かしたい人に向いています。</p>
+        <p class="starter">古いPCをもう一度使えるようにする発想は、ちょっと気持ちが前向きになります。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/topic/readitnow/2156463.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>科学</span><span>PC Watch</span></div>
+        <h2>【今すぐ読みたい！人気記事】有機ELテレビをPCモニターに5年使った結果。避けられなかった焼き付きとその顛末 - PC Watch</h2>
+        <p>有機ELテレビをPCモニターとして長期利用した体験をまとめた記事です。使い方によっては気をつけたいポイントもあり、機材選びの参考になります。</p>
+        <p class="starter">大画面をモニター代わりに使うときの相性って、意外と大事ですよね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/topic/readitnow/2156462.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
