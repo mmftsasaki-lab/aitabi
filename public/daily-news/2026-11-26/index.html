@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題まとめ</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年11月26日</p>
+    <h1>朝の話題まとめ</h1>
+    <p class="intro">きょうは、AIの新着を中心に、生活に役立つガジェットや街づくりの話題をまじえて14本に絞りました。重くなりすぎない範囲で、気軽に話しやすいニュースを選んでいます。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>AnthropicのアモデイCEO、「人間の自由意志をAIに明け渡す」考えを否定 AI企業間で議論</h2>
+        <p>Anthropicのダリオ・アモデイCEOが、超知能AIに人間の意思決定権を委ねるべきだとする見方をXで否定しました。社会の統治と個別タスクの自動化は別だとし、AIは民主的なプロセスで管理されるべきだと強調しています。</p>
+        <p class="starter">AIに任せる範囲って、どこまでがちょうどいいと思いますか？</p>
+        <a href="https://www.itmedia.co.jp/news/article/2611/26/2000003473/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>Impress Watch</span></div>
+        <h2>SB OAI Japan、AIで侵入リスクを検証する「侵入可否診断」</h2>
+        <p>SB OAI Japanが、AIを活用したサイバーセキュリティ対策の新メニューとして「侵入可否診断」を始めました。外部から侵入できるかを検証し、10営業日以内に結果と対策案を報告する仕組みです。</p>
+        <p class="starter">AIが守る側にも回ると、企業のセキュリティ対策はかなり変わりそうですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2159064.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>NVIDIA、LLM方式の画像生成AI「Nemotron-Labs-Image」を無償公開</h2>
+        <p>NVIDIAが、LLMのように文章を出力する方式で画像を生成するAIモデルを無償公開しました。オープンウェイトとしてHugging Faceで配布されており、研究や評価目的で使えます。</p>
+        <p class="starter">画像生成も“言葉で組み立てる”方向に進むと、使い方がさらに広がりそうです。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2159286.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>学術評価から負荷試験まで、オープンLLMを丸ごと測る「gBench」</h2>
+        <p>Google DeepMindが、オープンモデル向けのベンチマークツール「gBench」を公開しました。GemmaなどのLLMやVLMを対象に、能力だけでなくサービング性能までまとめて評価できます。</p>
+        <p class="starter">モデルの性能だけでなく、実運用のしやすさも測れるのは便利ですね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2159193.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>LLMが動くだけのOS。24KBの全アセンブリ製Qwen3-0.6B専用</h2>
+        <p>LLM専用に機能を絞ったOS「asm-llm-os.elf」が公開されました。PCを起動するとそのままQwen3-0.6Bとチャットでき、カーネルサイズは約24KBとかなり小さくまとまっています。</p>
+        <p class="starter">ここまで割り切ると、OSの役割そのものを考え直したくなりますね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2159364.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>AI/便利</span><span>PC Watch</span></div>
+        <h2>GPUなしで表も手書きも！無料OCR「NDLOCR-Lite ver.2」が登場</h2>
+        <p>国立国会図書館が、無料で使えるOCRソフト「NDLOCR-Lite ver.2」を公開しました。GPUなしでも動かせるのが特徴で、表や手書き文字の読み取りにも対応します。</p>
+        <p class="starter">古い資料のデジタル化が、ぐっと身近になりそうです。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2159134.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>AI/便利</span><span>PC Watch</span></div>
+        <h2>【Mac Info】macOS 27「写真」が進化、撮影後にAIで画角や視点を変更可能に！</h2>
+        <p>macOS 27の「写真」アプリでは、撮影後にAIで画角や視点を変えられるようになります。撮ったあとから見せ方を調整できるので、写真の仕上げ方が少し変わりそうです。</p>
+        <p class="starter">撮影後に“あとから構図を直せる”のは、写真好きにはうれしい進化ですね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/column/macinfo/2159075.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>H3と並ぶ日本の宇宙輸送の柱へ 小型ロケット「イプシロンS」飛行再開への道筋</h2>
+        <p>日本の固体燃料ロケット「イプシロン」が、飛行再開に向けて大きく前進しました。JAXAは11月10日、イプシロンロケット7号機(イプシロンSロケット実証機)の打上げリハーサルを実施し、予定された作業を終えました。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/topic/2157976.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>アンカー、窓に貼る2K防犯カメラ「Window Camera E10」 9990円</h2>
+        <p>アンカー・ジャパンが、窓ガラスの内側に貼って使う防犯カメラを発売しました。配線や設置のハードルが低く、手軽に見守り環境を整えやすい製品です。</p>
+        <p class="starter">“置く”より“貼る”カメラは、導入の気軽さが魅力ですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2159117.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>タクシーアプリ「GO」、成田空港で大型ワゴン指定可能に 最大5名</h2>
+        <p>タクシーアプリ「GO」で、成田空港と成田市内の一部で大型ワゴン指定ができるようになりました。最大5人まで乗れるため、家族旅行や荷物が多い移動に使いやすそうです。</p>
+        <p class="starter">空港からの移動で、人数や荷物に合わせて選べるのは助かりますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2159218.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>後楽園ホール、27年5月リニューアル LEDビジョン3面とボックス席新設</h2>
+        <p>東京ドームが、後楽園ホールを2027年5月にリニューアルすると発表しました。LEDビジョンの増設やボックス席の新設など、観戦しやすい空間づくりが進みます。</p>
+        <p class="starter">長く親しまれてきた会場がどう変わるのか、見に行ってみたくなります。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2159185.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>前向き</span><span>Impress Watch</span></div>
+        <h2>豊田市のキユーピー工場跡地に住商複合交流都市「ORINAS TOYOTA」</h2>
+        <p>愛知県豊田市の工場跡地に、住宅や商業施設を含む複合開発が進みます。暮らしと買い物、交流の場を一体で整える計画です。</p>
+        <p class="starter">工場跡地の再開発って、その街の次の姿が見えてきて面白いですね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2159231.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>前向き</span><span>Impress Watch</span></div>
+        <h2>金町の教習所跡地再開発 40階マンション着工・直結商業「MARK IS」増床</h2>
+        <p>葛飾区の再開発で、40階建ての住宅棟や商業施設の増床工事が始まります。住宅、商業、公益施設を一体で整える大規模な街づくりです。</p>
+        <p class="starter">駅前の景色が大きく変わる再開発は、完成後の街歩きが楽しみになります。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2159164.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>季節</span><span>家電 Watch</span></div>
+        <h2>暖房時に加湿器はどこに置く? 加湿方式で違いも</h2>
+        <p>エアコン暖房の利用が増える時期に合わせて、加湿器の置き方や使い方を紹介する記事です。加湿方式によって向いている置き場所が違うため、冬の乾燥対策の参考になります。</p>
+        <p class="starter">加湿器の置き場所ひとつで、体感がけっこう変わりそうです。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2155910.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
