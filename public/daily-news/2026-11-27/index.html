@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題まとめ</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年11月27日</p>
+    <h1>朝の話題まとめ</h1>
+    <p class="intro">きょうの朝雑談に使いやすい、軽めで前向きなニュースを中心に14本選びました。AI関連は7本、そのうち生成AIを少し深掘りできる話題を2本入れています。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>飲食店の“AI商品画像”は景品表示法違反にならないの？ 弁護士の見解</h2>
+        <p>飲食店のメニュー写真にAI生成画像を使う場合、景品表示法との関係を弁護士の視点で整理した話題です。見た目の印象と実際の商品に差が出ないようにすることが大切、という観点で読めます。</p>
+        <p class="starter">AIで作ったメニュー写真って、便利だけどどこまで許されるのか気になりますね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2611/26/2000003447/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>SSDでGPUメモリをペタバイト級に拡張、キオクシアとNVIDIAがAI向けの実証</h2>
+        <p>キオクシアとNVIDIAが、SSDを使ってGPUメモリの実効容量を大きく広げるAI向けの実証を始めました。大規模なベクトルデータを扱う用途で、ストレージとGPUの連携を強める狙いがうかがえます。</p>
+        <p class="starter">AIの進化って、モデルだけでなく“保存先”の工夫でも進むんですね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2159567.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>AI</span><span>ITmedia NEWS</span></div>
+        <h2>Character.AIのチャット履歴競売に41州とワシントンD.C.が異議 未成年者の約210万アカウント分も対象</h2>
+        <p>米41州とワシントンD.C.の司法長官が、Character.AIの資産競売に異議を申し立てました。チャット履歴の扱いとプライバシー保護のあり方が論点になっています。</p>
+        <p class="starter">AIサービスの便利さと、会話データの扱いはセットで考えたくなりますね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2611/26/2000003479/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>【鈴木淳也のPay Attention】「AIが買い物」は実現するか? エージェントコマースに必要な12カ月の助走</h2>
+        <p>AIエージェントが買い物を手伝う「エージェントコマース」の動きを追う連載です。実用化には、技術だけでなく決済や運用の整備も必要だと整理しています。</p>
+        <p class="starter">“AIに買い物を任せる”未来、どこまで現実味があるか話しやすいテーマです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/series/suzukij/2158785.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>AI</span><span>Impress Watch</span></div>
+        <h2>DeepL、より自然なAI音声翻訳「Aure v2」 翻訳の遅延を50%削減</h2>
+        <p>DeepLが音声AIモデル「Aure v2」を発表し、翻訳の遅延を前モデル比で50%削減したとしています。音声翻訳の自然さや使いやすさを高める改良がポイントです。</p>
+        <p class="starter">通訳アプリも、待ち時間が短くなるとぐっと使いやすくなりますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2159451.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>同期忘れをなくすAIレコーダ決定版「Notta Memo Pro」が25%OFFに 文字起こし月30時間増量</h2>
+        <p>会議や商談の録音から文字起こし、要約まで任せられるAIボイスレコーダの紹介です。議事録づくりの手間を減らしたい人に向く、実用寄りのAI活用例として読めます。</p>
+        <p class="starter">会議のメモ取りが減ると、仕事の集中力も少し上がりそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/topic/special/2155610.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>AI</span><span>家電 Watch</span></div>
+        <h2>エコバックスのロボット掃除機、モップ常に洗いながら床拭き</h2>
+        <p>エコバックスが、清掃からメンテナンスまで自動化しやすいロボット掃除機2機種を発売しました。モップの方式の違いも含めて、家事の省力化に関心がある人が話しやすい内容です。</p>
+        <p class="starter">ロボット掃除機は、最近どこまで“おまかせ”できるのか気になります。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2159195.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>穏やか</span><span>家電 Watch</span></div>
+        <h2>ご飯に合うだけじゃない! 成城石井「おかかくるみふりかけ」は万能かも【今日のうまい！】</h2>
+        <p>ご飯のお供の代表格といえば「ふりかけ」です。サッとかけるだけで、白いご飯がごちそうに変身。お米を主食とする日本ならではの食文化です。お弁当や、忙しい日にパパッと食事を済ませたいときなどにも重宝します。</p>
+        <p class="starter">この話題、日常でどう使われそうか話しやすそうです。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/column/umai/2159044.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>穏やか</span><span>ITmedia NEWS</span></div>
+        <h2>X、「ペアレンタルコントロール」を導入 メッセージ内容は見られず</h2>
+        <p>Xが13〜17歳向けのペアレンタルコントロール機能を導入しました。利用時間や表示コンテンツなどを管理でき、保護者向けの安心材料が増えています。</p>
+        <p class="starter">SNSの使い方を家族で話し合うきっかけになりそうです。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2611/27/2000003506/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>日本郵便、第4の本来業務「基盤的サービス提供業務」開始</h2>
+        <p>日本郵便が、12月1日施行の法改正を受けて新たな本来業務を始めます。郵便・銀行・保険に続く位置づけで、制度面の変化として押さえやすい話題です。</p>
+        <p class="starter">郵便の仕事の範囲が少し広がると、サービスの見え方も変わりそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2159598.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>科学</span><span>Impress Watch</span></div>
+        <h2>JR東、品川駅ホーム屋根にペロブスカイト太陽電池 27年度上期に稼働</h2>
+        <p>JR東日本が、品川駅ホーム屋根にフィルム型のペロブスカイト太陽電池を設置すると発表しました。駅の設備を活用した再生可能エネルギーの取り組みとして注目されます。</p>
+        <p class="starter">駅の屋根が発電に使われると、街の景色も少し未来っぽくなりますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2159602.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>堺東駅直結「HiViE堺東」、12月9日ライフが先行開業 髙島屋堺店跡</h2>
+        <p>堺東駅直結の商業施設「HiViE堺東」で、スーパーのライフが先行開業します。駅前の再開発が少しずつ形になる、街歩きの話題として取り上げやすいニュースです。</p>
+        <p class="starter">駅直結の新しい商業施設って、地元の暮らしが便利になりそうで気になります。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2159474.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>季節</span><span>Impress Watch</span></div>
+        <h2>新宿駅西口、工事用クレーンで高さ30m“光のクリスマスツリー”</h2>
+        <p>新宿駅周辺で、工事中の西口にクレーンを使った“光のクリスマスツリー”が登場します。冬らしい演出として、街のにぎわいを感じやすい企画です。</p>
+        <p class="starter">工事現場がイルミネーションになる発想、ちょっと見に行きたくなりますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2159434.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>便利</span><span>家電 Watch</span></div>
+        <h2>ニトリの小さいドライヤー 海外でも使える</h2>
+        <p>ニトリが、手のひらサイズで海外でも使えるコンパクトなドライヤーを発売しました。旅行や出張で荷物を減らしたい人に向く、実用的な家電ニュースです。</p>
+        <p class="starter">小型で海外対応だと、旅行用の持ち物をかなり減らせそうです。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2159161.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
