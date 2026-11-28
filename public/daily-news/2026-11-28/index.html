@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>朝の話題 14本</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f4ef;
+      --paper: #fffdf8;
+      --ink: #26312f;
+      --muted: #68736f;
+      --line: #ded6ca;
+      --accent: #2f6f73;
+      --warm: #b99a5b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(100% - 32px, 920px);
+      margin: 0 auto;
+    }
+    header {
+      padding: 44px 0 22px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .news-list {
+      display: grid;
+      gap: 14px;
+      padding: 8px 0 36px;
+    }
+    .news-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(58, 47, 42, 0.06);
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .meta span {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 9px;
+      background: #fbf8f2;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    .starter {
+      color: #4f625d;
+      border-left: 3px solid var(--warm);
+      padding-left: 12px;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    footer {
+      padding: 0 0 36px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">2026年11月28日</p>
+    <h1>朝の話題 14本</h1>
+    <p class="intro">今朝は、AIの実装や仕事の現場での使い方に関する話題が多めです。ほかにも、通勤・暮らしに関わる新しい動きや、季節の買い物情報を中心にまとめました。</p>
+  </header>
+  <main class="news-list">
+    <article class="news-card">
+        <div class="meta"><span>1</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>「AI関連の需要強い」京セラ 5年で設備投資9000億円、データセンター需要狙う</h2>
+        <p>京セラが、2031年3月期までの5年間で9000億円の設備投資を行うと発表しました。AIの普及で伸びるデータセンターや半導体関連の需要を取り込む狙いです。研究開発にも別枠で6500億円を投じる計画です。</p>
+        <p class="starter">AIの広がりが、こういう設備投資のニュースにもつながってきていますね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2611/27/2000003521/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>2</span><span>生成AI深掘り</span><span>ITmedia NEWS</span></div>
+        <h2>MCPに新機能「Skills over MCP」登場 ツールとの接続だけでなく使い方のスキルもMCP経由で提供</h2>
+        <p>AIエージェントと外部ツールをつなぐMCPに、新機能「Skills over MCP」がβ版として追加されました。単なる接続だけでなく、ツールの使い方そのものをスキルとして配信できるのが特徴です。エージェント活用の幅が広がりそうな動きです。</p>
+        <p class="starter">道具をつなぐだけでなく、使い方まで配れるのは面白い発想ですね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2611/27/2000003513/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>3</span><span>生成AI深掘り</span><span>PC Watch</span></div>
+        <h2>ClaudeのMessages API、Rust化されてCPU使用率が70%削減</h2>
+        <p>Anthropicが、Claude関連のMessages APIをPythonからRustへ移行し、CPU使用率を70%削減したと明らかにしました。サービスを止めずに移行した点も注目されています。急増するトラフィックに備えるための基盤改善として興味深い内容です。</p>
+        <p class="starter">表には出にくいけれど、AIサービスの裏側の工夫って大事ですよね。</p>
+        <a href="https://pc.watch.impress.co.jp/docs/news/2159943.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>4</span><span>AI</span><span>ITmedia NEWS</span></div>
+        <h2>「時給1280円?」「在宅勤務」 ローソンが募集する「アバターオペレーター」という謎のお仕事</h2>
+        <p>ローソンが、在宅でアバターを操作して接客する「アバターオペレーター」の募集を始めました。導入店舗の数や効果、なぜ接客をAIではなく人が担うのかといった点も紹介されています。新しい働き方として気になる話題です。</p>
+        <p class="starter">コンビニの接客も、少しずつ遠隔化や分業が進んでいますね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2611/27/2000003511/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>5</span><span>AI</span><span>ITmedia NEWS</span></div>
+        <h2>聴覚障害の社員にスマートグラス支給 会話をリアルタイムに文字表示 ソフトバンク、連携アプリも独自開発</h2>
+        <p>ソフトバンクが、会話をリアルタイムで文字表示するスマートグラスを聴覚障害のある社員に支給しました。音声認識処理はスマホ内で完結し、連携アプリも独自開発しています。職場でのAI活用の具体例として分かりやすい事例です。</p>
+        <p class="starter">こういう実用的な支援は、AIの良さが伝わりやすいですね。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2611/27/2000003516/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>6</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>レジなし「Lawson Go」、中国・四国地区初出店 県立広島病院</h2>
+        <p>ローソンの無人決済店舗「Lawson Go」が、県立広島病院にオープンします。中国・四国地区では初出店で、病院職員専用の24時間営業です。買い物のしやすさを高める店舗づくりとして注目されます。</p>
+        <p class="starter">病院内の買い物がスムーズになるのは、地味に便利そうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2159678.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>7</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>JR中野駅、南北通路・新改札が12月6日開通 南北の移動がスムーズに</h2>
+        <p>JR中野駅で整備が進んでいた新しい改札と南北通路が、12月6日正午に開通します。駅の南北を自由に行き来しやすくなり、日常の移動が少し楽になりそうです。駅周辺を使う人にはうれしいニュースです。</p>
+        <p class="starter">駅の通り抜けがしやすくなるだけでも、毎日のストレスが減りますよね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2159954.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>8</span><span>科学</span><span>ITmedia NEWS</span></div>
+        <h2>JAXA宇宙飛行士、5年ぶり募集へ 月面探査を担う人材育成</h2>
+        <p>JAXAが、約5年ぶりに宇宙飛行士の募集を行います。将来の月面探査や地球低軌道活動を担う人材を育てる狙いです。宇宙開発の次の世代に向けた動きとして関心を集めそうです。</p>
+        <p class="starter">宇宙飛行士の募集は、聞くだけで少しワクワクします。</p>
+        <a href="https://www.itmedia.co.jp/news/article/2611/27/2000003512/" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>9</span><span>便利</span><span>Impress Watch</span></div>
+        <h2>資格試験でマイナカード本人確認・結果証明 英検や日商簿記で実証</h2>
+        <p>英検や日商簿記などで、マイナンバーカードを使った本人確認と結果証明の実証実験が行われます。受験や証明の手続きが、少しずつデジタル化していく流れが見えます。実用化が進めば、受験の手間が減るかもしれません。</p>
+        <p class="starter">資格試験まわりの手続きが楽になると、受けやすさも変わりそうです。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2159973.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>10</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>シチズン、サファイアガラスの奥に白蝶貝を閉じ込めた黒と白の限定モデル</h2>
+        <p>シチズンが、白蝶貝とサファイアガラスを組み合わせた限定腕時計を12月3日に発売します。黒と白の2モデルで、電波ソーラー式です。冬の装いにも合わせやすそうな、上品なデザインが特徴です。</p>
+        <p class="starter">時計の限定モデルは、見ているだけでも気分が上がりますね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2160126.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>11</span><span>文化</span><span>Impress Watch</span></div>
+        <h2>木造タワーから「カールおじさん」まで 16社がGREEN×EXPO出展テーマ発表</h2>
+        <p>GREEN×EXPO 2027に出展する国内16社が、それぞれのテーマを発表しました。木造タワーやキャラクター企画など、企業ごとの個性が見える内容です。開催に向けて、少しずつ盛り上がりが見えてきました。</p>
+        <p class="starter">万博や博覧会の出展テーマって、発表されると一気に想像がふくらみます。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2160164.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>12</span><span>穏やか</span><span>Impress Watch</span></div>
+        <h2>あとから後悔しないための「Amazonブラックフライデー5つの誓い」(2026)</h2>
+        <p>Amazonブラックフライデーに向けて、買い物で後悔しないための考え方をまとめた記事です。セールの対象は幅広く、つい目移りしやすい時期でもあります。必要なものを見極めるヒントとして役立ちます。</p>
+        <p class="starter">セール前は、何を買うかより“何を買わないか”も大事ですよね。</p>
+        <a href="https://www.watch.impress.co.jp/docs/news/2160152.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>13</span><span>便利</span><span>家電 Watch</span></div>
+        <h2>マッチョモード付き体組成計 左右部位別の筋量わかる</h2>
+        <p>エレコムが、左右部位別の筋量まで測れる体組成計を発売します。全身だけでなく細かい部位の状態も分かるのが特徴です。冬に向けて運動習慣を見直したい人にも気になる製品です。</p>
+        <p class="starter">体組成計って、数字を見るだけで少しやる気が出ますよね。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2159841.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+<article class="news-card">
+        <div class="meta"><span>14</span><span>季節</span><span>家電 Watch</span></div>
+        <h2>暖炉みたいなセラミックヒーター</h2>
+        <p>小泉成器が、炎のゆらぎを再現する疑似炎パネル付きのセラミックヒーターを発売しました。見た目にもあたたかみがあり、冬の部屋をやわらかく演出してくれそうです。機能だけでなく雰囲気も楽しめる家電です。</p>
+        <p class="starter">暖房器具も、最近は“見た目の癒やし”まで工夫されていますね。</p>
+        <a href="https://kaden.watch.impress.co.jp/docs/news/2159120.html" target="_blank" rel="noopener noreferrer">出典を読む</a>
+      </article>
+  </main>
+  <footer>
+    <p>公開RSSをもとに、朝の雑談向けに自動生成しています。詳細は各出典で確認してください。</p>
+  </footer>
+</body>
+</html>
